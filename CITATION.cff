@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "agentic-ese: tools for agentic deep elastic strain engineering"
+authors:
+  - family-names: Shi
+    given-names: Zhe
+    affiliation: "Department of Materials Science and Engineering, Massachusetts Institute of Technology"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Agentic Deep Elastic Strain Engineering of Semiconductor Electronic Properties"
+  authors:
+    - family-names: Shi
+      given-names: Zhe
+  journal: "Computational Materials Science"
+  year: 2026
+  status: submitted

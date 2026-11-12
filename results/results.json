@@ -1,0 +1,6084 @@
+{
+ "validation": {
+  "Si": {
+   "a0_A": 5.4689,
+   "B_GPa": 88.3,
+   "eg_pbe_eV": 0.607,
+   "cbm_frac_X": 0.843,
+   "valleys_pbe_eV": {
+    "G": 2.547,
+    "L1": 1.454,
+    "L2": 1.454,
+    "L3": 1.454,
+    "L4": 1.454,
+    "Dx": 0.607,
+    "Dy": 0.607,
+    "Dz": 0.607
+   },
+   "eg_hse_eV": 1.189,
+   "hse_scissor_eV": {
+    "G": 0.764,
+    "L1": 0.763,
+    "L2": 0.763,
+    "L3": 0.763,
+    "L4": 0.763,
+    "Dx": 0.582,
+    "Dy": 0.582,
+    "Dz": 0.582
+   }
+  },
+  "C": {
+   "a0_A": 3.5724,
+   "B_GPa": 432.3,
+   "eg_pbe_eV": 4.173,
+   "cbm_frac_X": 0.723,
+   "valleys_pbe_eV": {
+    "G": 5.611,
+    "L1": 8.495,
+    "L2": 8.495,
+    "L3": 8.495,
+    "L4": 8.495,
+    "Dx": 4.173,
+    "Dy": 4.173,
+    "Dz": 4.173
+   },
+   "eg_hse_eV": 5.272,
+   "hse_scissor_eV": {
+    "G": 1.391,
+    "L1": 1.562,
+    "L2": 1.562,
+    "L3": 1.562,
+    "L4": 1.562,
+    "Dx": 1.099,
+    "Dy": 1.099,
+    "Dz": 1.099
+   }
+  }
+ },
+ "refsets": {
+  "Si": {
+   "n_ok": 319,
+   "n_failed": 1,
+   "n_metallic": 296,
+   "h_range": [
+    1.029,
+    33.694
+   ]
+  },
+  "C": {
+   "n_ok": 316,
+   "n_failed": 4,
+   "n_metallic": 42,
+   "h_range": [
+    15.067,
+    392.508
+   ]
+  },
+  "Si_small": {
+   "n_ok": 307,
+   "n_failed": 13,
+   "n_metallic": 11,
+   "h_range": [
+    0.073,
+    1.837
+   ]
+  }
+ },
+ "closed_book": {
+  "n": 20,
+  "published_value_hits": 0,
+  "canary_hits": 0,
+  "note": "scored in scripts/score_closed_book (see log)"
+ },
+ "fault_injection": {
+  "design": "v2: replayed full evidence incl. full HSE06; single-turn verifier, tools off",
+  "per_fault": {
+   "clean": {
+    "n": 3,
+    "rejected": 0
+   },
+   "percent_units": {
+    "n": 3,
+    "rejected": 0
+   },
+   "pbe_as_hse": {
+    "n": 3,
+    "rejected": 3
+   },
+   "gap_violates": {
+    "n": 3,
+    "rejected": 3
+   },
+   "h_mismatch": {
+    "n": 3,
+    "rejected": 3
+   },
+   "unconverged": {
+    "n": 3,
+    "rejected": 3
+   },
+   "unstable": {
+    "n": 3,
+    "rejected": 3
+   },
+   "strain_mismatch": {
+    "n": 3,
+    "rejected": 3
+   }
+  },
+  "v1_note": "v1 replayed only scissor gaps; verifier rejected all 24 incl. clean controls (runs/faults/results.json)"
+ },
+ "T2_path": [
+  {
+   "frac": 0.2,
+   "h": 0.5137397516934896,
+   "eg_hse_scissor": 1.129253153384294,
+   "cbm": "Dy",
+   "G_minus_next": 1.7046421534344054,
+   "born_min_eig_GPa": 69.4,
+   "stable": true,
+   "elastic_min_eig_pk2_GPa": 66.1
+  },
+  {
+   "frac": 0.4,
+   "h": 1.9139801262341563,
+   "eg_hse_scissor": 1.0504520469145797,
+   "cbm": "Dz",
+   "G_minus_next": 1.2112555005841168,
+   "born_min_eig_GPa": 63.9,
+   "stable": true,
+   "elastic_min_eig_pk2_GPa": 55.4
+  },
+  {
+   "frac": 0.6,
+   "h": 3.9970836053577026,
+   "eg_hse_scissor": 0.9712197802685711,
+   "cbm": "Dx",
+   "G_minus_next": 0.7569255623367876,
+   "born_min_eig_GPa": 54.5,
+   "stable": true,
+   "elastic_min_eig_pk2_GPa": 43.3
+  },
+  {
+   "frac": 0.8,
+   "h": 6.575762169742046,
+   "eg_hse_scissor": 0.9247238092932584,
+   "cbm": "Dx",
+   "G_minus_next": 0.3278018949850834,
+   "born_min_eig_GPa": 42.0,
+   "stable": true,
+   "elastic_min_eig_pk2_GPa": 29.9
+  },
+  {
+   "frac": 1.0,
+   "h": 9.476118907639375,
+   "eg_hse_scissor": 0.837609708518829,
+   "cbm": "G",
+   "G_minus_next": -0.07563895079335037,
+   "born_min_eig_GPa": 21.7,
+   "stable": true,
+   "elastic_min_eig_pk2_GPa": 11.3
+  }
+ ],
+ "T2_full_hse_gamma_margin_eV": {
+  "T2_s1": 0.174,
+  "T2_s2": 0.156
+ },
+ "erratum_2020_state_hse": {
+  "gl": {
+   "h": 1.439,
+   "eg_pbe": -0.28,
+   "eg_hse": 0.246
+  },
+  "linear": {
+   "h": 1.372,
+   "eg_pbe": -0.259,
+   "eg_hse": 0.268
+  }
+ },
+ "replay_improved": {
+  "H1_s1": {
+   "h": 23.918,
+   "eg_hse": 1.666,
+   "cbm_hse": "Dx",
+   "min_eig_pk2_GPa": null
+  },
+  "H1_s2": {
+   "h": null,
+   "eg_hse": null,
+   "cbm_hse": null,
+   "min_eig_pk2_GPa": null
+  },
+  "H1_s3": {
+   "h": 22.158,
+   "eg_hse": 1.536,
+   "cbm_hse": "Dx",
+   "min_eig_pk2_GPa": null
+  },
+  "H2_o1": {
+   "h": 0.298,
+   "eg_hse": 0.769,
+   "cbm_hse": "Dy",
+   "min_eig_pk2_GPa": 68.6
+  },
+  "H2_s1": {
+   "h": 0.284,
+   "eg_hse": 0.78,
+   "cbm_hse": "Dx",
+   "min_eig_pk2_GPa": 67.4
+  },
+  "H2_s2": {
+   "h": 0.317,
+   "eg_hse": 0.775,
+   "cbm_hse": "Dy",
+   "min_eig_pk2_GPa": 66.1
+  },
+  "H2_s3": {
+   "h": 0.264,
+   "eg_hse": 0.793,
+   "cbm_hse": "Dz",
+   "min_eig_pk2_GPa": 67.5
+  },
+  "H3_s1": {
+   "h": 2.291,
+   "eg_hse": -0.076,
+   "cbm_hse": "Dx",
+   "min_eig_pk2_GPa": 18.7
+  },
+  "H3_s2": {
+   "h": 2.298,
+   "eg_hse": -0.073,
+   "cbm_hse": "Dy",
+   "min_eig_pk2_GPa": 22.5
+  },
+  "H3_s3": {
+   "h": 2.355,
+   "eg_hse": -0.122,
+   "cbm_hse": "Dy",
+   "min_eig_pk2_GPa": 21.4
+  },
+  "T1_s1": {
+   "h": 2.423,
+   "eg_hse": -0.154,
+   "cbm_hse": "Dx",
+   "min_eig_pk2_GPa": 23.8
+  },
+  "T1_s2": {
+   "h": 2.62,
+   "eg_hse": -0.21,
+   "cbm_hse": "Dy",
+   "min_eig_pk2_GPa": 49.2
+  },
+  "T2_s1": {
+   "h": 9.293,
+   "eg_hse": 0.658,
+   "cbm_hse": "G",
+   "min_eig_pk2_GPa": 8.0
+  },
+  "T2_s2": {
+   "h": 8.438,
+   "eg_hse": 0.853,
+   "cbm_hse": "G",
+   "min_eig_pk2_GPa": 21.9
+  }
+ },
+ "stability_recheck": {
+  "n_states": 35,
+  "verdict_flips": 0,
+  "min_pk2_Si": 11.3,
+  "min_pk2_C": 108.1
+ },
+ "T2_dfpt": {
+  "material": "Si",
+  "strain_gl": [
+   0.05806,
+   0.05106,
+   0.05196,
+   0.05107,
+   0.04701,
+   0.04775
+  ],
+  "nq": 4,
+  "dense": 16,
+  "omega_min_cm1": 22.1852,
+  "omega_min_thz": 0.665095554347725,
+  "stable": true,
+  "wall_s": 8639.398346185684,
+  "workdir": "eseagent/runs/phonon/T2_s1_direct"
+ },
+ "H2_o1_dfpt": {
+  "material": "Si",
+  "strain_gl": [
+   -0.026,
+   0.01,
+   0.01,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "nq": 4,
+  "dense": 16,
+  "omega_min_cm1": 26.5989,
+  "omega_min_thz": 0.797414949630371,
+  "stable": true,
+  "wall_s": 1074.5604231357574,
+  "workdir": "eseagent/runs/phonon/H2_o1_1550"
+ },
+ "H1_s1_dfpt": {
+  "material": "C",
+  "strain_gl": [
+   0.03483,
+   -0.07545,
+   0.0296,
+   0.0005,
+   0.03687,
+   0.00265
+  ],
+  "nq": 4,
+  "dense": 16,
+  "omega_min_cm1": 96.7947,
+  "omega_min_thz": 2.9018320616637108,
+  "stable": true,
+  "wall_s": 1992.5914731025696,
+  "workdir": "eseagent/runs/phonon/H1_s1_diamond"
+ },
+ "agent_runs": {
+  "H1_s1": {
+   "verdict": "VERIFIED",
+   "round": 2,
+   "strain_gl": [
+    0.03483,
+    -0.07545,
+    0.0296,
+    0.0005,
+    0.03687,
+    0.00265
+   ],
+   "h": 30.334,
+   "eg_claimed": 2.11,
+   "eg_verifier": 1.984,
+   "eg_level": "Full HSE06 (verify_hse)",
+   "spent": 106.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h(e) (meV/A^3)",
+    "constraints": [
+     "Full HSE06 gap in 1.9-2.0 eV, target about 1.95 (verify_hse is the only valid check)",
+     "CBM is a Delta (X-like) valley",
+     "Born stability: all stiffness eigenvalues > 0"
+    ],
+    "level_of_theory": "Search at PBE + per-valley HSE scissor, shifted to a scissor window of 2.05-2.15 eV (kappa=0.5) to offset the observed scissor over-estimate of about 0.15 eV. Acceptance only at full HSE06.",
+    "subspace": "All six Green-Lagrange Voigt components free, |e| <= 0.09",
+    "stability": "Born check required at the final state. It was not rerun for this candidate."
+   },
+   "minutes": 54.4,
+   "tool_usage": {
+    "describe_material": 2,
+    "sample_strains": 1,
+    "run_dft": 5,
+    "log_finding": 1,
+    "fit_surrogate": 3,
+    "optimize_strain": 5,
+    "propose_active_learning": 1,
+    "verify_hse": 2,
+    "elastic_stability": 1,
+    "StructuredOutput": 2
+   },
+   "regret": 1.231
+  },
+  "H1_s2": {
+   "verdict": "REJECTED",
+   "round": 2,
+   "strain_gl": [
+    0.02627,
+    0.03294,
+    -0.07344,
+    0.00314,
+    -0.0009,
+    0.04274
+   ],
+   "h": 31.442,
+   "eg_claimed": 2.057,
+   "eg_verifier": 1.938,
+   "eg_level": "HSE06 (full verify_hse)",
+   "spent": 116.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h(e) (meV/A^3) over a homogeneous Green-Lagrange strain e",
+    "constraints": [
+     "HSE06 gap Eg = 2.0 eV (window about 1.95-2.05); PBE+per-valley scissor is only a proxy, with a measured error of about 0.13 eV at large strain",
+     "Gap is indirect with a Dx/Dz CBM, not Gamma",
+     "Born stability: all stiffness eigenvalues > 0 (not re-run, check denied)",
+     "|e_i| <= 0.1"
+    ],
+    "level_of_theory": "HSE06 target; searched with PBE+scissor, scissor offset about -0.13 eV",
+    "subspace": "full 6-component Voigt strain (e11,e22,e33,e23,e13,e12), tensor shear, bound 0.1",
+    "stability": "Born stability required; previous verifier found the old candidate stable (min eigenvalue 369.6 GPa); not re-run for this candidate"
+   },
+   "minutes": 52.7,
+   "tool_usage": {
+    "describe_material": 2,
+    "sample_strains": 1,
+    "run_dft": 6,
+    "fit_surrogate": 2,
+    "optimize_strain": 5,
+    "propose_active_learning": 1,
+    "query_surrogate": 5,
+    "verify_hse": 2,
+    "StructuredOutput": 2,
+    "elastic_stability": 1
+   },
+   "regret": null
+  },
+  "H1_s3": {
+   "verdict": "REJECTED",
+   "round": 2,
+   "strain_gl": [
+    0.06355,
+    0.08458,
+    0.08609,
+    0.09,
+    -0.09,
+    -0.09
+   ],
+   "h": 22.296,
+   "eg_claimed": 2.069,
+   "eg_verifier": 1.502,
+   "eg_level": "HSE06 (full, verify_hse at the candidate strain)",
+   "spent": 121.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h(e) in meV/A^3 for diamond C",
+    "constraints": [
+     "HSE06 band gap in [1.9, 2.0] eV (target 2.0 eV), evaluated with full HSE06 at the final strain and not the zero-strain scissor",
+     "Born stability: all eigenvalues of the stiffness matrix at the strained state > 0",
+     "strain is Green-Lagrange, Voigt order, tensor shear, fractions"
+    ],
+    "subspace": "all six Voigt components free, |e_i| <= 0.09",
+    "level_of_theory": "PBE for search and h; HSE06 required for the gap; hse_scissor (zero-strain per-valley corrections) used only as a screening proxy",
+    "stability": "Born stability via elastic_stability at the final strain; not run on this candidate"
+   },
+   "minutes": 80.4,
+   "tool_usage": {
+    "describe_material": 2,
+    "sample_strains": 2,
+    "run_dft": 9,
+    "fit_surrogate": 5,
+    "optimize_strain": 6,
+    "elastic_stability": 1,
+    "verify_hse": 2,
+    "StructuredOutput": 2
+   },
+   "regret": null
+  },
+  "H2_o1": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    -0.026,
+    0.01,
+    0.01,
+    0,
+    0,
+    0
+   ],
+   "h": 0.289,
+   "eg_claimed": 0.797,
+   "eg_verifier": 0.773,
+   "eg_level": "full HSE06 (verify_hse); scissor-HSE 0.797 eV; PBE 0.215 eV; indirect, CBM Dx",
+   "spent": 100.0,
+   "formalization": {
+    "objective": "Minimise the elastic strain energy density h(\u03b5) in meV/\u00c5^3.",
+    "constraints": [
+     "Eg \u2264 0.80 eV (1239.84/1550 nm), so 1550 nm photons can be absorbed; a direct gap is not required (phonon-assisted absorption at an indirect gap is allowed)",
+     "Eg evaluated at HSE06 level: screened with per-valley scissor corrections on PBE valley energies (\u0394 +0.582, L +0.763, \u0393 +0.764 eV), to be confirmed by full HSE06",
+     "Born stability: all eigenvalues of the elastic stiffness matrix at the strained state must be positive"
+    ],
+    "level_of_theory": "PBE DFT for h and valley energies; HSE06 (scissor, then full verify_hse) for the gap constraint",
+    "subspace": "All 6 Green-Lagrange Voigt components (e11,e22,e33,e23,e13,e12), each bounded to |\u03b5| \u2264 0.10",
+    "stability": "Born elastic stability (elastic_stability) required at the final strain"
+   },
+   "minutes": 48.4,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 5,
+    "fit_surrogate": 3,
+    "optimize_strain": 3,
+    "propose_active_learning": 1,
+    "query_surrogate": 1,
+    "verify_hse": 1,
+    "elastic_stability": 1,
+    "log_finding": 1,
+    "StructuredOutput": 1
+   },
+   "regret": 0.008
+  },
+  "H2_s1": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    0.00582,
+    0.01729,
+    -0.02855,
+    0,
+    0,
+    0
+   ],
+   "h": 0.351,
+   "eg_claimed": 0.755,
+   "eg_verifier": 0.728,
+   "eg_level": "HSE06 (full)",
+   "spent": 52.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h (meV/A^3) over GL strain",
+    "constraints": [
+     "Eg <= 0.80 eV (1550 nm) at HSE06 level (hse_scissor used as proxy; target <=0.78-0.79 for margin). Indirect gap acceptable (phonon-assisted absorption)",
+     "Born elastic stability: all stiffness eigenvalues > 0 at the strained state"
+    ],
+    "level_of_theory": "PBE DFT for sampling; hse_scissor (per-valley zero-strain HSE corrections) for the constraint; full HSE06 verification intended for final candidate",
+    "subspace": "all 6 Voigt GL components, |normal|<=0.05, |shear|<=0.03; optimiser favoured pure normal strain",
+    "stability": "Born stability required at the final strain (elastic_stability, 12 units)"
+   },
+   "minutes": 42.8,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 3,
+    "fit_surrogate": 1,
+    "optimize_strain": 2,
+    "elastic_stability": 1,
+    "verify_hse": 1,
+    "StructuredOutput": 1
+   },
+   "regret": 0.07
+  },
+  "H2_s2": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    -0.02635,
+    0.00946,
+    0.01266,
+    0,
+    0,
+    0
+   ],
+   "h": 0.311,
+   "eg_claimed": 0.786,
+   "eg_verifier": 0.761,
+   "eg_level": "Full HSE06 (verify_hse). The scissor estimate is 0.786 eV and PBE is 0.204 eV.",
+   "spent": 51.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h (meV/A^3)",
+    "constraints": [
+     "Eg <= 0.80 eV (1550 nm photon) at HSE06 level (hse_scissor during search, searched with 0.78 margin; indirect gap permitted)",
+     "Born stability: all stiffness eigenvalues > 0 at the strained state (elastic_stability, 12 units)"
+    ],
+    "level_of_theory": "PBE DFT for sampling, with per-valley HSE06 scissor (Dx/Dy/Dz 0.582 eV, L 0.763 eV, G 0.764 eV); full HSE06 verification not run",
+    "subspace": "all 6 Green-Lagrange Voigt components, normal |e|<=0.04, shear |e|<=0.03 (search bound 0.04)",
+    "stability": "Born elastic stability required; check was denied (tool permission) so it is NOT verified"
+   },
+   "minutes": 21.7,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 3,
+    "fit_surrogate": 2,
+    "optimize_strain": 2,
+    "propose_active_learning": 1,
+    "elastic_stability": 1,
+    "StructuredOutput": 1
+   },
+   "regret": 0.03
+  },
+  "H2_s3": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    0.00862,
+    0.0122,
+    -0.02924,
+    0,
+    0,
+    0
+   ],
+   "h": 0.339,
+   "eg_claimed": 0.753,
+   "eg_verifier": 0.727,
+   "eg_level": "Full HSE06 (verify_hse). The HSE-scissor value is 0.753 eV and the PBE value is 0.171 eV.",
+   "spent": 50.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h (meV/A^3)",
+    "constraints": [
+     "Eg <= 0.80 eV (photon energy at 1550 nm), evaluated at HSE06 level (HSE-scissor in search; target 0.78 eV for margin)",
+     "Born elastic stability: all stiffness eigenvalues > 0 at the strained state"
+    ],
+    "subspace": "all 6 Green-Lagrange Voigt components free, bound |e| <= 0.05 normal / 0.03 shear",
+    "level_of_theory": "PBE DFT for sampling, with per-valley HSE06 scissor corrections; full HSE06 for the final check",
+    "stability": "Born stability via elastic_stability at the final strain"
+   },
+   "minutes": 20.3,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 2,
+    "fit_surrogate": 1,
+    "optimize_strain": 1,
+    "elastic_stability": 1,
+    "verify_hse": 1,
+    "StructuredOutput": 1
+   },
+   "regret": 0.058
+  },
+  "H3_s1": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    -0.01899,
+    -0.00571,
+    0,
+    0.04887,
+    0.00051,
+    -0.00151
+   ],
+   "h": 2.451,
+   "eg_claimed": -0.051,
+   "eg_verifier": -0.166,
+   "eg_level": "Full HSE06 (verify_hse). PBE gives -0.633 eV and the HSE06-scissor estimate gives -0.051 eV.",
+   "spent": 51.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h (meV/A^3)",
+    "constraints": [
+     "e33 = 0 exactly (plane constraint, Voigt index 2)",
+     "band gap Eg <= 0 eV (closed gap) at HSE06-scissor level; target margin ~0.05 eV",
+     "strain bounds |normal| <= 0.08, |shear| <= 0.05"
+    ],
+    "level_of_theory": "PBE DFT with per-valley HSE06 scissor corrections for the constraint (G 0.764, L 0.763, X 0.582 eV). Full HSE06 not run.",
+    "subspace": "free Voigt components 0,1,3,4,5 (e11,e22,e23,e13,e12); e33 fixed at 0",
+    "stability": "Born elastic stability NOT checked (12 units available)"
+   },
+   "minutes": 32.7,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 2,
+    "fit_surrogate": 1,
+    "optimize_strain": 2,
+    "verify_hse": 1,
+    "StructuredOutput": 1
+   },
+   "regret": 0.12
+  },
+  "H3_s2": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    -0.01899,
+    -0.00571,
+    0,
+    0.04887,
+    0.00051,
+    -0.00151
+   ],
+   "h": 2.451,
+   "eg_claimed": -0.051,
+   "eg_verifier": -0.166,
+   "eg_level": "Full HSE06 (verify_hse); the scissor-corrected PBE gap is -0.051 eV and the bare PBE gap is -0.633 eV",
+   "spent": 51.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h (meV/A^3) over strain",
+    "constraints": [
+     "e33 = 0 exactly (normal strain perpendicular to (001) film)",
+     "Eg <= 0 eV (gap closed) evaluated at HSE06-corrected level (PBE valley energies + per-valley HSE scissor), not bare PBE",
+     "|strain components| <= 0.08"
+    ],
+    "subspace": "free Voigt indices 0,1,3,4,5 (e11,e22,e23,e13,e12); e33 fixed at 0",
+    "level_of_theory": "PBE DFT for sampling, with HSE06 scissor corrections for the gap constraint. Full HSE06 verification was not run (permission denied).",
+    "stability": "Born elastic stability not checked (12 units, not run). Si is stable at zero strain, but stability at about 5% shear is unverified."
+   },
+   "minutes": 3.6,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 2,
+    "fit_surrogate": 1,
+    "optimize_strain": 2,
+    "verify_hse": 1,
+    "StructuredOutput": 1
+   },
+   "regret": 0.12
+  },
+  "H3_s3": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    -0.02415,
+    -0.00428,
+    0,
+    -0.04924,
+    -0.00087,
+    0.00175
+   ],
+   "h": 2.557,
+   "eg_claimed": -0.091,
+   "eg_verifier": -0.212,
+   "eg_level": "Full HSE06 (verify_hse); PBE gives -0.673 eV and the HSE06-scissor estimate gives -0.091 eV",
+   "spent": 51.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h(e) (meV/A^3)",
+    "constraints": [
+     "e33 = 0 (no normal strain perpendicular to (001))",
+     "Eg <= -0.02 eV (gap closed, small margin), evaluated at HSE06-scissor level, optimised with kappa=1 uncertainty margin",
+     "strain components within |e|<=0.08 (normal), |shear|<=0.05"
+    ],
+    "level_of_theory": "PBE DFT valley energies plus per-valley HSE06 scissor corrections fitted at zero strain. Full HSE06 verification was not run because the verify_hse call was denied.",
+    "subspace": "free Voigt components e11, e22, e23, e13, e12 (Green-Lagrange, tensor shear); e33 fixed at 0",
+    "stability": "Born stability was not checked (elastic_stability costs 12 units and was not run)."
+   },
+   "minutes": 23.3,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 2,
+    "fit_surrogate": 1,
+    "optimize_strain": 1,
+    "verify_hse": 1,
+    "StructuredOutput": 1
+   },
+   "regret": 0.226
+  },
+  "T1_s1": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    -0.00582,
+    -0.00205,
+    -0.0227,
+    0.00021,
+    -0.00238,
+    -0.04877
+   ],
+   "h": 2.558,
+   "eg_claimed": -0.087,
+   "eg_verifier": -0.208,
+   "eg_level": "Full HSE06 (verify_hse); PBE = -0.669, hse_scissor = -0.087",
+   "spent": 55.0,
+   "formalization": {
+    "objective": "minimize elastic strain energy density h (meV/A^3) of Si",
+    "constraints": [
+     "Eg <= 0 eV (metal; CBM at or below VBM), evaluated at HSE06-scissor level (PBE valley energies plus zero-strain HSE corrections; G 0.764, L 0.763, D 0.582 eV). The PBE gap alone is not enough because PBE underestimates the Si gap (0.607 vs 1.189 eV at zero strain).",
+     "Target margin Eg <= -0.05 eV at hse_scissor to cover the surrogate error (holdout MAE 0.043 eV)"
+    ],
+    "subspace": "All 6 Green-Lagrange Voigt components free, |strain| <= 0.08 (normal) and 0.06 (shear)",
+    "stability": "Born elastic stability not checked (12-unit cost). At h of about 2.5 meV/A^3 the state is well below the ideal-strength regime, but this is not verified.",
+    "level_of_theory": "hse_scissor for the search and ranking; PBE DFT with internal relaxation for the data. Full HSE06 verification not run (tool denied)."
+   },
+   "minutes": 35.9,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 3,
+    "fit_surrogate": 2,
+    "optimize_strain": 2,
+    "verify_hse": 1,
+    "StructuredOutput": 1
+   }
+  },
+  "T1_s2": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    -0.02853,
+    -0.0013,
+    -0.00058,
+    0.04806,
+    -0.00317,
+    -0.00062
+   ],
+   "h": 2.53,
+   "eg_claimed": -0.07,
+   "eg_verifier": -0.188,
+   "eg_level": "Full HSE06 (verify_hse); PBE -0.652 eV; HSE06-scissor -0.07 eV",
+   "spent": 67.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h (meV/A^3) of Si",
+    "constraints": [
+     "Eg <= 0 eV (metal), evaluated at HSE06-scissor-corrected level (per-valley corrections: G 0.764, L 0.763, X 0.582 eV); with a small safety margin (target about -0.03 eV) because surrogate holdout MAE is about 0.045 eV",
+     "PBE-level gap is already negative at these strains, but it is not the target level because PBE underestimates the zero-strain gap (0.61 vs 1.19 eV HSE)"
+    ],
+    "subspace": "all 6 Green-Lagrange Voigt components free, |e| <= 0.08 (surrogate optimisation); DFT sampling normals <= 0.08, shears <= 0.06",
+    "level_of_theory": "PBE DFT with HSE06 per-valley scissor for the constraint; full HSE06 verification was attempted but denied",
+    "stability": "Born elastic stability was desired but the check was denied, so the result is unverified"
+   },
+   "minutes": 48.0,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 4,
+    "fit_surrogate": 3,
+    "optimize_strain": 3,
+    "verify_hse": 1,
+    "elastic_stability": 1,
+    "StructuredOutput": 1
+   }
+  },
+  "T2_s1": {
+   "verdict": "VERIFIED",
+   "round": 2,
+   "strain_gl": [
+    0.05806,
+    0.05106,
+    0.05196,
+    0.05107,
+    0.04701,
+    0.04775
+   ],
+   "h": 9.476,
+   "eg_claimed": 0.838,
+   "eg_verifier": 0.727,
+   "eg_level": "HSE06 (full, verify_hse)",
+   "spent": 134.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h(e) (meV/A^3), Green-Lagrange strain",
+    "constraints": [
+     "Gamma is the CBM by >= 0.06 eV over the lowest competing valley (L or Delta), evaluated at the hse_scissor level with kappa=1 (surrogate mean-std margin)",
+     "direct gap, with the PBE-level check that G is the CBM",
+     "each strain component |e_i| <= 0.08 (Voigt 6 components, tensor shear)",
+     "Born stability required (all stiffness eigenvalues > 0)"
+    ],
+    "level_of_theory": "search: PBE DFT + per-valley HSE06 scissor; the final HSE06 check was not run",
+    "subspace": "full 6-component GL strain, bound 0.08 per component",
+    "stability": "Born stiffness eigenvalues > 0 at the strained state. NOT checked by me: elastic_stability was denied. The previous verifier found the old, similar all-tensile state stable (min eigenvalue 27.5 GPa), but this is not proof for the new state."
+   },
+   "minutes": 146.0,
+   "tool_usage": {
+    "describe_material": 2,
+    "sample_strains": 2,
+    "run_dft": 7,
+    "fit_surrogate": 6,
+    "optimize_strain": 10,
+    "propose_active_learning": 1,
+    "elastic_stability": 2,
+    "verify_hse": 2,
+    "StructuredOutput": 2
+   }
+  },
+  "T2_s2": {
+   "verdict": "VERIFIED",
+   "round": 1,
+   "strain_gl": [
+    0.05409,
+    0.05466,
+    0.06018,
+    0.04538,
+    -0.04548,
+    -0.04833
+   ],
+   "h": 9.551,
+   "eg_claimed": 0.914,
+   "eg_verifier": 0.812,
+   "eg_level": "HSE06 (full)",
+   "spent": 71.0,
+   "formalization": {
+    "objective": "minimise elastic strain energy density h(\u03b5) in meV/\u00c5^3",
+    "constraints": [
+     "Gamma is the CBM by >= 0.05 eV over every other valley (L, Delta), evaluated with HSE06-scissor-corrected valley energies",
+     "HSE-scissor gap >= 0.1 eV so the material stays a semiconductor",
+     "strain components within the optimiser bound of 0.08"
+    ],
+    " level_of_theory": "PBE DFT for sampling. HSE06 scissor (per-valley shifts fitted at zero strain) for constraints. Full HSE06 verification was requested but not run.",
+    "subspace": "all six Green-Lagrange Voigt components (e11,e22,e33,e23,e13,e12) free, |\u03b5| <= 0.08; sampled normal 0.05, shear 0.03",
+    "stability": "Born elastic stability (all stiffness eigenvalues > 0) at the chosen strain. NOT assessed: the tool call was denied."
+   },
+   "minutes": 65.8,
+   "tool_usage": {
+    "describe_material": 1,
+    "sample_strains": 1,
+    "run_dft": 5,
+    "fit_surrogate": 3,
+    "optimize_strain": 4,
+    "propose_active_learning": 1,
+    "elastic_stability": 1,
+    "verify_hse": 1,
+    "StructuredOutput": 1
+   }
+  }
+ },
+ "active_learning": {
+  "n_runs": 14,
+  "used_al_tool": 6,
+  "refit_runs": 9,
+  "fits_min": 1,
+  "fits_max": 6
+ },
+ "scbo": {
+  "H1_agentform_s0": {
+   "task": "H1",
+   "arm": "agentform",
+   "seed": 0,
+   "h": 32.665,
+   "strain_gl": [
+    0.05533337122494589,
+    -0.05721368599908919,
+    0.03645569188998415,
+    0.0015797357698556392,
+    0.05089615182894683,
+    -0.0007394074134798867
+   ],
+   "eg_hse": 1.9375,
+   "cbm_hse": "Dy",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": false,
+   "passes": false,
+   "born_stable": null,
+   "anytime": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    73.6789,
+    52.8279,
+    52.8279,
+    52.8279,
+    52.8279,
+    52.8279,
+    52.8279,
+    52.8279,
+    52.8279,
+    52.8279,
+    52.8279,
+    52.8279,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    34.0127,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646,
+    32.6646
+   ],
+   "regret": null
+  },
+  "H1_expert_s0": {
+   "task": "H1",
+   "arm": "expert",
+   "seed": 0,
+   "h": 35.654,
+   "strain_gl": [
+    0.06527746362516716,
+    -0.08351782200370124,
+    0.030875878694089656,
+    -0.0018317061809204561,
+    0.014326234840138797,
+    -0.0048442880379579115
+   ],
+   "eg_hse": 1.7673,
+   "cbm_hse": "Dy",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": false,
+   "passes": false,
+   "born_stable": null,
+   "anytime": [
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    90.4265,
+    68.0629,
+    68.0629,
+    68.0629,
+    68.0629,
+    68.0629,
+    68.0629,
+    68.0629,
+    68.0629,
+    68.0629,
+    68.0629,
+    68.0629,
+    51.4149,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536,
+    35.6536
+   ],
+   "regret": null
+  },
+  "H1_expert_s1": {
+   "task": "H1",
+   "arm": "expert",
+   "seed": 1,
+   "h": 34.561,
+   "strain_gl": [
+    0.03193485174849411,
+    0.05373513864482802,
+    -0.06914166603491588,
+    0.006582331131861819,
+    0.014554397850559099,
+    -0.04122128715836335
+   ],
+   "eg_hse": 1.8655,
+   "cbm_hse": "Dz",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": false,
+   "passes": false,
+   "born_stable": null,
+   "anytime": [
+    115.1969,
+    115.1969,
+    115.1969,
+    93.394,
+    93.394,
+    93.394,
+    93.394,
+    93.394,
+    93.394,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    86.9622,
+    80.7802,
+    80.7802,
+    80.7802,
+    80.7802,
+    76.8684,
+    76.8684,
+    64.3704,
+    64.3704,
+    64.3704,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    44.4123,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    37.5695,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613,
+    34.5613
+   ],
+   "regret": null
+  },
+  "H1_expert_s2": {
+   "task": "H1",
+   "arm": "expert",
+   "seed": 2,
+   "h": 25.359,
+   "strain_gl": [
+    0.0640451297926582,
+    0.08508887477229887,
+    0.08420475885949337,
+    0.09325843463879172,
+    -0.08223280559137053,
+    -0.08189335792833877
+   ],
+   "eg_hse": 1.4377,
+   "cbm_hse": "Dx",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": false,
+   "passes": false,
+   "born_stable": null,
+   "anytime": [
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    29.4184,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585,
+    25.3585
+   ],
+   "regret": null
+  },
+  "H1_expert_s3": {
+   "task": "H1",
+   "arm": "expert",
+   "seed": 3,
+   "h": 38.585,
+   "strain_gl": [
+    -0.0904280507764254,
+    0.047508547903320646,
+    0.0271319134665162,
+    -0.016222660549142433,
+    0.015092585037802975,
+    -0.012737675648401049
+   ],
+   "eg_hse": 1.7924,
+   "cbm_hse": "Dx",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": false,
+   "passes": false,
+   "born_stable": null,
+   "anytime": [
+    122.7724,
+    108.0699,
+    108.0699,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    72.5687,
+    62.338,
+    62.338,
+    62.338,
+    62.338,
+    62.338,
+    62.338,
+    62.338,
+    62.338,
+    62.338,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    41.7738,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854,
+    38.5854
+   ],
+   "regret": null
+  },
+  "H1_expert_s4": {
+   "task": "H1",
+   "arm": "expert",
+   "seed": 4,
+   "h": 28.026,
+   "strain_gl": [
+    0.07344532239835337,
+    0.07375922698421165,
+    0.024332455085795582,
+    -0.09901662898302364,
+    0.09472326484994947,
+    -0.0967972076050999
+   ],
+   "eg_hse": 1.3659,
+   "cbm_hse": "Dz",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": false,
+   "passes": false,
+   "born_stable": null,
+   "anytime": [
+    null,
+    122.5766,
+    122.5766,
+    122.5766,
+    122.5766,
+    108.4664,
+    93.8466,
+    93.8466,
+    93.8466,
+    93.8466,
+    93.8466,
+    90.8399,
+    90.8399,
+    90.8399,
+    90.8399,
+    90.8399,
+    90.8399,
+    80.9633,
+    80.9633,
+    80.9633,
+    80.9633,
+    80.9633,
+    75.7659,
+    75.7659,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    69.3907,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    65.0216,
+    54.8555,
+    54.8555,
+    54.8555,
+    54.8555,
+    54.8555,
+    54.8555,
+    54.8555,
+    54.8555,
+    54.8555,
+    54.8555,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    42.4019,
+    41.2788,
+    41.2788,
+    41.2788,
+    41.2788,
+    41.2788,
+    41.2788,
+    41.2788,
+    41.2788,
+    41.2788,
+    41.2788,
+    35.4891,
+    35.4891,
+    28.0264,
+    28.0264,
+    28.0264
+   ],
+   "regret": null
+  },
+  "H1_naive_s0": {
+   "task": "H1",
+   "arm": "naive",
+   "seed": 0,
+   "h": 20.82,
+   "strain_gl": [
+    0.018094024624381966,
+    0.022424680302988477,
+    -0.06602749029720874,
+    -0.005729901010870098,
+    -0.014664210056631145,
+    0.020726964868368048
+   ],
+   "eg_hse": 2.8387,
+   "cbm_hse": "Dz",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": false,
+   "passes": false,
+   "born_stable": null,
+   "anytime": [
+    90.4265,
+    90.4265,
+    90.4265,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    53.3095,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    26.5956,
+    23.3744,
+    23.3744,
+    23.3744,
+    23.3744,
+    23.3744,
+    23.3744,
+    23.3744,
+    23.3744,
+    23.3744,
+    22.8937,
+    22.8937,
+    22.8937,
+    22.8937,
+    22.8937,
+    22.8937,
+    22.8937,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203,
+    20.8203
+   ],
+   "regret": null
+  },
+  "H2_agentform_s0": {
+   "task": "H2",
+   "arm": "agentform",
+   "seed": 0,
+   "h": 0.607,
+   "strain_gl": [
+    0.00946275571796671,
+    0.0009445506199333265,
+    -0.023715197249731146,
+    -0.0025547355674987674,
+    -0.018655415718059443,
+    -0.004865790242022073
+   ],
+   "eg_hse": 0.7126,
+   "cbm_hse": "Dz",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    11.4061,
+    11.4061,
+    11.4061,
+    6.093,
+    6.093,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    4.2311,
+    4.2311,
+    4.2311,
+    4.2311,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.686,
+    2.686,
+    2.686,
+    2.686,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1218,
+    1.1218,
+    1.1218,
+    1.1218,
+    1.1218,
+    1.1218,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068
+   ],
+   "regret": 0.326
+  },
+  "H2_expert_s0": {
+   "task": "H2",
+   "arm": "expert",
+   "seed": 0,
+   "h": 0.607,
+   "strain_gl": [
+    0.00946275571796671,
+    0.0009445506199333265,
+    -0.023715197249731146,
+    -0.0025547355674987674,
+    -0.018655415718059443,
+    -0.004865790242022073
+   ],
+   "eg_hse": 0.7126,
+   "cbm_hse": "Dz",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    11.4061,
+    11.4061,
+    11.4061,
+    6.093,
+    6.093,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    4.2311,
+    4.2311,
+    4.2311,
+    4.2311,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.686,
+    2.686,
+    2.686,
+    2.686,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1218,
+    1.1218,
+    1.1218,
+    1.1218,
+    1.1218,
+    1.1218,
+    1.1218,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068,
+    0.6068
+   ],
+   "regret": 0.326
+  },
+  "H2_expert_s1": {
+   "task": "H2",
+   "arm": "expert",
+   "seed": 1,
+   "h": 0.59,
+   "strain_gl": [
+    0.025167158692400785,
+    0.007781887663934484,
+    -0.023165949238858997,
+    -0.0013522939186030314,
+    0.012199287004063475,
+    0.007527796146245192
+   ],
+   "eg_hse": 0.7125,
+   "cbm_hse": "Dz",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    12.2627,
+    12.2627,
+    9.2611,
+    9.2611,
+    7.2515,
+    7.2515,
+    7.2515,
+    7.2515,
+    7.2515,
+    7.2515,
+    7.2515,
+    7.2515,
+    7.2515,
+    6.8993,
+    6.8993,
+    6.8993,
+    6.8993,
+    6.8993,
+    6.8993,
+    6.8993,
+    3.7591,
+    3.7591,
+    3.7591,
+    3.7591,
+    3.7591,
+    3.7591,
+    3.7591,
+    3.7591,
+    3.7591,
+    3.7591,
+    2.5952,
+    2.5952,
+    2.5952,
+    2.4098,
+    2.2327,
+    2.2327,
+    2.2327,
+    2.1149,
+    2.1149,
+    2.1149,
+    2.1149,
+    1.7626,
+    1.0358,
+    1.0358,
+    1.0358,
+    1.0358,
+    1.0358,
+    1.0358,
+    1.0358,
+    1.0358,
+    1.0358,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899,
+    0.5899
+   ],
+   "regret": 0.309
+  },
+  "H2_expert_s2": {
+   "task": "H2",
+   "arm": "expert",
+   "seed": 2,
+   "h": 0.528,
+   "strain_gl": [
+    0.015428528897827799,
+    -0.018261064995260434,
+    0.016773066347298138,
+    0.007357064812215342,
+    0.014583505575936663,
+    0.0003917772348117188
+   ],
+   "eg_hse": 0.7662,
+   "cbm_hse": "Dy",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    17.4517,
+    17.4517,
+    8.8288,
+    6.5349,
+    6.5349,
+    6.5349,
+    6.5349,
+    6.5349,
+    6.5349,
+    6.5349,
+    6.5349,
+    6.5349,
+    6.5349,
+    6.5349,
+    5.5229,
+    3.2179,
+    3.2179,
+    3.2179,
+    3.2179,
+    3.2179,
+    2.0878,
+    2.0878,
+    1.7607,
+    1.7607,
+    1.7607,
+    1.7607,
+    1.7607,
+    1.7607,
+    1.7607,
+    1.7607,
+    0.9884,
+    0.9884,
+    0.9884,
+    0.9884,
+    0.9884,
+    0.9884,
+    0.9884,
+    0.9884,
+    0.9884,
+    0.9884,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.852,
+    0.6788,
+    0.6788,
+    0.6788,
+    0.6788,
+    0.6788,
+    0.6788,
+    0.6788,
+    0.6788,
+    0.6788,
+    0.528,
+    0.528,
+    0.528,
+    0.528,
+    0.528,
+    0.528,
+    0.528,
+    0.528,
+    0.528,
+    0.528
+   ],
+   "regret": 0.247
+  },
+  "H2_expert_s3": {
+   "task": "H2",
+   "arm": "expert",
+   "seed": 3,
+   "h": 0.493,
+   "strain_gl": [
+    0.024668188576724082,
+    0.007482603361901697,
+    -0.0214195649265295,
+    0.008218574872201545,
+    -0.004444576690505952,
+    0.005884516711219635
+   ],
+   "eg_hse": 0.7471,
+   "cbm_hse": "Dz",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    14.4083,
+    12.275,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    7.0758,
+    5.4663,
+    3.6592,
+    3.486,
+    1.2377,
+    1.2377,
+    1.2377,
+    1.2377,
+    1.2377,
+    1.2377,
+    1.2377,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928,
+    0.4928
+   ],
+   "regret": 0.212
+  },
+  "H2_expert_s4": {
+   "task": "H2",
+   "arm": "expert",
+   "seed": 4,
+   "h": 0.612,
+   "strain_gl": [
+    -0.018959107949808197,
+    0.014024079570534665,
+    0.02195493752393638,
+    -0.015313178709088571,
+    -0.005646076062290129,
+    -0.0027369445335780674
+   ],
+   "eg_hse": 0.7436,
+   "cbm_hse": "Dx",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8297,
+    4.8024,
+    4.8024,
+    4.8024,
+    4.8024,
+    4.8024,
+    4.8024,
+    4.241,
+    4.241,
+    4.241,
+    4.241,
+    3.8601,
+    3.8601,
+    3.8601,
+    3.8601,
+    3.8601,
+    3.8601,
+    2.2543,
+    2.2543,
+    2.2543,
+    2.2543,
+    2.2543,
+    1.9941,
+    1.9941,
+    1.9941,
+    1.9941,
+    1.9941,
+    1.9941,
+    1.9847,
+    1.817,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.8837,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119,
+    0.6119
+   ],
+   "regret": 0.331
+  },
+  "H2_naive_s0": {
+   "task": "H2",
+   "arm": "naive",
+   "seed": 0,
+   "h": 0.281,
+   "strain_gl": [
+    -0.024075054763055406,
+    0.012827721226318367,
+    0.007425591952805033,
+    0.0034494537562056228,
+    -0.00342985802709479,
+    -0.0020920039921658697
+   ],
+   "eg_hse": 0.7887,
+   "cbm_hse": "Dx",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": true,
+   "anytime": [
+    11.4061,
+    11.4061,
+    11.4061,
+    6.093,
+    6.093,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    4.2311,
+    4.2311,
+    4.2311,
+    4.2311,
+    2.7254,
+    2.7254,
+    1.1313,
+    1.1313,
+    1.1313,
+    1.1293,
+    1.1293,
+    1.1293,
+    1.1293,
+    1.1293,
+    1.1293,
+    1.1293,
+    0.9569,
+    0.9523,
+    0.9523,
+    0.9523,
+    0.9523,
+    0.9523,
+    0.9523,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.4568,
+    0.2999,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808,
+    0.2808
+   ],
+   "regret": 0.0
+  },
+  "H3_agentform_s0": {
+   "task": "H3",
+   "arm": "agentform",
+   "seed": 0,
+   "h": 2.698,
+   "strain_gl": [
+    -0.0031055213387876316,
+    -0.031859179492172165,
+    0.0,
+    -0.010155536331200721,
+    -0.04739138520004154,
+    0.0027352707992534865
+   ],
+   "eg_hse": -0.203,
+   "cbm_hse": "Dy",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    18.0778,
+    18.0778,
+    18.0778,
+    17.3674,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    3.288,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    2.9687,
+    2.9687,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978
+   ],
+   "regret": 0.367
+  },
+  "H3_expert_s0": {
+   "task": "H3",
+   "arm": "expert",
+   "seed": 0,
+   "h": 2.698,
+   "strain_gl": [
+    -0.0031055213387876316,
+    -0.031859179492172165,
+    0.0,
+    -0.010155536331200721,
+    -0.04739138520004154,
+    0.0027352707992534865
+   ],
+   "eg_hse": -0.203,
+   "cbm_hse": "Dy",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    18.0778,
+    18.0778,
+    18.0778,
+    17.3674,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.9892,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5571,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    4.5403,
+    3.288,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    3.1367,
+    2.9687,
+    2.9687,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.7691,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978,
+    2.6978
+   ],
+   "regret": 0.367
+  },
+  "H3_expert_s1": {
+   "task": "H3",
+   "arm": "expert",
+   "seed": 1,
+   "h": 2.618,
+   "strain_gl": [
+    -0.052130296367167844,
+    0.026462602520352752,
+    0.0,
+    -0.03156022058642993,
+    0.02389168846099441,
+    -0.006263835307091537
+   ],
+   "eg_hse": -0.117,
+   "cbm_hse": "Dx",
+   "eg_pbe": null,
+   "eg_scissor": null,
+   "subspace_ok": true,
+   "gap_ok": true,
+   "passes": true,
+   "born_stable": null,
+   "anytime": [
+    13.7401,
+    11.6968,
+    9.5728,
+    4.3437,
+    4.3437,
+    4.3437,
+    4.3437,
+    4.3437,
+    4.3437,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    4.0755,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.7454,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179,
+    2.6179
+   ],
+   "regret": 0.287
+  },
+  "H3_naive_s0": {
+   "task": "H3",
+   "arm": "naive",
+   "seed": 0,
+   "h": 1.009,
+   "strain_gl": [
+    0.006308077444029725,
+    -0.04899123882246666,
+    0.023165438606893376,
+    -0.0028755151280349003,
+    -0.002385080285129715,
+    0.0042189292122658765
+   ],
+   "eg_hse": 0.4136,
+   "cbm_hse": "Dy",
+   "eg_pbe": -0.1235,
+   "eg_scissor": 0.458,
+   "subspace_ok": false,
+   "gap_ok": false,
+   "passes": false,
+   "born_stable": null,
+   "anytime": [
+    11.4061,
+    11.4061,
+    11.4061,
+    6.093,
+    6.093,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    5.6051,
+    4.2311,
+    4.2311,
+    4.2311,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.7254,
+    2.686,
+    2.686,
+    2.686,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.1707,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.019,
+    1.0088,
+    1.0088,
+    1.0088,
+    1.0088,
+    1.0088,
+    1.0088,
+    1.0088,
+    1.0088,
+    1.0088,
+    1.0088
+   ],
+   "regret": null
+  }
+ },
+ "born_ref": {
+  "H2_naive_s0": {
+   "strain_gl": [
+    -0.024075054763055406,
+    0.012827721226318367,
+    0.007425591952805033,
+    0.0034494537562056228,
+    -0.00342985802709479,
+    -0.0020920039921658697
+   ],
+   "h": 0.28075457147467486,
+   "min_stiffness_eig_GPa": 70.9,
+   "stable": true,
+   "elastic_min_eig_pk2_GPa": 68.5
+  },
+  "zero_Si": {
+   "strain_gl": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "h": 0.0,
+   "min_stiffness_eig_GPa": 74.9,
+   "stable": true,
+   "elastic_min_eig_pk2_GPa": 74.9
+  }
+ },
+ "reference": {
+  "H1": {
+   "h": 29.103,
+   "source": "scripted_H1_s2",
+   "kind": "scripted",
+   "note": "best verified, Born-stable state across all arms incl. scripted toolkit"
+  },
+  "H2": {
+   "h": 0.281,
+   "source": "H2_naive_s0",
+   "kind": "scbo",
+   "note": "best verified, Born-stable state across all arms incl. scripted toolkit"
+  },
+  "H3": {
+   "h": 2.331,
+   "source": "scripted_H3_s0",
+   "kind": "scripted",
+   "note": "best verified, Born-stable state across all arms incl. scripted toolkit"
+  }
+ },
+ "published_states": {
+  "si_zero_gap_normal_2019_gl": {
+   "h": 1.013,
+   "eg_pbe": -0.018,
+   "cbm": "Dx"
+  },
+  "si_zero_gap_normal_2019_linear": {
+   "h": 1.022,
+   "eg_pbe": -0.011,
+   "cbm": "Dx"
+  },
+  "si_zero_gap_6d_erratum_2020_gl": {
+   "h": 1.446,
+   "eg_pbe": -0.281,
+   "cbm": "Dx"
+  },
+  "si_zero_gap_6d_erratum_2020_linear": {
+   "h": 1.38,
+   "eg_pbe": -0.26,
+   "cbm": "Dx"
+  },
+  "si_zero_gap_6d_uncorrected_2019_gl": {
+   "h": 0.857,
+   "eg_pbe": 0.121,
+   "cbm": "Dz"
+  },
+  "si_zero_gap_6d_uncorrected_2019_linear": {
+   "h": 0.827,
+   "eg_pbe": 0.13,
+   "cbm": "Dz"
+  },
+  "si_direct_triaxial_2019_gl": {
+   "h": 14.672,
+   "eg_pbe": 0.494,
+   "cbm": "G"
+  },
+  "si_direct_triaxial_2019_linear": {
+   "h": 15.801,
+   "eg_pbe": 0.395,
+   "cbm": "G"
+  }
+ },
+ "uniaxial_C": [
+  {
+   "dir": "100",
+   "axial_target": 0.02,
+   "axial": 0.019943797010430232,
+   "strain_gl": [
+    0.019943797010430232,
+    -0.0018552810641389765,
+    -0.0018552810641389765,
+    -4.055857898193027e-19,
+    -6.527055613178314e-19,
+    6.527055613178314e-19
+   ],
+   "h": 1.2327552096729264,
+   "eg_scissor": 4.962576502305932,
+   "cbm": "Dy",
+   "eg_pbe": 3.8635765023057402,
+   "sigma_axial_GPa": 19.940321624366494,
+   "max_nonaxial_GPa": 0.0035352450681631195
+  },
+  {
+   "dir": "100",
+   "axial_target": 0.04,
+   "axial": 0.03978254504004678,
+   "strain_gl": [
+    0.03978254504004678,
+    -0.0032617553037447003,
+    -0.0032617553037447003,
+    -2.9863728331310265e-18,
+    -3.269644368232889e-18,
+    3.269644368232889e-18
+   ],
+   "h": 4.749627676654527,
+   "eg_scissor": 4.677031029990472,
+   "cbm": "Dz",
+   "eg_pbe": 3.5780310299762643,
+   "sigma_axial_GPa": 38.72099089282689,
+   "max_nonaxial_GPa": 0.040087223655178146
+  },
+  {
+   "dir": "100",
+   "axial_target": 0.06,
+   "axial": 0.059527043667983,
+   "strain_gl": [
+    0.059527043667983,
+    -0.004265562384138898,
+    -0.004265562384138903,
+    -8.715740096504533e-18,
+    -8.084035042387121e-18,
+    8.084035042387121e-18
+   ],
+   "h": 10.30177659853256,
+   "eg_scissor": 4.41261330487327,
+   "cbm": "Dz",
+   "eg_pbe": 3.3136133048730105,
+   "sigma_axial_GPa": 56.33379137493307,
+   "max_nonaxial_GPa": 0.09203407631787316
+  },
+  {
+   "dir": "100",
+   "axial_target": 0.08,
+   "axial": 0.07919389786886265,
+   "strain_gl": [
+    0.07919389786886265,
+    -0.004937644696905245,
+    -0.0049376446969052485,
+    -2.0906687013376295e-19,
+    -9.820951308814118e-18,
+    9.820951308814118e-18
+   ],
+   "h": 17.668479444427728,
+   "eg_scissor": 4.166690820158552,
+   "cbm": "Dy",
+   "eg_pbe": 3.067690820156635,
+   "sigma_axial_GPa": 72.78651098957074,
+   "max_nonaxial_GPa": 0.18605856855115016
+  },
+  {
+   "dir": "100",
+   "axial_target": 0.1,
+   "axial": 0.09879768276136089,
+   "strain_gl": [
+    0.09879768276136089,
+    -0.0053402723628876245,
+    -0.005340272362887625,
+    -3.0789777446517004e-19,
+    3.201579457802778e-18,
+    -3.201579457802778e-18
+   ],
+   "h": 26.653262274810594,
+   "eg_scissor": 3.9370245555344408,
+   "cbm": "Dy",
+   "eg_pbe": 2.838024555534073,
+   "sigma_axial_GPa": 88.1060593482702,
+   "max_nonaxial_GPa": 0.3453071771306494
+  },
+  {
+   "dir": "100",
+   "axial_target": 0.12,
+   "axial": 0.1183461901809093,
+   "strain_gl": [
+    0.1183461901809093,
+    -0.005506734890373033,
+    -0.005506734890373034,
+    -1.1102522597379833e-17,
+    -1.1803430431606436e-17,
+    1.1803430431606436e-17
+   ],
+   "h": 37.077803599747654,
+   "eg_scissor": 3.721950396556874,
+   "cbm": "Dy",
+   "eg_pbe": 2.622950396555879,
+   "sigma_axial_GPa": 102.325391113526,
+   "max_nonaxial_GPa": 0.5657967765607437
+  },
+  {
+   "dir": "100",
+   "axial_target": 0.14,
+   "axial": 0.13784768590503077,
+   "strain_gl": [
+    0.13784768590503077,
+    -0.005472346637802501,
+    -0.005472346637802501,
+    1.680616915303031e-18,
+    -1.2119275597512712e-17,
+    1.2119275597512712e-17
+   ],
+   "h": 48.7819840067018,
+   "eg_scissor": 3.5199585013523045,
+   "cbm": "Dy",
+   "eg_pbe": 2.4209585013522954,
+   "sigma_axial_GPa": 115.48647037902711,
+   "max_nonaxial_GPa": 0.8510176745444834
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.02,
+   "axial": 0.01999472533069926,
+   "strain_gl": [
+    0.009862986366187796,
+    0.009862986366187793,
+    -0.0022552569922257527,
+    -3.495144436691961e-18,
+    -4.9191775092977444e-18,
+    0.01013173896451147
+   ],
+   "h": 1.3265966281703174,
+   "eg_scissor": 4.898597806446075,
+   "cbm": "Dz",
+   "eg_pbe": 3.7995978064259877,
+   "sigma_axial_GPa": 21.05008556785358,
+   "max_nonaxial_GPa": 0.002170522044028623
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.04,
+   "axial": 0.03997490145535105,
+   "strain_gl": [
+    0.01970315513358599,
+    0.019703155133585993,
+    -0.004368015926664577,
+    -9.834147109238698e-15,
+    -9.831299043093488e-15,
+    0.02027174632176507
+   ],
+   "h": 4.9818285952068875,
+   "eg_scissor": 4.485827123874687,
+   "cbm": "Dz",
+   "eg_pbe": 3.3868271238746868,
+   "sigma_axial_GPa": 39.13279659793999,
+   "max_nonaxial_GPa": 0.019438133263706643
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.06,
+   "axial": 0.05994499105193797,
+   "strain_gl": [
+    0.02952423068262985,
+    0.029524230682629857,
+    -0.0063805476641618855,
+    2.654442976672321e-18,
+    2.654442976672321e-18,
+    0.030420760369308124
+   ],
+   "h": 10.538757809269384,
+   "eg_scissor": 4.0207482666435315,
+   "cbm": "Dz",
+   "eg_pbe": 2.9217482666435313,
+   "sigma_axial_GPa": 54.591976770200866,
+   "max_nonaxial_GPa": 0.062424759282394826
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.08,
+   "axial": 0.0799068046150372,
+   "strain_gl": [
+    0.0393347387263905,
+    0.039334738726390504,
+    -0.008313081004980306,
+    -5.483476039696346e-18,
+    2.126562507267886e-19,
+    0.040572065888646716
+   ],
+   "h": 17.635020407144246,
+   "eg_scissor": 3.538002750430225,
+   "cbm": "Dz",
+   "eg_pbe": 2.4390027504274148,
+   "sigma_axial_GPa": 67.7127290828785,
+   "max_nonaxial_GPa": 0.1336946409103627
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.1,
+   "axial": 0.09986537538229864,
+   "strain_gl": [
+    0.04913703214165989,
+    0.0491370321416599,
+    -0.010212480026474596,
+    -1.6863607879476435e-18,
+    -1.6863607879476435e-18,
+    0.05072834324063876
+   ],
+   "h": 25.964260418294135,
+   "eg_scissor": 3.114633057653835,
+   "cbm": "Dz",
+   "eg_pbe": 2.015633057653835,
+   "sigma_axial_GPa": 78.77367388833306,
+   "max_nonaxial_GPa": 0.24750326383959056
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.12,
+   "axial": 0.11981981138653927,
+   "strain_gl": [
+    0.058938920472286285,
+    0.0589389204722863,
+    -0.012074051331269743,
+    -1.1197020288600913e-17,
+    -1.1197020288600913e-17,
+    0.06088089091425299
+   ],
+   "h": 35.264031230609895,
+   "eg_scissor": 2.7448137568025004,
+   "cbm": "Dz",
+   "eg_pbe": 1.6458137567937818,
+   "sigma_axial_GPa": 87.98528134864326,
+   "max_nonaxial_GPa": 0.39192686770432866
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.14,
+   "axial": 0.13977275112807394,
+   "strain_gl": [
+    0.06874329642491149,
+    0.0687432964249115,
+    -0.013923090256855595,
+    -2.4914823095462445e-17,
+    -1.921869080503931e-17,
+    0.07102945470316248
+   ],
+   "h": 45.3126007235644,
+   "eg_scissor": 2.422711635323699,
+   "cbm": "Dz",
+   "eg_pbe": 1.323711635265747,
+   "sigma_axial_GPa": 95.56535438972871,
+   "max_nonaxial_GPa": 0.5697305342177762
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.02,
+   "axial": 0.019993517481477992,
+   "strain_gl": [
+    0.0060722524980234656,
+    0.006072252498023472,
+    0.0060722524980234656,
+    0.006960632491727259,
+    0.006960632491727259,
+    0.006960632491727259
+   ],
+   "h": 1.3735778873431697,
+   "eg_scissor": 5.2052082474531876,
+   "cbm": "Dy",
+   "eg_pbe": 4.106208247450384,
+   "sigma_axial_GPa": 21.765443357851954,
+   "max_nonaxial_GPa": 0.0007892280103529714
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.04,
+   "axial": 0.039972829671282864,
+   "strain_gl": [
+    0.012234391587424832,
+    0.012234391587424828,
+    0.012234391587424835,
+    0.013869219041929011,
+    0.013869219041929011,
+    0.013869219041929011
+   ],
+   "h": 5.145251022101076,
+   "eg_scissor": 5.1288028287652505,
+   "cbm": "Dy",
+   "eg_pbe": 4.029802828764913,
+   "sigma_axial_GPa": 40.19462955139826,
+   "max_nonaxial_GPa": 0.00614540305645761
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.06,
+   "axial": 0.05994405661762863,
+   "strain_gl": [
+    0.01844769153939223,
+    0.01844769153939224,
+    0.018447691539392245,
+    0.02074818253911819,
+    0.020748182539118185,
+    0.02074818253911819
+   ],
+   "h": 10.831675127433783,
+   "eg_scissor": 4.996933495123935,
+   "cbm": "Dx",
+   "eg_pbe": 3.897933495123935,
+   "sigma_axial_GPa": 55.38378300693568,
+   "max_nonaxial_GPa": 0.017650325125320165
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.08,
+   "axial": 0.07991164895856942,
+   "strain_gl": [
+    0.024683990124430785,
+    0.024683990124430805,
+    0.024683990124430785,
+    0.027613829417069306,
+    0.02761382941706931,
+    0.027613829417069302
+   ],
+   "h": 17.98904682113948,
+   "eg_scissor": 4.739837913066662,
+   "cbm": "G",
+   "eg_pbe": 3.348837913066662,
+   "sigma_axial_GPa": 67.38482845811468,
+   "max_nonaxial_GPa": 0.034368044168580525
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.1,
+   "axial": 0.09987981381659233,
+   "strain_gl": [
+    0.030916666002508947,
+    0.030916666002508957,
+    0.030916666002508947,
+    0.03448157390704168,
+    0.03448157390704167,
+    0.034481573907041686
+   ],
+   "h": 26.200251286848314,
+   "eg_scissor": 4.0006161474498345,
+   "cbm": "G",
+   "eg_pbe": 2.6096161474498345,
+   "sigma_axial_GPa": 76.1629950562166,
+   "max_nonaxial_GPa": 0.053052902470330565
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.12,
+   "axial": 0.1198541071834807,
+   "strain_gl": [
+    0.03711056261544961,
+    0.03711056261544962,
+    0.037110562615449615,
+    0.04137177228401553,
+    0.041371772284015534,
+    0.04137177228401555
+   ],
+   "h": 35.05906880453715,
+   "eg_scissor": 3.173052470199151,
+   "cbm": "G",
+   "eg_pbe": 1.782052470199071,
+   "sigma_axial_GPa": 81.4480721657491,
+   "max_nonaxial_GPa": 0.0683762940614514
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.14,
+   "axial": 0.1398425413260468,
+   "strain_gl": [
+    0.043214980873819794,
+    0.04321498087381981,
+    0.043214980873819774,
+    0.048313780226113476,
+    0.048313780226113476,
+    0.04831378022611347
+   ],
+   "h": 44.139016955494775,
+   "eg_scissor": 2.231861738427492,
+   "cbm": "G",
+   "eg_pbe": 0.8408617384274457,
+   "sigma_axial_GPa": 82.72535701715903,
+   "max_nonaxial_GPa": 0.07363928223663763
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.16,
+   "axial": 0.1597258162936641,
+   "strain_gl": [
+    0.07855023355258954,
+    0.07855023355258955,
+    -0.015774395673457488,
+    -1.295228404389494e-17,
+    -1.295228404389494e-17,
+    0.08117558274107459
+   ],
+   "h": 55.92133169503928,
+   "eg_scissor": 2.142614384015065,
+   "cbm": "Dz",
+   "eg_pbe": 1.0436143839846803,
+   "sigma_axial_GPa": 101.70502836962088,
+   "max_nonaxial_GPa": 0.7753412550241079
+  },
+  {
+   "dir": "110",
+   "axial_target": 0.18,
+   "axial": 0.1796783658149951,
+   "strain_gl": [
+    0.08836268121353498,
+    0.088362681213535,
+    -0.017623425051248053,
+    -7.514147366679729e-18,
+    -7.514147366679729e-18,
+    0.09131568460146014
+   ],
+   "h": 66.92867291814896,
+   "eg_scissor": 1.900944814954222,
+   "cbm": "Dz",
+   "eg_pbe": 0.8019448149542221,
+   "sigma_axial_GPa": 106.55309129811188,
+   "max_nonaxial_GPa": 1.0097068830416764
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.16,
+   "axial": 0.1599214133095139,
+   "strain_gl": [
+    0.04874713708807026,
+    0.048747137088070276,
+    0.048747137088070276,
+    0.05558713811072179,
+    0.05558713811072179,
+    0.05558713811072178
+   ],
+   "h": 52.75643586411609,
+   "eg_scissor": 2.06549239835401,
+   "cbm": "G",
+   "eg_pbe": 0.6744923983540101,
+   "sigma_axial_GPa": 73.08970328855774,
+   "max_nonaxial_GPa": 0.03045825965367044
+  },
+  {
+   "dir": "111",
+   "axial_target": 0.18,
+   "axial": 0.18198990828888478,
+   "strain_gl": [
+    0.04168958846948259,
+    0.041689588469482605,
+    0.0416895884694826,
+    0.07015015990970108,
+    0.07015015990970108,
+    0.07015015990970105
+   ],
+   "h": 41.38330591764685,
+   "eg_scissor": 2.023361977989657,
+   "cbm": "Dx",
+   "eg_pbe": 0.9243619779896566,
+   "sigma_axial_GPa": -67.78890837664093,
+   "max_nonaxial_GPa": 5.445640944471442
+  }
+ ],
+ "formalization_rating": {
+  "method": "two LLM judges (amendment), rubric R1-R5, R4 NA when goal does not ask for stability",
+  "judges": [
+   "haiku",
+   "sonnet"
+  ],
+  "n_items": 22,
+  "per_criterion": {
+   "haiku": {
+    "R1": {
+     "n": 22,
+     "passed": 22,
+     "frac": 1.0
+    },
+    "R2": {
+     "n": 22,
+     "passed": 16,
+     "frac": 0.727
+    },
+    "R3": {
+     "n": 22,
+     "passed": 22,
+     "frac": 1.0
+    },
+    "R4": {
+     "n": 10,
+     "passed": 10,
+     "frac": 1.0
+    },
+    "R5": {
+     "n": 22,
+     "passed": 19,
+     "frac": 0.864
+    }
+   },
+   "sonnet": {
+    "R1": {
+     "n": 22,
+     "passed": 22,
+     "frac": 1.0
+    },
+    "R2": {
+     "n": 22,
+     "passed": 20,
+     "frac": 0.909
+    },
+    "R3": {
+     "n": 22,
+     "passed": 22,
+     "frac": 1.0
+    },
+    "R4": {
+     "n": 10,
+     "passed": 10,
+     "frac": 1.0
+    },
+    "R5": {
+     "n": 22,
+     "passed": 21,
+     "frac": 0.955
+    }
+   }
+  },
+  "mean_item_score_frac": {
+   "haiku": 0.902,
+   "sonnet": 0.966
+  },
+  "full_marks": {
+   "haiku": 15,
+   "sonnet": 19
+  },
+  "kappa": 0.476,
+  "agreement": 0.939,
+  "n_pairs": 98
+ },
+ "principal_strains": {
+  "H1_s1": [
+   -0.07552,
+   -0.00472,
+   0.06921
+  ],
+  "T2_s1": [
+   0.00039,
+   0.00976,
+   0.15093
+  ],
+  "H2_o1": [
+   -0.026,
+   0.01,
+   0.01
+  ]
+ },
+ "uniaxial_summary": {
+  "110_at_2.0": {
+   "h": 62.42,
+   "axial": 0.1715
+  },
+  "110_at_agent_scissor": {
+   "h": 57.41,
+   "axial": 0.1624
+  },
+  "111_stress_max": {
+   "axial": 0.1398,
+   "sigma_GPa": 82.7,
+   "eg": 2.232,
+   "h": 44.14
+  }
+ },
+ "learning_curves_splits": {
+  "Si_small|valley|50": {
+   "n_splits": 5,
+   "mae_mean": 10.6,
+   "mae_sd": 1.2,
+   "gapped_mean": 10.4,
+   "cbm_acc_mean": 99.3
+  },
+  "Si_small|direct|50": {
+   "n_splits": 5,
+   "mae_mean": 53.0,
+   "mae_sd": 7.7,
+   "gapped_mean": 51.3,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|50": {
+   "n_splits": 5,
+   "mae_mean": 43.3,
+   "mae_sd": 3.7,
+   "gapped_mean": 42.4,
+   "cbm_acc_mean": null
+  },
+  "Si_small|valley|100": {
+   "n_splits": 5,
+   "mae_mean": 9.3,
+   "mae_sd": 0.9,
+   "gapped_mean": 9.1,
+   "cbm_acc_mean": 99.3
+  },
+  "Si_small|direct|100": {
+   "n_splits": 5,
+   "mae_mean": 42.3,
+   "mae_sd": 3.2,
+   "gapped_mean": 41.3,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|100": {
+   "n_splits": 5,
+   "mae_mean": 39.8,
+   "mae_sd": 5.5,
+   "gapped_mean": 38.7,
+   "cbm_acc_mean": null
+  },
+  "Si_small|valley|200": {
+   "n_splits": 5,
+   "mae_mean": 9.2,
+   "mae_sd": 0.9,
+   "gapped_mean": 9.2,
+   "cbm_acc_mean": 99.3
+  },
+  "Si_small|direct|200": {
+   "n_splits": 5,
+   "mae_mean": 31.4,
+   "mae_sd": 1.4,
+   "gapped_mean": 30.5,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|200": {
+   "n_splits": 5,
+   "mae_mean": 35.8,
+   "mae_sd": 2.2,
+   "gapped_mean": 35.4,
+   "cbm_acc_mean": null
+  },
+  "Si_small|valley|full": {
+   "n_splits": 5,
+   "mae_mean": 9.2,
+   "mae_sd": 0.7,
+   "gapped_mean": 9.2,
+   "cbm_acc_mean": 99.0
+  },
+  "Si_small|direct|full": {
+   "n_splits": 5,
+   "mae_mean": 32.5,
+   "mae_sd": 1.5,
+   "gapped_mean": 31.3,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|full": {
+   "n_splits": 5,
+   "mae_mean": 34.4,
+   "mae_sd": 2.0,
+   "gapped_mean": 34.1,
+   "cbm_acc_mean": null
+  },
+  "Si|valley|50": {
+   "n_splits": 5,
+   "mae_mean": 54.5,
+   "mae_sd": 5.2,
+   "gapped_mean": 60.2,
+   "cbm_acc_mean": 97.3
+  },
+  "Si|direct|50": {
+   "n_splits": 5,
+   "mae_mean": 196.7,
+   "mae_sd": 14.6,
+   "gapped_mean": 208.7,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|50": {
+   "n_splits": 5,
+   "mae_mean": 189.2,
+   "mae_sd": 9.2,
+   "gapped_mean": 85.6,
+   "cbm_acc_mean": null
+  },
+  "Si|valley|100": {
+   "n_splits": 5,
+   "mae_mean": 40.9,
+   "mae_sd": 2.4,
+   "gapped_mean": 40.6,
+   "cbm_acc_mean": 98.0
+  },
+  "Si|direct|100": {
+   "n_splits": 5,
+   "mae_mean": 147.6,
+   "mae_sd": 9.8,
+   "gapped_mean": 122.9,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|100": {
+   "n_splits": 5,
+   "mae_mean": 136.5,
+   "mae_sd": 16.2,
+   "gapped_mean": 80.6,
+   "cbm_acc_mean": null
+  },
+  "Si|valley|200": {
+   "n_splits": 5,
+   "mae_mean": 39.0,
+   "mae_sd": 4.9,
+   "gapped_mean": 29.4,
+   "cbm_acc_mean": 99.3
+  },
+  "Si|direct|200": {
+   "n_splits": 5,
+   "mae_mean": 114.4,
+   "mae_sd": 13.8,
+   "gapped_mean": 109.6,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|200": {
+   "n_splits": 5,
+   "mae_mean": 111.5,
+   "mae_sd": 11.7,
+   "gapped_mean": 48.3,
+   "cbm_acc_mean": null
+  },
+  "Si|valley|full": {
+   "n_splits": 5,
+   "mae_mean": 38.5,
+   "mae_sd": 4.8,
+   "gapped_mean": 26.1,
+   "cbm_acc_mean": 99.0
+  },
+  "Si|direct|full": {
+   "n_splits": 5,
+   "mae_mean": 102.0,
+   "mae_sd": 7.9,
+   "gapped_mean": 107.9,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|full": {
+   "n_splits": 5,
+   "mae_mean": 111.1,
+   "mae_sd": 9.6,
+   "gapped_mean": 44.5,
+   "cbm_acc_mean": null
+  },
+  "C|valley|50": {
+   "n_splits": 5,
+   "mae_mean": 240.6,
+   "mae_sd": 72.8,
+   "gapped_mean": 238.4,
+   "cbm_acc_mean": 89.7
+  },
+  "C|direct|50": {
+   "n_splits": 5,
+   "mae_mean": 550.0,
+   "mae_sd": 101.5,
+   "gapped_mean": 534.8,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|50": {
+   "n_splits": 5,
+   "mae_mean": 481.0,
+   "mae_sd": 47.5,
+   "gapped_mean": 446.9,
+   "cbm_acc_mean": null
+  },
+  "C|valley|100": {
+   "n_splits": 5,
+   "mae_mean": 162.0,
+   "mae_sd": 28.2,
+   "gapped_mean": 152.0,
+   "cbm_acc_mean": 90.7
+  },
+  "C|direct|100": {
+   "n_splits": 5,
+   "mae_mean": 454.6,
+   "mae_sd": 58.2,
+   "gapped_mean": 434.8,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|100": {
+   "n_splits": 5,
+   "mae_mean": 336.7,
+   "mae_sd": 35.8,
+   "gapped_mean": 325.0,
+   "cbm_acc_mean": null
+  },
+  "C|valley|200": {
+   "n_splits": 5,
+   "mae_mean": 133.4,
+   "mae_sd": 25.1,
+   "gapped_mean": 122.0,
+   "cbm_acc_mean": 92.3
+  },
+  "C|direct|200": {
+   "n_splits": 5,
+   "mae_mean": 370.0,
+   "mae_sd": 29.0,
+   "gapped_mean": 351.9,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|200": {
+   "n_splits": 5,
+   "mae_mean": 285.7,
+   "mae_sd": 28.8,
+   "gapped_mean": 275.2,
+   "cbm_acc_mean": null
+  },
+  "C|valley|full": {
+   "n_splits": 5,
+   "mae_mean": 123.6,
+   "mae_sd": 24.3,
+   "gapped_mean": 105.6,
+   "cbm_acc_mean": 95.3
+  },
+  "C|direct|full": {
+   "n_splits": 5,
+   "mae_mean": 353.5,
+   "mae_sd": 42.9,
+   "gapped_mean": 334.4,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|full": {
+   "n_splits": 5,
+   "mae_mean": 283.2,
+   "mae_sd": 30.3,
+   "gapped_mean": 272.2,
+   "cbm_acc_mean": null
+  }
+ },
+ "scripted": {
+  "H1_s0": {
+   "task": "H1",
+   "seed": 0,
+   "verdict": "VERIFIED",
+   "h": 33.507,
+   "eg_hse": 2.004,
+   "eg_scissor": 2.112,
+   "born_min_eig_GPa": 339.3,
+   "spent": 86.0,
+   "n_dft": 32,
+   "retargeted": true,
+   "minutes": 47.1,
+   "regret": 4.404
+  },
+  "H1_s1": {
+   "task": "H1",
+   "seed": 1,
+   "verdict": "FAILED",
+   "h": 28.457,
+   "eg_hse": 2.038,
+   "eg_scissor": 2.19,
+   "born_min_eig_GPa": 402.5,
+   "spent": 86.0,
+   "n_dft": 32,
+   "retargeted": true,
+   "minutes": 44.8,
+   "regret": null
+  },
+  "H1_s2": {
+   "task": "H1",
+   "seed": 2,
+   "verdict": "VERIFIED",
+   "h": 29.103,
+   "eg_hse": 1.994,
+   "eg_scissor": 2.146,
+   "born_min_eig_GPa": 419.4,
+   "spent": 86.0,
+   "n_dft": 32,
+   "retargeted": true,
+   "minutes": 44.8,
+   "regret": 0.0
+  },
+  "H2_s0": {
+   "task": "H2",
+   "seed": 0,
+   "verdict": "VERIFIED",
+   "h": 0.313,
+   "eg_hse": 0.774,
+   "eg_scissor": 0.799,
+   "born_min_eig_GPa": 69.7,
+   "spent": 56.0,
+   "n_dft": 29,
+   "retargeted": false,
+   "minutes": 67.5,
+   "regret": 0.032
+  },
+  "H2_s1": {
+   "task": "H2",
+   "seed": 1,
+   "verdict": "VERIFIED",
+   "h": 0.293,
+   "eg_hse": 0.772,
+   "eg_scissor": 0.796,
+   "born_min_eig_GPa": 70.9,
+   "spent": 56.0,
+   "n_dft": 29,
+   "retargeted": false,
+   "minutes": 74.2,
+   "regret": 0.012
+  },
+  "H2_s2": {
+   "task": "H2",
+   "seed": 2,
+   "verdict": "VERIFIED",
+   "h": 0.372,
+   "eg_hse": 0.705,
+   "eg_scissor": 0.733,
+   "born_min_eig_GPa": 70.4,
+   "spent": 56.0,
+   "n_dft": 29,
+   "retargeted": false,
+   "minutes": 40.5,
+   "regret": 0.091
+  },
+  "H3_s0": {
+   "task": "H3",
+   "seed": 0,
+   "verdict": "VERIFIED",
+   "h": 2.331,
+   "eg_hse": -0.107,
+   "eg_scissor": -0.001,
+   "born_min_eig_GPa": 22.4,
+   "spent": 56.0,
+   "n_dft": 29,
+   "retargeted": false,
+   "minutes": 43.5,
+   "regret": 0.0
+  },
+  "H3_s1": {
+   "task": "H3",
+   "seed": 1,
+   "verdict": "VERIFIED",
+   "h": 2.672,
+   "eg_hse": -0.108,
+   "eg_scissor": -0.004,
+   "born_min_eig_GPa": 20.0,
+   "spent": 56.0,
+   "n_dft": 29,
+   "retargeted": false,
+   "minutes": 52.9,
+   "regret": 0.341
+  },
+  "H3_s2": {
+   "task": "H3",
+   "seed": 2,
+   "verdict": "VERIFIED",
+   "h": 2.894,
+   "eg_hse": -0.142,
+   "eg_scissor": -0.016,
+   "born_min_eig_GPa": 49.0,
+   "spent": 56.0,
+   "n_dft": 29,
+   "retargeted": false,
+   "minutes": 47.4,
+   "regret": 0.563
+  }
+ },
+ "scbo_h1_window": {
+  "H1_expert_s0": {
+   "n_feasible": 1,
+   "eg_hse_checked": [
+    1.9427
+   ],
+   "h_checked": [
+    143.645
+   ],
+   "passes": false
+  },
+  "H1_expert_s1": {
+   "n_feasible": 2,
+   "eg_hse_checked": [
+    1.9008,
+    1.9353
+   ],
+   "h_checked": [
+    43.538,
+    74.543
+   ],
+   "passes": false
+  },
+  "H1_expert_s2": {
+   "n_feasible": 2,
+   "eg_hse_checked": [
+    1.9481,
+    1.9558
+   ],
+   "h_checked": [
+    108.045,
+    133.969
+   ],
+   "passes": false
+  },
+  "H1_expert_s3": {
+   "n_feasible": 7,
+   "eg_hse_checked": [
+    1.8397,
+    1.8597,
+    1.8221,
+    1.8532,
+    1.8677
+   ],
+   "h_checked": [
+    35.293,
+    41.585,
+    42.147,
+    43.062,
+    52.559
+   ],
+   "passes": false
+  },
+  "H1_expert_s4": {
+   "n_feasible": 1,
+   "eg_hse_checked": [
+    1.8959
+   ],
+   "h_checked": [
+    42.06
+   ],
+   "passes": false
+  },
+  "H1_naive_s0": {
+   "n_feasible": 5,
+   "eg_hse_checked": [
+    2.9718,
+    3.0295,
+    2.969,
+    3.0078,
+    3.02
+   ],
+   "h_checked": [
+    22.913,
+    26.887,
+    29.718,
+    31.505,
+    44.174
+   ],
+   "passes": false
+  }
+ },
+ "surrogate_study": {
+  "Si_small|prod|50": {
+   "cfg": [
+    128,
+    3,
+    3000
+   ],
+   "n_splits": 5,
+   "mae_mean": 6.8,
+   "mae_sd": 1.9
+  },
+  "Si_small|cone|50": {
+   "cfg": [
+    128,
+    3,
+    1500
+   ],
+   "n_splits": 5,
+   "mae_mean": 9.7,
+   "mae_sd": 0.9
+  },
+  "Si_small|prod|full": {
+   "cfg": [
+    128,
+    3,
+    3000
+   ],
+   "n_splits": 5,
+   "mae_mean": 3.8,
+   "mae_sd": 0.6
+  },
+  "Si_small|cone|full": {
+   "cfg": [
+    128,
+    3,
+    1500
+   ],
+   "n_splits": 5,
+   "mae_mean": 7.3,
+   "mae_sd": 0.6
+  },
+  "Si|prod|50": {
+   "cfg": [
+    128,
+    3,
+    3000
+   ],
+   "n_splits": 5,
+   "mae_mean": 55.9,
+   "mae_sd": 11.8
+  },
+  "Si|cone|50": {
+   "cfg": [
+    64,
+    3,
+    1500
+   ],
+   "n_splits": 5,
+   "mae_mean": 53.0,
+   "mae_sd": 9.7
+  },
+  "Si|prod|full": {
+   "cfg": [
+    128,
+    3,
+    3000
+   ],
+   "n_splits": 5,
+   "mae_mean": 24.6,
+   "mae_sd": 4.5
+  },
+  "Si|cone|full": {
+   "cfg": [
+    64,
+    3,
+    1500
+   ],
+   "n_splits": 5,
+   "mae_mean": 27.8,
+   "mae_sd": 3.8
+  },
+  "C|prod|50": {
+   "cfg": [
+    128,
+    4,
+    1500
+   ],
+   "n_splits": 5,
+   "mae_mean": 193.8,
+   "mae_sd": 53.6
+  },
+  "C|cone|50": {
+   "cfg": [
+    128,
+    3,
+    1500
+   ],
+   "n_splits": 5,
+   "mae_mean": 214.2,
+   "mae_sd": 68.8
+  },
+  "C|prod|full": {
+   "cfg": [
+    128,
+    4,
+    1500
+   ],
+   "n_splits": 5,
+   "mae_mean": 77.6,
+   "mae_sd": 21.3
+  },
+  "C|cone|full": {
+   "cfg": [
+    128,
+    3,
+    1500
+   ],
+   "n_splits": 5,
+   "mae_mean": 99.0,
+   "mae_sd": 15.2
+  }
+ },
+ "scaling_alpha": {
+  "Si_small|valley": 0.08,
+  "Si_small|direct": 0.36,
+  "Si_small|bandgrid": 0.18,
+  "Si|valley": 0.04,
+  "Si|direct": 0.36,
+  "Si|bandgrid": 0.28,
+  "C|valley": 0.12,
+  "C|direct": 0.32,
+  "C|bandgrid": 0.31
+ },
+ "gp_study": {
+  "Si_small|50": {
+   "n_splits": 5,
+   "mae_mean": 11.8,
+   "mae_sd": 1.5
+  },
+  "Si_small|full": {
+   "n_splits": 5,
+   "mae_mean": 5.6,
+   "mae_sd": 0.6
+  },
+  "Si|50": {
+   "n_splits": 5,
+   "mae_mean": 58.4,
+   "mae_sd": 19.3
+  },
+  "Si|full": {
+   "n_splits": 5,
+   "mae_mean": 28.1,
+   "mae_sd": 3.2
+  },
+  "C|50": {
+   "n_splits": 5,
+   "mae_mean": 208.1,
+   "mae_sd": 71.9
+  },
+  "C|full": {
+   "n_splits": 5,
+   "mae_mean": 150.8,
+   "mae_sd": 33.1
+  }
+ },
+ "al_diamond": {
+  "n_added": 300,
+  "n_train": 556,
+  "mae_mean": 78.5,
+  "mae_sd": 18.1,
+  "per_split": {
+   "7": 79.7,
+   "11": 105.8,
+   "13": 89.5,
+   "17": 57.8,
+   "19": 59.9
+  }
+ },
+ "surrogate_step3_val": {
+  "Si_small|128x3x3000": 4.37,
+  "Si_small|256x3x3000": 3.97,
+  "Si_small|128x3x6000": 4.61,
+  "Si_small|256x4x3000": 3.89,
+  "Si_small|128x3x3000x10": 4.22,
+  "Si|128x3x3000": 31.58,
+  "Si|256x3x3000": 30.56,
+  "Si|128x3x6000": 29.28,
+  "Si|256x4x3000": 28.31,
+  "Si|128x3x3000x10": 32.43,
+  "C|128x3x3000": 127.82,
+  "C|256x3x3000": 119.81,
+  "C|128x3x6000": 122.16,
+  "C|256x4x3000": 104.23,
+  "C|128x3x3000x10": 117.81
+ },
+ "diamond_A_test": {
+  "cfg": [
+   256,
+   4,
+   3000
+  ],
+  "n_splits": 5,
+  "mae_mean": 77.7,
+  "mae_sd": 19.8
+ },
+ "rand_diamond": {
+  "n_added": 300,
+  "n_train": 556,
+  "mae_mean": 72.9,
+  "mae_sd": 25.5,
+  "per_split": {
+   "7": 100.6,
+   "11": 66.8,
+   "13": 104.7,
+   "17": 46.3,
+   "19": 46.0
+  }
+ },
+ "uniaxial_110_hse": {
+  "points": [
+   {
+    "axial": 0.14,
+    "h": 45.313,
+    "eg_scissor": 2.423,
+    "eg_hse": 2.31,
+    "cbm_hse": "Dz"
+   },
+   {
+    "axial": 0.16,
+    "h": 55.921,
+    "eg_scissor": 2.143,
+    "eg_hse": 2.019,
+    "cbm_hse": "Dz"
+   },
+   {
+    "axial": 0.18,
+    "h": 66.929,
+    "eg_scissor": 1.901,
+    "eg_hse": 1.767,
+    "cbm_hse": "Dz"
+   }
+  ],
+  "at_2p0": {
+   "h": 56.8,
+   "axial": 0.161
+  },
+  "at_agent": {
+   "h": 57.4,
+   "axial": 0.162
+  }
+ },
+ "rand800_diamond": {
+  "n_added": 800,
+  "n_train": 1056,
+  "mae_mean": 71.3,
+  "mae_sd": 20.4,
+  "per_split": {
+   "7": 81.9,
+   "11": 76.1,
+   "13": 100.7,
+   "17": 42.8,
+   "19": 54.9
+  }
+ },
+ "learning_curves": [
+  {
+   "set": "Si_small",
+   "model": "valley",
+   "n_train": 50,
+   "mae_meV": 10.01036916008311,
+   "p90_meV": 23.717919614269167,
+   "fit_s": 9,
+   "cbm_acc": 0.9833333333333333
+  },
+  {
+   "set": "Si_small",
+   "model": "direct",
+   "n_train": 50,
+   "mae_meV": 59.346968472043976,
+   "p90_meV": 109.89167480369552,
+   "fit_s": 1
+  },
+  {
+   "set": "Si_small",
+   "model": "bandgrid",
+   "n_train": 50,
+   "mae_meV": 47.65724860457751,
+   "p90_meV": 88.0206144512731,
+   "fit_s": 1
+  },
+  {
+   "set": "Si_small",
+   "model": "valley",
+   "n_train": 100,
+   "mae_meV": 8.135748461951234,
+   "p90_meV": 15.193829207240219,
+   "fit_s": 16,
+   "cbm_acc": 0.9833333333333333
+  },
+  {
+   "set": "Si_small",
+   "model": "direct",
+   "n_train": 100,
+   "mae_meV": 47.11065981903215,
+   "p90_meV": 89.06935166865644,
+   "fit_s": 1
+  },
+  {
+   "set": "Si_small",
+   "model": "bandgrid",
+   "n_train": 100,
+   "mae_meV": 50.064828853401984,
+   "p90_meV": 111.9881182611069,
+   "fit_s": 1
+  },
+  {
+   "set": "Si_small",
+   "model": "valley",
+   "n_train": 200,
+   "mae_meV": 8.812144861323185,
+   "p90_meV": 16.975149475536266,
+   "fit_s": 34,
+   "cbm_acc": 0.9833333333333333
+  },
+  {
+   "set": "Si_small",
+   "model": "direct",
+   "n_train": 200,
+   "mae_meV": 33.994540320064885,
+   "p90_meV": 66.06790057066264,
+   "fit_s": 1
+  },
+  {
+   "set": "Si_small",
+   "model": "bandgrid",
+   "n_train": 200,
+   "mae_meV": 38.88301176794168,
+   "p90_meV": 79.8540737784457,
+   "fit_s": 2
+  },
+  {
+   "set": "Si_small",
+   "model": "valley",
+   "n_train": 247,
+   "mae_meV": 8.565697135603267,
+   "p90_meV": 18.09062338579217,
+   "fit_s": 43,
+   "cbm_acc": 0.9833333333333333
+  },
+  {
+   "set": "Si_small",
+   "model": "direct",
+   "n_train": 247,
+   "mae_meV": 34.75920700405945,
+   "p90_meV": 65.86378774557221,
+   "fit_s": 2
+  },
+  {
+   "set": "Si_small",
+   "model": "bandgrid",
+   "n_train": 247,
+   "mae_meV": 36.29409304656294,
+   "p90_meV": 74.40725404437413,
+   "fit_s": 3
+  },
+  {
+   "set": "Si",
+   "model": "valley",
+   "n_train": 50,
+   "mae_meV": 49.085839650156544,
+   "p90_meV": 98.9557412479946,
+   "fit_s": 9,
+   "cbm_acc": 0.9666666666666667
+  },
+  {
+   "set": "Si",
+   "model": "direct",
+   "n_train": 50,
+   "mae_meV": 174.825094427888,
+   "p90_meV": 349.32669484948906,
+   "fit_s": 1
+  },
+  {
+   "set": "Si",
+   "model": "bandgrid",
+   "n_train": 50,
+   "mae_meV": 187.24483450133093,
+   "p90_meV": 395.94341554647707,
+   "fit_s": 1
+  },
+  {
+   "set": "Si",
+   "model": "valley",
+   "n_train": 100,
+   "mae_meV": 43.9492765231751,
+   "p90_meV": 93.7226608929189,
+   "fit_s": 17,
+   "cbm_acc": 1.0
+  },
+  {
+   "set": "Si",
+   "model": "direct",
+   "n_train": 100,
+   "mae_meV": 140.91327412088376,
+   "p90_meV": 289.80309093555167,
+   "fit_s": 1
+  },
+  {
+   "set": "Si",
+   "model": "bandgrid",
+   "n_train": 100,
+   "mae_meV": 138.1119680628982,
+   "p90_meV": 311.8981681637793,
+   "fit_s": 2
+  },
+  {
+   "set": "Si",
+   "model": "valley",
+   "n_train": 200,
+   "mae_meV": 45.62871033811821,
+   "p90_meV": 93.81516446001854,
+   "fit_s": 35,
+   "cbm_acc": 1.0
+  },
+  {
+   "set": "Si",
+   "model": "direct",
+   "n_train": 200,
+   "mae_meV": 110.82906569319135,
+   "p90_meV": 212.4925656468766,
+   "fit_s": 2
+  },
+  {
+   "set": "Si",
+   "model": "bandgrid",
+   "n_train": 200,
+   "mae_meV": 117.00474417803048,
+   "p90_meV": 229.9789213830988,
+   "fit_s": 2
+  },
+  {
+   "set": "Si",
+   "model": "valley",
+   "n_train": 259,
+   "mae_meV": 45.541186301283524,
+   "p90_meV": 99.99524120050056,
+   "fit_s": 45,
+   "cbm_acc": 1.0
+  },
+  {
+   "set": "Si",
+   "model": "direct",
+   "n_train": 259,
+   "mae_meV": 95.75623019714862,
+   "p90_meV": 190.30398958955158,
+   "fit_s": 1
+  },
+  {
+   "set": "Si",
+   "model": "bandgrid",
+   "n_train": 259,
+   "mae_meV": 119.05010527039421,
+   "p90_meV": 234.8820203181538,
+   "fit_s": 3
+  },
+  {
+   "set": "C",
+   "model": "valley",
+   "n_train": 50,
+   "mae_meV": 174.81598374932702,
+   "p90_meV": 318.7024789278562,
+   "fit_s": 9,
+   "cbm_acc": 0.9666666666666667
+  },
+  {
+   "set": "C",
+   "model": "direct",
+   "n_train": 50,
+   "mae_meV": 551.6730219020211,
+   "p90_meV": 1078.4709068038069,
+   "fit_s": 1
+  },
+  {
+   "set": "C",
+   "model": "bandgrid",
+   "n_train": 50,
+   "mae_meV": 450.5120157216424,
+   "p90_meV": 871.671388245301,
+   "fit_s": 1
+  },
+  {
+   "set": "C",
+   "model": "valley",
+   "n_train": 100,
+   "mae_meV": 143.34383088296917,
+   "p90_meV": 182.67749695523747,
+   "fit_s": 18,
+   "cbm_acc": 0.9666666666666667
+  },
+  {
+   "set": "C",
+   "model": "direct",
+   "n_train": 100,
+   "mae_meV": 368.9621041823159,
+   "p90_meV": 600.730510397438,
+   "fit_s": 1
+  },
+  {
+   "set": "C",
+   "model": "bandgrid",
+   "n_train": 100,
+   "mae_meV": 310.17459429767064,
+   "p90_meV": 690.4921983984789,
+   "fit_s": 2
+  },
+  {
+   "set": "C",
+   "model": "valley",
+   "n_train": 200,
+   "mae_meV": 156.72288977269397,
+   "p90_meV": 224.50965545894024,
+   "fit_s": 37,
+   "cbm_acc": 0.95
+  },
+  {
+   "set": "C",
+   "model": "direct",
+   "n_train": 200,
+   "mae_meV": 331.45939126360264,
+   "p90_meV": 770.3034200840069,
+   "fit_s": 2
+  },
+  {
+   "set": "C",
+   "model": "bandgrid",
+   "n_train": 200,
+   "mae_meV": 264.63799945289776,
+   "p90_meV": 477.03593585225565,
+   "fit_s": 3
+  },
+  {
+   "set": "C",
+   "model": "valley",
+   "n_train": 256,
+   "mae_meV": 134.51115491678888,
+   "p90_meV": 199.15929754117238,
+   "fit_s": 46,
+   "cbm_acc": 0.9833333333333333
+  },
+  {
+   "set": "C",
+   "model": "direct",
+   "n_train": 256,
+   "mae_meV": 322.1620656103018,
+   "p90_meV": 630.5815155753281,
+   "fit_s": 2
+  },
+  {
+   "set": "C",
+   "model": "bandgrid",
+   "n_train": 256,
+   "mae_meV": 275.2510226506994,
+   "p90_meV": 523.3611202481991,
+   "fit_s": 3
+  }
+ ],
+ "learning_curves_ext": {
+  "C|bandgrid|50": {
+   "n_splits": 5,
+   "mae_mean": 481.0,
+   "mae_sd": 47.5,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|100": {
+   "n_splits": 5,
+   "mae_mean": 336.7,
+   "mae_sd": 35.8,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|200": {
+   "n_splits": 5,
+   "mae_mean": 285.7,
+   "mae_sd": 28.8,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|256": {
+   "n_splits": 5,
+   "mae_mean": 283.2,
+   "mae_sd": 30.3,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|500": {
+   "n_splits": 5,
+   "mae_mean": 243.6,
+   "mae_sd": 34.6,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|1000": {
+   "n_splits": 5,
+   "mae_mean": 245.3,
+   "mae_sd": 27.9,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|2000": {
+   "n_splits": 5,
+   "mae_mean": 245.1,
+   "mae_sd": 24.6,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|4000": {
+   "n_splits": 5,
+   "mae_mean": 250.8,
+   "mae_sd": 24.1,
+   "cbm_acc_mean": null
+  },
+  "C|bandgrid|6456": {
+   "n_splits": 5,
+   "mae_mean": 247.8,
+   "mae_sd": 21.4,
+   "cbm_acc_mean": null
+  },
+  "C|direct|50": {
+   "n_splits": 5,
+   "mae_mean": 550.0,
+   "mae_sd": 101.5,
+   "cbm_acc_mean": null
+  },
+  "C|direct|100": {
+   "n_splits": 5,
+   "mae_mean": 454.6,
+   "mae_sd": 58.2,
+   "cbm_acc_mean": null
+  },
+  "C|direct|200": {
+   "n_splits": 5,
+   "mae_mean": 370.0,
+   "mae_sd": 29.0,
+   "cbm_acc_mean": null
+  },
+  "C|direct|256": {
+   "n_splits": 5,
+   "mae_mean": 353.5,
+   "mae_sd": 42.9,
+   "cbm_acc_mean": null
+  },
+  "C|direct|500": {
+   "n_splits": 5,
+   "mae_mean": 279.5,
+   "mae_sd": 56.1,
+   "cbm_acc_mean": null
+  },
+  "C|direct|1000": {
+   "n_splits": 5,
+   "mae_mean": 210.3,
+   "mae_sd": 25.2,
+   "cbm_acc_mean": null
+  },
+  "C|direct|2000": {
+   "n_splits": 5,
+   "mae_mean": 180.4,
+   "mae_sd": 28.9,
+   "cbm_acc_mean": null
+  },
+  "C|direct|4000": {
+   "n_splits": 5,
+   "mae_mean": 171.7,
+   "mae_sd": 30.5,
+   "cbm_acc_mean": null
+  },
+  "C|direct|6456": {
+   "n_splits": 5,
+   "mae_mean": 170.7,
+   "mae_sd": 30.4,
+   "cbm_acc_mean": null
+  },
+  "C|valley|50": {
+   "n_splits": 5,
+   "mae_mean": 240.6,
+   "mae_sd": 72.8,
+   "cbm_acc_mean": 89.7
+  },
+  "C|valley|100": {
+   "n_splits": 5,
+   "mae_mean": 162.0,
+   "mae_sd": 28.2,
+   "cbm_acc_mean": 90.7
+  },
+  "C|valley|200": {
+   "n_splits": 5,
+   "mae_mean": 133.4,
+   "mae_sd": 25.1,
+   "cbm_acc_mean": 92.3
+  },
+  "C|valley|256": {
+   "n_splits": 5,
+   "mae_mean": 123.6,
+   "mae_sd": 24.3,
+   "cbm_acc_mean": 95.3
+  },
+  "C|valley|500": {
+   "n_splits": 5,
+   "mae_mean": 112.5,
+   "mae_sd": 18.6,
+   "cbm_acc_mean": 95.0
+  },
+  "C|valley|1000": {
+   "n_splits": 5,
+   "mae_mean": 102.2,
+   "mae_sd": 18.1,
+   "cbm_acc_mean": 95.7
+  },
+  "C|valley|2000": {
+   "n_splits": 5,
+   "mae_mean": 107.2,
+   "mae_sd": 12.7,
+   "cbm_acc_mean": 94.3
+  },
+  "C|valley|4000": {
+   "n_splits": 5,
+   "mae_mean": 104.1,
+   "mae_sd": 14.6,
+   "cbm_acc_mean": 94.3
+  },
+  "C|valley|6456": {
+   "n_splits": 5,
+   "mae_mean": 103.7,
+   "mae_sd": 14.4,
+   "cbm_acc_mean": 94.0
+  },
+  "n_added_states": 6200,
+  "Si_small|bandgrid|50": {
+   "n_splits": 5,
+   "mae_mean": 43.3,
+   "mae_sd": 3.7,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|100": {
+   "n_splits": 5,
+   "mae_mean": 39.8,
+   "mae_sd": 5.5,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|200": {
+   "n_splits": 5,
+   "mae_mean": 35.8,
+   "mae_sd": 2.2,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|247": {
+   "n_splits": 5,
+   "mae_mean": 34.4,
+   "mae_sd": 2.0,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|500": {
+   "n_splits": 5,
+   "mae_mean": 34.4,
+   "mae_sd": 2.7,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|1000": {
+   "n_splits": 5,
+   "mae_mean": 34.0,
+   "mae_sd": 2.3,
+   "cbm_acc_mean": null
+  },
+  "Si_small|bandgrid|1016": {
+   "n_splits": 5,
+   "mae_mean": 34.0,
+   "mae_sd": 2.2,
+   "cbm_acc_mean": null
+  },
+  "Si_small|direct|50": {
+   "n_splits": 5,
+   "mae_mean": 53.0,
+   "mae_sd": 7.7,
+   "cbm_acc_mean": null
+  },
+  "Si_small|direct|100": {
+   "n_splits": 5,
+   "mae_mean": 42.3,
+   "mae_sd": 3.2,
+   "cbm_acc_mean": null
+  },
+  "Si_small|direct|200": {
+   "n_splits": 5,
+   "mae_mean": 31.4,
+   "mae_sd": 1.4,
+   "cbm_acc_mean": null
+  },
+  "Si_small|direct|247": {
+   "n_splits": 5,
+   "mae_mean": 32.5,
+   "mae_sd": 1.5,
+   "cbm_acc_mean": null
+  },
+  "Si_small|direct|500": {
+   "n_splits": 5,
+   "mae_mean": 30.1,
+   "mae_sd": 2.9,
+   "cbm_acc_mean": null
+  },
+  "Si_small|direct|1000": {
+   "n_splits": 5,
+   "mae_mean": 29.6,
+   "mae_sd": 2.6,
+   "cbm_acc_mean": null
+  },
+  "Si_small|direct|1016": {
+   "n_splits": 5,
+   "mae_mean": 29.5,
+   "mae_sd": 2.5,
+   "cbm_acc_mean": null
+  },
+  "Si_small|valley|50": {
+   "n_splits": 5,
+   "mae_mean": 10.6,
+   "mae_sd": 1.2,
+   "cbm_acc_mean": 99.3
+  },
+  "Si_small|valley|100": {
+   "n_splits": 5,
+   "mae_mean": 9.3,
+   "mae_sd": 0.9,
+   "cbm_acc_mean": 99.3
+  },
+  "Si_small|valley|200": {
+   "n_splits": 5,
+   "mae_mean": 9.2,
+   "mae_sd": 0.9,
+   "cbm_acc_mean": 99.3
+  },
+  "Si_small|valley|247": {
+   "n_splits": 5,
+   "mae_mean": 9.2,
+   "mae_sd": 0.7,
+   "cbm_acc_mean": 99.0
+  },
+  "Si_small|valley|500": {
+   "n_splits": 5,
+   "mae_mean": 9.0,
+   "mae_sd": 0.9,
+   "cbm_acc_mean": 99.3
+  },
+  "Si_small|valley|1000": {
+   "n_splits": 5,
+   "mae_mean": 8.8,
+   "mae_sd": 1.0,
+   "cbm_acc_mean": 99.7
+  },
+  "Si_small|valley|1016": {
+   "n_splits": 5,
+   "mae_mean": 8.6,
+   "mae_sd": 1.1,
+   "cbm_acc_mean": 99.3
+  },
+  "Si|bandgrid|50": {
+   "n_splits": 5,
+   "mae_mean": 189.2,
+   "mae_sd": 9.2,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|100": {
+   "n_splits": 5,
+   "mae_mean": 136.5,
+   "mae_sd": 16.2,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|200": {
+   "n_splits": 5,
+   "mae_mean": 111.5,
+   "mae_sd": 11.7,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|259": {
+   "n_splits": 5,
+   "mae_mean": 111.1,
+   "mae_sd": 9.6,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|500": {
+   "n_splits": 5,
+   "mae_mean": 97.1,
+   "mae_sd": 9.6,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|1000": {
+   "n_splits": 5,
+   "mae_mean": 94.1,
+   "mae_sd": 8.0,
+   "cbm_acc_mean": null
+  },
+  "Si|bandgrid|1018": {
+   "n_splits": 5,
+   "mae_mean": 94.0,
+   "mae_sd": 8.4,
+   "cbm_acc_mean": null
+  },
+  "Si|direct|50": {
+   "n_splits": 5,
+   "mae_mean": 196.7,
+   "mae_sd": 14.6,
+   "cbm_acc_mean": null
+  },
+  "Si|direct|100": {
+   "n_splits": 5,
+   "mae_mean": 147.6,
+   "mae_sd": 9.8,
+   "cbm_acc_mean": null
+  },
+  "Si|direct|200": {
+   "n_splits": 5,
+   "mae_mean": 114.4,
+   "mae_sd": 13.8,
+   "cbm_acc_mean": null
+  },
+  "Si|direct|259": {
+   "n_splits": 5,
+   "mae_mean": 102.0,
+   "mae_sd": 7.9,
+   "cbm_acc_mean": null
+  },
+  "Si|direct|500": {
+   "n_splits": 5,
+   "mae_mean": 92.9,
+   "mae_sd": 7.9,
+   "cbm_acc_mean": null
+  },
+  "Si|direct|1000": {
+   "n_splits": 5,
+   "mae_mean": 81.0,
+   "mae_sd": 4.2,
+   "cbm_acc_mean": null
+  },
+  "Si|direct|1018": {
+   "n_splits": 5,
+   "mae_mean": 81.1,
+   "mae_sd": 5.3,
+   "cbm_acc_mean": null
+  },
+  "Si|valley|50": {
+   "n_splits": 5,
+   "mae_mean": 54.5,
+   "mae_sd": 5.2,
+   "cbm_acc_mean": 97.3
+  },
+  "Si|valley|100": {
+   "n_splits": 5,
+   "mae_mean": 40.9,
+   "mae_sd": 2.4,
+   "cbm_acc_mean": 98.0
+  },
+  "Si|valley|200": {
+   "n_splits": 5,
+   "mae_mean": 39.0,
+   "mae_sd": 4.9,
+   "cbm_acc_mean": 99.3
+  },
+  "Si|valley|259": {
+   "n_splits": 5,
+   "mae_mean": 38.5,
+   "mae_sd": 4.8,
+   "cbm_acc_mean": 99.0
+  },
+  "Si|valley|500": {
+   "n_splits": 5,
+   "mae_mean": 34.6,
+   "mae_sd": 5.1,
+   "cbm_acc_mean": 99.0
+  },
+  "Si|valley|1000": {
+   "n_splits": 5,
+   "mae_mean": 34.9,
+   "mae_sd": 2.6,
+   "cbm_acc_mean": 98.7
+  },
+  "Si|valley|1018": {
+   "n_splits": 5,
+   "mae_mean": 34.8,
+   "mae_sd": 3.1,
+   "cbm_acc_mean": 99.0
+  }
+ },
+ "kmesh_check_c": {
+  "points": [
+   {
+    "strain": [
+     -0.08914444515157191,
+     0.002518225754395975,
+     0.004881447144066506,
+     0.05700566039252265,
+     -0.03939490004779554,
+     -0.005011868826560115
+    ],
+    "eg_k8": 0.43110622456904935,
+    "eg_k10": 0.4306020476423935,
+    "d_meV": -0.5
+   },
+   {
+    "strain": [
+     0.06048022089277297,
+     -0.04440940294562476,
+     0.0001550446577470721,
+     -0.04114113122210846,
+     -0.048483180278320985,
+     -0.037285942836172384
+    ],
+    "eg_k8": 1.2467245574094257,
+    "eg_k10": 1.24726598123463,
+    "d_meV": 0.54
+   },
+   {
+    "strain": [
+     -0.06025225289571193,
+     0.08170618102631963,
+     -0.0502245185111701,
+     0.021518959457106565,
+     -0.03364735611478817,
+     0.0027922935416760386
+    ],
+    "eg_k8": 1.7466600450178102,
+    "eg_k10": 1.7459383032188889,
+    "d_meV": -0.72
+   },
+   {
+    "strain": [
+     -0.07383304291578333,
+     -0.08231989720189523,
+     -0.01997793973673359,
+     0.07900276853962283,
+     0.0659297190683323,
+     -0.014164368186568008
+    ],
+    "eg_k8": 0.0038592538184012426,
+    "eg_k10": 0.010413289612969834,
+    "d_meV": 6.55
+   },
+   {
+    "strain": [
+     0.012329783823961035,
+     0.062163299472118516,
+     0.0029535101332668345,
+     -0.07517357028900443,
+     0.02740378878504174,
+     -0.016140641758167137
+    ],
+    "eg_k8": 1.7486584915061556,
+    "eg_k10": 1.7491105129843323,
+    "d_meV": 0.45
+   },
+   {
+    "strain": [
+     -0.09042360375718048,
+     -0.06279494666997829,
+     0.04998379222555016,
+     -0.05060728065049927,
+     -0.020799884002174966,
+     -0.03411554927132206
+    ],
+    "eg_k8": 0.23299210407760995,
+    "eg_k10": 0.2374212639907114,
+    "d_meV": 4.43
+   },
+   {
+    "strain": [
+     -0.09391499732363665,
+     0.06517840362939159,
+     -0.07254487913044284,
+     -0.04921803745675174,
+     0.050170886750639646,
+     0.06278822558468801
+    ],
+    "eg_k8": -0.4805728388814572,
+    "eg_k10": -0.4749228962609955,
+    "d_meV": 5.65
+   },
+   {
+    "strain": [
+     -0.013587434678437343,
+     0.014840719251276058,
+     -0.09104208346125003,
+     -0.025175192496253225,
+     -0.027612606034885696,
+     -0.022747231390342897
+    ],
+    "eg_k8": 1.352106770469149,
+    "eg_k10": 1.3520996248515615,
+    "d_meV": -0.01
+   },
+   {
+    "strain": [
+     0.008238470158635186,
+     0.028545150160269206,
+     -0.07411729000053244,
+     0.07468385801419429,
+     -0.02824616521090939,
+     -0.061766496798294324
+    ],
+    "eg_k8": 0.5117092112172958,
+    "eg_k10": 0.5124345185087869,
+    "d_meV": 0.73
+   },
+   {
+    "strain": [
+     0.004106656501514094,
+     0.051158324099732255,
+     -0.008535857511532075,
+     0.03187830472345288,
+     -0.06759598738006813,
+     0.045793658581667465
+    ],
+    "eg_k8": 2.0071708954090948,
+    "eg_k10": 2.0064641057415837,
+    "d_meV": -0.71
+   },
+   {
+    "strain": [
+     -0.08099558988636986,
+     0.07042647810465338,
+     0.006891413540217578,
+     -0.006325750648435657,
+     -0.010311147225714634,
+     0.00887408886009465
+    ],
+    "eg_k8": 1.1185092510158494,
+    "eg_k10": 1.1185649014458203,
+    "d_meV": 0.06
+   },
+   {
+    "strain": [
+     -0.06323333493744504,
+     0.056587070095229536,
+     -0.008523887361426216,
+     -0.05168092808219087,
+     -0.05573106070977618,
+     0.02855596587384447
+    ],
+    "eg_k8": 0.9474205673247855,
+    "eg_k10": 0.9459926166737915,
+    "d_meV": -1.43
+   }
+  ],
+  "max_abs_meV": 6.55,
+  "mean_abs_meV": 1.8149999999999997
+ },
+ "stability_cbo": {
+  "H2_agentform_s0": {
+   "task": "H2",
+   "strain_gl": [
+    0.009463,
+    0.000945,
+    -0.023715,
+    -0.002555,
+    -0.018655,
+    -0.004866
+   ],
+   "min_eig_pk2_GPa": 70.9,
+   "stable": true
+  },
+  "H2_expert_s0": {
+   "task": "H2",
+   "strain_gl": [
+    0.009463,
+    0.000945,
+    -0.023715,
+    -0.002555,
+    -0.018655,
+    -0.004866
+   ],
+   "min_eig_pk2_GPa": 70.9,
+   "stable": true,
+   "same_as": "H2_agentform_s0"
+  },
+  "H2_expert_s1": {
+   "task": "H2",
+   "strain_gl": [
+    0.025167,
+    0.007782,
+    -0.023166,
+    -0.001352,
+    0.012199,
+    0.007528
+   ],
+   "min_eig_pk2_GPa": 64.7,
+   "stable": true
+  },
+  "H2_expert_s2": {
+   "task": "H2",
+   "strain_gl": [
+    0.015429,
+    -0.018261,
+    0.016773,
+    0.007357,
+    0.014584,
+    0.000392
+   ],
+   "min_eig_pk2_GPa": 63.6,
+   "stable": true
+  },
+  "H2_expert_s3": {
+   "task": "H2",
+   "strain_gl": [
+    0.024668,
+    0.007483,
+    -0.02142,
+    0.008219,
+    -0.004445,
+    0.005885
+   ],
+   "min_eig_pk2_GPa": 64.6,
+   "stable": true
+  },
+  "H2_expert_s4": {
+   "task": "H2",
+   "strain_gl": [
+    -0.018959,
+    0.014024,
+    0.021955,
+    -0.015313,
+    -0.005646,
+    -0.002737
+   ],
+   "min_eig_pk2_GPa": 62.3,
+   "stable": true
+  },
+  "H3_agentform_s0": {
+   "task": "H3",
+   "strain_gl": [
+    -0.003106,
+    -0.031859,
+    0.0,
+    -0.010156,
+    -0.047391,
+    0.002735
+   ],
+   "min_eig_pk2_GPa": 25.8,
+   "stable": true
+  },
+  "H3_expert_s0": {
+   "task": "H3",
+   "strain_gl": [
+    -0.003106,
+    -0.031859,
+    0.0,
+    -0.010156,
+    -0.047391,
+    0.002735
+   ],
+   "min_eig_pk2_GPa": 25.8,
+   "stable": true,
+   "same_as": "H3_agentform_s0"
+  },
+  "H3_expert_s1": {
+   "task": "H3",
+   "strain_gl": [
+    -0.05213,
+    0.026463,
+    0.0,
+    -0.03156,
+    0.023892,
+    -0.006264
+   ],
+   "min_eig_pk2_GPa": 25.4,
+   "stable": true
+  }
+ },
+ "scripted_naive": {
+  "H1_s0_naive": {
+   "task": "H1",
+   "seed": 0,
+   "formalization": "naive",
+   "level": "pbe",
+   "verdict": "FAILED",
+   "final": {
+    "strain": [
+     0.05266,
+     -0.0766,
+     0.0474,
+     6e-05,
+     6e-05,
+     0.00011
+    ],
+    "h": 30.212,
+    "eg_scissor": 0.992,
+    "eg_hse": 1.933,
+    "cbm_hse": "Dy",
+    "born_min_eig_GPa": 399.2,
+    "stable": true,
+    "subspace_ok": true,
+    "passed": false
+   },
+   "rounds": [
+    {
+     "stage": "first",
+     "constraints": [
+      {
+       "kind": "gap_min",
+       "value": 1.97
+      },
+      {
+       "kind": "gap_max",
+       "value": 2.03
+      }
+     ],
+     "result": {
+      "strain": [
+       0.03154,
+       -0.05417,
+       0.02979,
+       -0.00143,
+       -0.00034,
+       -0.00067
+      ],
+      "h": 13.776,
+      "eg_scissor": 2.011,
+      "eg_hse": 3.007,
+      "cbm_hse": "Dy",
+      "born_min_eig_GPa": 462.9,
+      "stable": true,
+      "subspace_ok": true,
+      "passed": false
+     }
+    },
+    {
+     "stage": "retarget",
+     "constraints": [
+      {
+       "kind": "gap_min",
+       "value": 0.974
+      },
+      {
+       "kind": "gap_max",
+       "value": 1.034
+      }
+     ],
+     "result": {
+      "strain": [
+       0.05266,
+       -0.0766,
+       0.0474,
+       6e-05,
+       6e-05,
+       0.00011
+      ],
+      "h": 30.212,
+      "eg_scissor": 0.992,
+      "eg_hse": 1.933,
+      "cbm_hse": "Dy",
+      "born_min_eig_GPa": 399.2,
+      "stable": true,
+      "subspace_ok": true,
+      "passed": false
+     }
+    }
+   ],
+   "spent": 86.0,
+   "n_dft": 32,
+   "minutes": 41.7
+  },
+  "H2_s0_naive": {
+   "task": "H2",
+   "seed": 0,
+   "formalization": "naive",
+   "level": "pbe",
+   "verdict": "VERIFIED",
+   "final": {
+    "strain": [
+     -0.02847,
+     0.00837,
+     0.01169,
+     -0.00012,
+     -2e-05,
+     -0.00011
+    ],
+    "h": 0.36,
+    "eg_scissor": 0.183,
+    "eg_hse": 0.74,
+    "cbm_hse": "Dx",
+    "born_min_eig_GPa": 71.0,
+    "stable": true,
+    "subspace_ok": true,
+    "passed": true
+   },
+   "rounds": [
+    {
+     "stage": "first",
+     "constraints": [
+      {
+       "kind": "gap_max",
+       "value": 0.8
+      }
+     ],
+     "result": {
+      "strain": [
+       -0.00156,
+       -0.00157,
+       -0.00157,
+       -0.0002,
+       6e-05,
+       -0.00095
+      ],
+      "h": 0.007,
+      "eg_scissor": 0.59,
+      "eg_hse": 1.171,
+      "cbm_hse": "Dz",
+      "born_min_eig_GPa": 75.4,
+      "stable": true,
+      "subspace_ok": true,
+      "passed": false
+     }
+    },
+    {
+     "stage": "retarget",
+     "constraints": [
+      {
+       "kind": "gap_max",
+       "value": 0.219
+      }
+     ],
+     "result": {
+      "strain": [
+       -0.02847,
+       0.00837,
+       0.01169,
+       -0.00012,
+       -2e-05,
+       -0.00011
+      ],
+      "h": 0.36,
+      "eg_scissor": 0.183,
+      "eg_hse": 0.74,
+      "cbm_hse": "Dx",
+      "born_min_eig_GPa": 71.0,
+      "stable": true,
+      "subspace_ok": true,
+      "passed": true
+     }
+    }
+   ],
+   "spent": 86.0,
+   "n_dft": 32,
+   "minutes": 50.6
+  },
+  "H3_s0_naive": {
+   "task": "H3",
+   "seed": 0,
+   "formalization": "naive",
+   "level": "pbe",
+   "verdict": "FAILED",
+   "final": null,
+   "rounds": [
+    {
+     "stage": "first",
+     "constraints": [
+      {
+       "kind": "gap_max",
+       "value": 0.0
+      }
+     ],
+     "result": {
+      "strain": [
+       0.02134,
+       0.01627,
+       -0.04154,
+       -3e-05,
+       -0.00076,
+       0.00294
+      ],
+      "h": 0.731,
+      "eg_scissor": -0.039,
+      "eg_hse": 0.501,
+      "cbm_hse": "Dz",
+      "born_min_eig_GPa": 66.3,
+      "stable": true,
+      "subspace_ok": false,
+      "passed": false
+     }
+    },
+    {
+     "stage": "retarget",
+     "constraints": [
+      {
+       "kind": "gap_max",
+       "value": -0.54
+      }
+     ],
+     "result": null
+    }
+   ],
+   "spent": 59.0,
+   "n_dft": 32,
+   "minutes": 32.8
+  }
+ },
+ "hse_delta_check": [
+  {
+   "state": "H1_agent",
+   "strain_gl": [
+    0.03483,
+    -0.07545,
+    0.0296,
+    0.0005,
+    0.03687,
+    0.00265
+   ],
+   "eg_hse_paper": 1.9842907879023404,
+   "cbm_paper": "Dy",
+   "corr_paper": {
+    "G": 1.3094410380758639,
+    "L1": 1.327637155247107,
+    "L2": 1.465776863431003,
+    "L3": 1.3346610429636385,
+    "L4": 1.4722148380217384,
+    "Dx": 1.1070020952460098,
+    "Dy": 0.9734311852668611,
+    "Dz": 1.1024284897035166
+   },
+   "by_s": {
+    "2/3": {
+     "corr_delta": {
+      "Dx": 1.125110624089693,
+      "Dy": 0.9927711644858874,
+      "Dz": 1.1204851304725487
+     },
+     "eg_hse": 2.0036307671213667,
+     "cbm": "Dy"
+    },
+    "5/6": {
+     "corr_delta": {
+      "Dx": 1.0945001109278714,
+      "Dy": 0.9608778727629677,
+      "Dz": 1.0900161204434902
+     },
+     "eg_hse": 1.971737475398447,
+     "cbm": "Dy"
+    }
+   },
+   "wall_min": 46.6
+  },
+  {
+   "state": "110_16pct",
+   "strain_gl": [
+    0.07855023355258954,
+    0.07855023355258955,
+    -0.015774395673457488,
+    -1.295228404389494e-17,
+    -1.295228404389494e-17,
+    0.08117558274107459
+   ],
+   "eg_hse_paper": 2.0189904581698848,
+   "cbm_paper": "Dz",
+   "corr_paper": {
+    "G": 1.2212109902889328,
+    "L1": 1.2272466615689197,
+    "L2": 1.2272466806755542,
+    "L3": 1.5405166201971774,
+    "L4": 1.5405166061889801,
+    "Dx": 1.098207873047997,
+    "Dy": 1.0982078599615352,
+    "Dz": 0.9753760741548199
+   },
+   "by_s": {
+    "2/3": {
+     "corr_delta": {
+      "Dx": 1.113677056484013,
+      "Dy": 1.1136770591446403,
+      "Dz": 1.0016430903562075
+     },
+     "eg_hse": 2.0452574743712724,
+     "cbm": "Dz"
+    },
+    "5/6": {
+     "corr_delta": {
+      "Dx": 1.0896254125699283,
+      "Dy": 1.089625416259926,
+      "Dz": 0.9528556854803458
+     },
+     "eg_hse": 1.9964700694954107,
+     "cbm": "Dz"
+    }
+   },
+   "wall_min": 46.4
+  },
+  {
+   "state": "110_18pct",
+   "strain_gl": [
+    0.08836268121353498,
+    0.088362681213535,
+    -0.017623425051248053,
+    -7.514147366679729e-18,
+    -7.514147366679729e-18,
+    0.09131568460146014
+   ],
+   "eg_hse_paper": 1.7668882756466147,
+   "cbm_paper": "Dz",
+   "corr_paper": {
+    "G": 1.1924623002331103,
+    "L1": 1.1986580511055642,
+    "L2": 1.1986580758977095,
+    "L3": 1.5271362288206696,
+    "L4": 1.5271361242503154,
+    "Dx": 1.1030394795775607,
+    "Dy": 1.1030394783490163,
+    "Dz": 0.9649434606923926
+   },
+   "by_s": {
+    "2/3": {
+     "corr_delta": {
+      "Dx": 1.11868026710634,
+      "Dy": 1.1186802649360832,
+      "Dz": 0.9926394812408521
+     },
+     "eg_hse": 1.7945842961950742,
+     "cbm": "Dz"
+    },
+    "5/6": {
+     "corr_delta": {
+      "Dx": 1.0943698378929803,
+      "Dy": 1.0943698362511114,
+      "Dz": 0.940478362487136
+     },
+     "eg_hse": 1.742423177441358,
+     "cbm": "Dz"
+    }
+   },
+   "wall_min": 47.4
+  }
+ ],
+ "formalization_rule_check": {
+  "pass_counts": {
+   "R1": "21/22",
+   "R2": "18/22",
+   "R3": "22/22",
+   "R4": "10/10",
+   "R5": "22/22"
+  },
+  "agreement_with_judge": {
+   "sonnet": 0.939,
+   "haiku": 0.898
+  },
+  "mean_score": 0.945
+ },
+ "hse_delta_min": {
+  "states": {
+   "agent_H1_s1": {
+    "h": 30.334,
+    "eg_s075": 1.984,
+    "eg_min": 1.962
+   },
+   "agent_H1_s2": {
+    "h": 31.442,
+    "eg_s075": 1.938,
+    "eg_min": 1.909
+   },
+   "scripted_H1_s0": {
+    "h": 33.507,
+    "eg_s075": 2.004,
+    "eg_min": 1.964
+   },
+   "scripted_H1_s1": {
+    "h": 28.457,
+    "eg_s075": 2.038,
+    "eg_min": 2.038
+   },
+   "scripted_H1_s2": {
+    "h": 29.103,
+    "eg_s075": 1.994,
+    "eg_min": 1.994
+   },
+   "cbo_agentform_H1": {
+    "h": 32.665,
+    "eg_s075": 1.938,
+    "eg_min": 1.907
+   },
+   "110_16pct": {
+    "h": 55.921,
+    "eg_s075": 2.019,
+    "eg_min": 1.975
+   },
+   "110_18pct": {
+    "h": 66.929,
+    "eg_s075": 1.767,
+    "eg_min": 1.719
+   },
+   "agent_T1_s1": {
+    "h": 2.558,
+    "eg_s075": -0.208,
+    "eg_min": -0.248
+   },
+   "agent_T1_s2": {
+    "h": 2.53,
+    "eg_s075": -0.188,
+    "eg_min": -0.227
+   },
+   "agent_H3_s1": {
+    "h": 2.451,
+    "eg_s075": -0.166,
+    "eg_min": -0.205
+   },
+   "agent_H3_s3": {
+    "h": 2.557,
+    "eg_s075": -0.212,
+    "eg_min": -0.252
+   },
+   "scripted_H3_s0": {
+    "h": 2.331,
+    "eg_s075": -0.107,
+    "eg_min": -0.146
+   },
+   "scripted_H3_s1": {
+    "h": 2.672,
+    "eg_s075": -0.108,
+    "eg_min": -0.148
+   },
+   "scripted_H3_s2": {
+    "h": 2.894,
+    "eg_s075": -0.142,
+    "eg_min": -0.142
+   },
+   "cbo_H3_expert_s0": {
+    "h": 2.698,
+    "eg_s075": -0.204,
+    "eg_min": -0.244
+   },
+   "cbo_H3_expert_s1": {
+    "h": 2.618,
+    "eg_s075": -0.118,
+    "eg_min": -0.148
+   }
+  },
+  "si_eg_min_range": [
+   -0.252,
+   -0.142
+  ],
+  "u110_at_agent_h": 56.5
+ },
+ "T2_principal": {
+  "gl": [
+   0.0004,
+   0.0098,
+   0.1509
+  ],
+  "engineering": [
+   0.0004,
+   0.0097,
+   0.141
+  ]
+ },
+ "H1_s1_dfpt_relaxed": {
+  "material": "C",
+  "strain_gl": [
+   0.03483,
+   -0.07545,
+   0.0296,
+   0.0005,
+   0.03687,
+   0.00265
+  ],
+  "nq": 4,
+  "dense": 16,
+  "omega_min_cm1": 96.8895,
+  "omega_min_thz": 2.904674094124638,
+  "stable": true,
+  "wall_s": 2447.4443159103394,
+  "positions_frac": [
+   [
+    0.0013938415644653443,
+    -0.0013496451674720655,
+    0.0011579910260157108
+   ],
+   [
+    0.24860615843553469,
+    0.25134964516747194,
+    0.24884200897398423
+   ]
+  ],
+  "n_negative": 0,
+  "omega_min_nonGamma_cm1": 96.8895
+ }
+}

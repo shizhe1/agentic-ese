@@ -1,0 +1,9 @@
+# Tested with Python 3.12. Quantum ESPRESSO 7.x (pw.x, ph.x) is needed only for new DFT points.
+numpy>=1.26
+scipy>=1.11
+torch>=2.2
+# Only for the Bayesian-optimization baseline (eseagent/scbo.py):
+botorch>=0.11
+gpytorch>=1.11
+# Only for the agent tool server (eseagent/server.py):
+mcp>=2.0

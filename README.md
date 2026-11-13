@@ -12,6 +12,13 @@ surrogate. An independent "verifier" agent re-checks each candidate with DFT, HS
 elastic stability. This repository holds the toolkit, the tool server the agents call, the agent
 harness, and a small demo that runs in about a minute without any DFT code.
 
+![Designer and verifier agents working through the MCP tool layer](docs/overview.png)
+
+*Workflow overview (Fig. 1 of the paper). The designer agent formalizes the goal and runs the
+active-learning campaign. The verifier agent, which did not design the candidate, re-checks it at
+full HSE06 and for elastic stability. Both agents act only through the tools of the MCP server in
+`eseagent/server.py`.*
+
 It is a lightweight companion, not a full reproduction package: the raw Quantum ESPRESSO outputs
 and the DFT cache (about 31 GB) are not included.
 

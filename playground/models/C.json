@@ -1,0 +1,11 @@
+{
+ "material": "C",
+ "n_train": 7048,
+ "n_test": 370,
+ "fit_minutes": 12.5,
+ "test_gap_mae_mev": 119.4,
+ "test_h_mae_mev_a3": 1.482,
+ "test_h_mean_mev_a3": 81.18,
+ "unstrained_gap_pred_ev": 3.985,
+ "unstrained_gap_dft_ev": 4.173
+}

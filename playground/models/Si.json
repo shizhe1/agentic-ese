@@ -1,0 +1,11 @@
+{
+ "material": "Si",
+ "n_train": 2049,
+ "n_test": 107,
+ "fit_minutes": 3.5,
+ "test_gap_mae_mev": 30.7,
+ "test_h_mae_mev_a3": 0.048,
+ "test_h_mean_mev_a3": 4.19,
+ "unstrained_gap_pred_ev": 0.603,
+ "unstrained_gap_dft_ev": 0.607
+}

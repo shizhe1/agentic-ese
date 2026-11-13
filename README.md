@@ -31,6 +31,7 @@ and the DFT cache (about 31 GB) are not included.
 | `scripts/scripted_arm.py` | The scripted, LLM-free arm: the same tools, budget and verification on a fixed schedule. |
 | `scripts/figures/` | Scripts that redraw Figs. 1–6 of the paper from the data in this repository (see its README). |
 | `demo/` | `run_demo.py` and an example of its output. |
+| `playground/` | A local web app for trying the surrogate (see "Playground" below), with its pre-trained models and training data. |
 | `docs/overview.png` | The workflow overview shown above (Fig. 1 of the paper). |
 | `data/refsets/` | PBE reference sets: Si (319 points), Si small-strain (307) and diamond (316), with valley-resolved band edges and `h`. |
 | `data/agent_runs/`, `data/scripted/` | Final answers of the 15 agent runs and 12 scripted runs, plus the full transcripts of the run shown in Fig. 3 (`H2_s3`). |
@@ -67,6 +68,19 @@ The ensemble members are trained in parallel threads, so numbers change a little
 expect a gap error of 41–43 meV and a predicted optimum `h` of roughly 8.7–9.4 meV/Å³ (the
 DFT-verified agent states in the paper are at 9.5). The optimum is a surrogate prediction only. In
 the paper each candidate is recomputed with DFT and checked by the verifier before it is reported.
+
+## Playground (local web app)
+
+```bash
+pip install -r playground/requirements.txt
+python playground/app.py        # then open http://127.0.0.1:7860
+```
+
+A small point-and-click interface on top of the pre-trained surrogate. **Predict:** set the six
+strain components with sliders and see the predicted valley energies, band gap and `h` for Si or
+diamond. **Inverse design:** choose a target (close the gap, a gap value, a direct gap) and a strain
+subspace, and get the lowest-energy strains. It starts in a few seconds and runs no DFT and no
+language model. Its results are surrogate predictions, so check them with DFT before relying on them.
 
 Conventions used everywhere: Green-Lagrange strain in Voigt order (e11, e22, e33, e23, e13, e12),
 tensor shear, as fractions (0.01 = 1%); `h` is the elastic strain energy density in meV/Å³.

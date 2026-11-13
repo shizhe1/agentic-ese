@@ -3,7 +3,7 @@
 Companion code for the paper
 
 > Zhe Shi, **Agentic Deep Elastic Strain Engineering of Semiconductor Electronic Properties**
-> (submitted to *Computational Materials Science*, 2026).
+> (submitted, 2026).
 
 A language-model "designer" agent turns a one-sentence goal (for example *"make silicon a
 direct-gap semiconductor at the lowest elastic strain energy"*) into a constrained inverse problem

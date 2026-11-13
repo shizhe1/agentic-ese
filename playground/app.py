@@ -161,6 +161,7 @@ def build() -> gr.Blocks:
             out_md = gr.Markdown()
             out_plot = gr.Plot()
             btn.click(predict, [mat, level, *sl], [out_md, out_plot])
+            demo.load(predict, [mat, level, *sl], [out_md, out_plot])       # show the unstrained crystal on open
             gr.Examples([["Si", "HSE06 (scissor)", 0, 0, 0, 0, 0, 0],
                          ["Si", "HSE06 (scissor)", -8.5, 2.65, 2.65, 0, 0, 0],
                          ["C", "HSE06 (scissor)", 6, 6, 6, 3, 3, 3]],

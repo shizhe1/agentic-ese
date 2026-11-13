@@ -10,7 +10,8 @@ direct-gap semiconductor at the lowest elastic strain energy"*) into a constrain
 and solves it with first-principles active learning on a valley-resolved, symmetry-equivariant
 surrogate. An independent "verifier" agent re-checks each candidate with DFT, HSE06 band edges and
 elastic stability. This repository holds the toolkit, the tool server the agents call, the agent
-harness, and a small demo that runs in about a minute without any DFT code.
+harness, a small demo that runs in about a minute without any DFT code, and a point-and-click
+[playground](#playground-local-web-app) for trying the surrogate in a browser.
 
 ![Designer and verifier agents working through the MCP tool layer](docs/overview.png)
 
@@ -32,7 +33,7 @@ and the DFT cache (about 31 GB) are not included.
 | `scripts/figures/` | Scripts that redraw Figs. 1–6 of the paper from the data in this repository (see its README). |
 | `demo/` | `run_demo.py` and an example of its output. |
 | `playground/` | A local web app for trying the surrogate (see "Playground" below), with its pre-trained models and training data. |
-| `docs/overview.png` | The workflow overview shown above (Fig. 1 of the paper). |
+| `docs/` | The workflow overview (Fig. 1 of the paper) and a screenshot of the playground, both shown in this README. |
 | `data/refsets/` | PBE reference sets: Si (319 points), Si small-strain (307) and diamond (316), with valley-resolved band edges and `h`. |
 | `data/agent_runs/`, `data/scripted/` | Final answers of the 15 agent runs and 12 scripted runs, plus the full transcripts of the run shown in Fig. 3 (`H2_s3`). |
 | `data/learning_curves/`, `data/uniaxial_C.json`, `data/fig5_reference_states.json` | Remaining source data for the figures. |
@@ -75,6 +76,8 @@ the paper each candidate is recomputed with DFT and checked by the verifier befo
 pip install -r playground/requirements.txt
 python playground/app.py        # then open http://127.0.0.1:7860
 ```
+
+![The playground's Predict tab: strain sliders, the predicted gap and h, and the eight valley energies](docs/playground.png)
 
 A small point-and-click interface on top of the pre-trained surrogate. **Predict:** set the six
 strain components with sliders and see the predicted valley energies, band gap and `h` for Si or

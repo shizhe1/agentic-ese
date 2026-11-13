@@ -1,0 +1,53 @@
+{
+ "task": "H3",
+ "seed": 1,
+ "verdict": "VERIFIED",
+ "final": {
+  "strain": [
+   -0.02726,
+   -0.00079,
+   0.0,
+   0.0032,
+   0.00301,
+   -0.04712
+  ],
+  "h": 2.672,
+  "eg_scissor": -0.004,
+  "eg_hse": -0.108,
+  "cbm_hse": "Dz",
+  "born_min_eig_GPa": 20.0,
+  "stable": true,
+  "passed": true
+ },
+ "rounds": [
+  {
+   "stage": "first",
+   "constraints": [
+    {
+     "kind": "gap_max",
+     "value": 0.0
+    }
+   ],
+   "result": {
+    "strain": [
+     -0.02726,
+     -0.00079,
+     0.0,
+     0.0032,
+     0.00301,
+     -0.04712
+    ],
+    "h": 2.672,
+    "eg_scissor": -0.004,
+    "eg_hse": -0.108,
+    "cbm_hse": "Dz",
+    "born_min_eig_GPa": 20.0,
+    "stable": true,
+    "passed": true
+   }
+  }
+ ],
+ "spent": 56.0,
+ "n_dft": 29,
+ "minutes": 52.9
+}

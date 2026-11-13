@@ -124,7 +124,7 @@ def main():
     ap.add_argument("--budget", type=float, default=150)
     ap.add_argument("--architecture", default="pipeline", choices=["pipeline", "multi", "single"])
     a = ap.parse_args()
-    run_dir = ROOT / "runs" / "agent" / f"{a.task}_{a.run_id}"
+    run_dir = Path(os.environ.get("ESE_RUNS_DIR") or ROOT / "runs") / "agent" / f"{a.task}_{a.run_id}"
     run_dir.mkdir(parents=True, exist_ok=False)
     cwd = Path(tempfile.mkdtemp(prefix="ese_agent_"))          # empty, outside the project
     env = dict(os.environ, ESE_RUN_DIR=str(run_dir), ESE_BUDGET=str(a.budget),
@@ -132,7 +132,9 @@ def main():
                PYTHONPATH=str(ROOT))
     mcp = {"mcpServers": {"ese": {"command": str(PY), "args": ["-m", "eseagent.server"],
                                   "env": {"ESE_RUN_DIR": str(run_dir), "ESE_BUDGET": str(a.budget),
-                                          "PYTHONPATH": str(ROOT)}}}}
+                                          "PYTHONPATH": str(ROOT),
+                                          **{k: os.environ[k] for k in ("ESE_RUNS_DIR", "ESE_QE_BIN", "ESE_WORKERS")
+                                             if k in os.environ}}}}}
     (run_dir / "mcp.json").write_text(json.dumps(mcp))
     allowed = [f"mcp__ese__{t}" for t in sorted(set(DESIGN_TOOLS) | set(VERIFY_TOOLS))]
     cmd = [str(CLAUDE), "-p", TASKS[a.task], "--model", a.model, "--output-format", "stream-json",

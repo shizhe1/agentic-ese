@@ -1,0 +1,51 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h (meV/A^3)",
+   "constraints": [
+    "Eg <= 0.80 eV (1550 nm photon) at HSE06 level (hse_scissor during search, searched with 0.78 margin; indirect gap permitted)",
+    "Born stability: all stiffness eigenvalues > 0 at the strained state (elastic_stability, 12 units)"
+   ],
+   "level_of_theory": "PBE DFT for sampling, with per-valley HSE06 scissor (Dx/Dy/Dz 0.582 eV, L 0.763 eV, G 0.764 eV); full HSE06 verification not run",
+   "subspace": "all 6 Green-Lagrange Voigt components, normal |e|<=0.04, shear |e|<=0.03 (search bound 0.04)",
+   "stability": "Born elastic stability required; check was denied (tool permission) so it is NOT verified"
+  },
+  "strain_gl": [
+   -0.02635,
+   0.00946,
+   0.01266,
+   0,
+   0,
+   0
+  ],
+  "h_mev_a3": 0.311,
+  "eg_ev": 0.786,
+  "constraints_satisfied": false,
+  "cbm_valley": "Dx",
+  "explanation": "Mostly uniaxial compression along x lowers the Dx valley. In PBE, Dx is at 0.204 eV, Dy at 0.528 eV, Dz at 0.556 eV, L at 1.253 eV and Gamma at 2.29 eV. Dx stays the CBM, so the gap is indirect. HSE-scissor gap is 0.786 eV, under the 0.80 eV threshold but above the 0.78 eV search margin. The candidate was DFT-checked at PBE (h = 0.311), but the Born stability check was denied by tool permission and full HSE06 was not run. constraints_satisfied is false because stability is unverified."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "h_mev_a3": 0.311,
+  "eg_ev": 0.761,
+  "eg_level": "Full HSE06 (verify_hse). The scissor estimate is 0.786 eV and PBE is 0.204 eV.",
+  "stable": "Yes. Born stability check: minimum stiffness eigenvalue is 70.7 GPa, so all eigenvalues are positive.",
+  "strain_gl": [
+   -0.02635,
+   0.00946,
+   0.01266,
+   0,
+   0,
+   0
+  ],
+  "issues": [
+   "I re-ran PBE DFT at the stated strain. h = 0.311 meV/A^3, matching the claim. The PBE gap is 0.204 eV and the CBM is the Dx valley. The scissor-corrected gap is 0.786 eV, matching the claim.",
+   "Full HSE06 gives Eg = 0.761 eV with the CBM in Dx. This is below the 0.80 eV limit. The scissor estimate (0.786 eV) was about 25 meV too high, so it was conservative here. The design team had not run this check.",
+   "The design team's stability check was denied and never run. I ran it, and the strained state is Born-stable (minimum eigenvalue 70.7 GPa).",
+   "The strain is Green-Lagrange in Voigt order with fractions, and the shear components are zero, so the tensor-versus-engineering shear convention does not matter. The bounds hold: |e1| = 0.026 is under 0.04 for normal strains.",
+   "I did not test whether h = 0.311 is the true minimum. Only feasibility and the reported numbers are verified. I did not search other strains. I did not check the symmetry-equivalent permutations of the normal strains, because those would give the same h and gap by cubic symmetry.",
+   "The 1550 nm threshold (0.80 eV) is satisfied by an indirect gap, which the task permits."
+  ]
+ }
+}

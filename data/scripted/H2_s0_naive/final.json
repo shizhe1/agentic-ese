@@ -1,0 +1,84 @@
+{
+ "task": "H2",
+ "seed": 0,
+ "formalization": "naive",
+ "level": "pbe",
+ "verdict": "VERIFIED",
+ "final": {
+  "strain": [
+   -0.02847,
+   0.00837,
+   0.01169,
+   -0.00012,
+   -2e-05,
+   -0.00011
+  ],
+  "h": 0.36,
+  "eg_scissor": 0.183,
+  "eg_hse": 0.74,
+  "cbm_hse": "Dx",
+  "born_min_eig_GPa": 71.0,
+  "stable": true,
+  "subspace_ok": true,
+  "passed": true
+ },
+ "rounds": [
+  {
+   "stage": "first",
+   "constraints": [
+    {
+     "kind": "gap_max",
+     "value": 0.8
+    }
+   ],
+   "result": {
+    "strain": [
+     -0.00156,
+     -0.00157,
+     -0.00157,
+     -0.0002,
+     6e-05,
+     -0.00095
+    ],
+    "h": 0.007,
+    "eg_scissor": 0.59,
+    "eg_hse": 1.171,
+    "cbm_hse": "Dz",
+    "born_min_eig_GPa": 75.4,
+    "stable": true,
+    "subspace_ok": true,
+    "passed": false
+   }
+  },
+  {
+   "stage": "retarget",
+   "constraints": [
+    {
+     "kind": "gap_max",
+     "value": 0.219
+    }
+   ],
+   "result": {
+    "strain": [
+     -0.02847,
+     0.00837,
+     0.01169,
+     -0.00012,
+     -2e-05,
+     -0.00011
+    ],
+    "h": 0.36,
+    "eg_scissor": 0.183,
+    "eg_hse": 0.74,
+    "cbm_hse": "Dx",
+    "born_min_eig_GPa": 71.0,
+    "stable": true,
+    "subspace_ok": true,
+    "passed": true
+   }
+  }
+ ],
+ "spent": 86.0,
+ "n_dft": 32,
+ "minutes": 50.6
+}

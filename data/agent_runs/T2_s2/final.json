@@ -1,0 +1,50 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h(\u03b5) in meV/\u00c5^3",
+   "constraints": [
+    "Gamma is the CBM by >= 0.05 eV over every other valley (L, Delta), evaluated with HSE06-scissor-corrected valley energies",
+    "HSE-scissor gap >= 0.1 eV so the material stays a semiconductor",
+    "strain components within the optimiser bound of 0.08"
+   ],
+   " level_of_theory": "PBE DFT for sampling. HSE06 scissor (per-valley shifts fitted at zero strain) for constraints. Full HSE06 verification was requested but not run.",
+   "subspace": "all six Green-Lagrange Voigt components (e11,e22,e33,e23,e13,e12) free, |\u03b5| <= 0.08; sampled normal 0.05, shear 0.03",
+   "stability": "Born elastic stability (all stiffness eigenvalues > 0) at the chosen strain. NOT assessed: the tool call was denied."
+  },
+  "strain_gl": [
+   0.05409,
+   0.05466,
+   0.06018,
+   0.04538,
+   -0.04548,
+   -0.04833
+  ],
+  "h_mev_a3": 9.551,
+  "eg_ev": 0.914,
+  "constraints_satisfied": true,
+  "cbm_valley": "G",
+  "explanation": "Unstrained Si has its PBE CBM in the Delta valleys at 0.607 eV. Gamma sits at 2.55 eV and L at 1.45 eV, so Gamma is far above the CBM. Across 42 PBE points, small and moderate strains (h < 6) never brought Gamma near the CBM. Gamma only dropped to the CBM with large, nearly equal tensile normal strains (about +0.05 to +0.06 on all three axes, roughly hydrostatic) combined with large shears (about 0.05). Delta and L1 stay low under pure shear, so mixed hydrostatic plus shear strain is needed. The first optimiser candidates were extrapolations: at h of 7.1 to 7.5, PBE had Gamma only 0.05 to 0.22 eV above the Delta minimum, and the HSE-scissor correction (Gamma +0.764 eV, Delta +0.582 eV) did not make it direct. After refitting, the optimiser (HSE-scissor level, kappa = 1) gave a candidate that DFT confirmed. At [0.0541, 0.0547, 0.0602, 0.0454, -0.0455, -0.0483], h = 9.55 meV/\u00c5^3 (the surrogate predicted 9.89). PBE valleys relative to the VBM were G 0.150, L2/L3/L4 about 0.32 to 0.34, Dx/Dy/Dz about 0.40, and L1 1.78 eV. Gamma is the CBM in PBE and with the HSE scissor (gap 0.914 eV). With the scissor, the next-lowest valley is Delta at about 0.98 eV, so the direct margin is about 0.07 eV. The gap is 0.914 eV HSE-scissor and 0.150 eV PBE. Relaxing the direct margin from 0.05 to 0.02 eV only predicted about 9.87 to 9.9 meV/\u00c5^3, so there is no gain below roughly 9.5 to 10. This is the best DFT-checked point, not a proven global minimum. Stability is unassessed. My calls to elastic_stability (12 units) and verify_hse (15 units) were both denied by the environment's permission settings. I did not work around that. The state is also very large strain (about 5 to 6% normal and about 5% shear), so it is likely near or beyond the elastic-stability and fracture limits of real silicon. Treat it as unverified. If you allow those two calls, about 107 budget units remain and they would settle stability and the true HSE gap. The scissor-based gap and direct margin are approximations until the full HSE06 check is run."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "issues": [
+   "Optimality is not verified: this check confirms the candidate is feasible, not that it is the minimum-h state. I did not search for a lower-h state or check symmetry-equivalent strains.",
+   "The scissor model differs from full HSE06. Scissor gives Eg 0.914 eV and a Gamma margin of 0.067 eV. Full HSE06 gives Eg 0.812 eV and a margin of 0.156 eV (Gamma 0.812 vs Dx 0.968). The scissor margin is conservative, but the claimed 0.914 eV gap is not the true HSE06 gap.",
+   "The strain is large: all components are about 5-6%, within the 0.08 bound. The Born stability margin is moderate (min eigenvalue 26.4 GPa). Stability here is elastic only. I did not check phonon stability, dynamic stability or fracture.",
+   "The shear values were taken as tensor shear in Green-Lagrange Voigt form, and the tool's h of 9.551 matches the claim. I did not independently confirm the unit convention beyond that match."
+  ],
+  "stable": "true",
+  "eg_ev": 0.812,
+  "eg_level": "HSE06 (full)",
+  "h_mev_a3": 9.551,
+  "strain_gl": [
+   0.05409,
+   0.05466,
+   0.06018,
+   0.04538,
+   -0.04548,
+   -0.04833
+  ]
+ }
+}

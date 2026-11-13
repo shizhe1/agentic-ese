@@ -1,0 +1,51 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h (meV/A^3) over strain",
+   "constraints": [
+    "e33 = 0 exactly (normal strain perpendicular to (001) film)",
+    "Eg <= 0 eV (gap closed) evaluated at HSE06-corrected level (PBE valley energies + per-valley HSE scissor), not bare PBE",
+    "|strain components| <= 0.08"
+   ],
+   "subspace": "free Voigt indices 0,1,3,4,5 (e11,e22,e23,e13,e12); e33 fixed at 0",
+   "level_of_theory": "PBE DFT for sampling, with HSE06 scissor corrections for the gap constraint. Full HSE06 verification was not run (permission denied).",
+   "stability": "Born elastic stability not checked (12 units, not run). Si is stable at zero strain, but stability at about 5% shear is unverified."
+  },
+  "strain_gl": [
+   -0.01899,
+   -0.00571,
+   0,
+   0.04887,
+   0.00051,
+   -0.00151
+  ],
+  "h_mev_a3": 2.451,
+  "eg_ev": -0.051,
+  "constraints_satisfied": true,
+  "cbm_valley": "Dx",
+  "explanation": "Method: I ran 20 Latin-hypercube PBE points with e33 = 0 and fitted the surrogate (held-out gap MAE 0.048 eV). I then minimised h with the constraint Eg <= 0 at the hse_scissor level. The first optimize_strain call, which passed e33 = 0 through `fixed`, returned e33 != 0, so I re-ran it with free = [0,1,3,4,5]. I then checked 3 optimizer candidates with PBE DFT. All three have h of about 2.45-2.47 meV/A^3 and close the gap at the scissor level. The best is the one reported, with h = 2.451 and scissor gap -0.051 eV. Its PBE gap is -0.633 eV. Valleys: the CBM is Dx at -0.633 eV (PBE, relative to the VBM). The next lowest conduction valleys are Dz at 0.101 eV and Dy at 0.050 eV. Shear e23 = 0.049 splits the six Delta valleys. It pulls Dx down, so the CBM crosses the VBM. Gamma (1.38 eV) and the L valleys (above 0.4 eV) are not involved. The HSE scissor for the Delta valleys is 0.582 eV, so the true HSE gap is expected to close only marginally. The margin is -0.051 eV, close to the surrogate's gap error, so closure at full HSE is not confirmed. Caveats: verify_hse was denied in this session, so there is no full HSE06 check. I also did not run the Born stability check, and the shear is near the 0.05 sampling limit. Equivalent solutions exist by symmetry (e23 = -0.0495, or e13 = 0.0497 with Dy as the CBM). The optimiser pushes the shear to its edge of about 0.05 (the sampled range), so the true minimum could lie at larger shear."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "eg_ev": -0.166,
+  "eg_level": "Full HSE06 (verify_hse); the scissor-corrected PBE gap is -0.051 eV and the bare PBE gap is -0.633 eV",
+  "h_mev_a3": 2.451,
+  "stable": "Yes. Born stability check passed, with a minimum stiffness eigenvalue of 25.2 GPa.",
+  "strain_gl": [
+   -0.01899,
+   -0.00571,
+   0,
+   0.04887,
+   0.00051,
+   -0.00151
+  ],
+  "issues": [
+   "Re-ran PBE DFT at the candidate. h = 2.451 meV/A^3 and the scissor-corrected gap = -0.051 eV, both matching the claim. The CBM is Dx (PBE -0.633 eV, plus the 0.582 eV scissor).",
+   "Ran full HSE06, which the team skipped. The gap is -0.166 eV with the CBM at Dx, so the gap is closed. The scissor estimate (-0.051 eV) was less negative than the HSE06 result, which is the conservative direction.",
+   "Ran the Born stability check, which the team skipped. The strained state is stable, with a minimum eigenvalue of 25.2 GPa.",
+   "Constraints hold: e33 = 0 exactly, and the largest component is 0.0489, below the 0.08 bound. The strain is in the stated Green-Lagrange, Voigt, tensor-shear, fraction convention.",
+   "Caveats: I did not search for a lower-energy strain, so global minimality of h is not verified. I did not check symmetry-equivalent strains, such as the e13 or e12 variants. The Dy and Dz valleys are well above Dx in HSE06 (0.549 and 0.603 eV), so the gap closure comes from the Dx valley alone."
+  ]
+ }
+}

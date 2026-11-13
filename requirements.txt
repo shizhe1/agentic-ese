@@ -7,3 +7,4 @@ botorch>=0.11
 gpytorch>=1.11
 # Only for the agent tool server (eseagent/server.py):
 mcp>=2.0
+matplotlib>=3.8   # only for scripts/figures

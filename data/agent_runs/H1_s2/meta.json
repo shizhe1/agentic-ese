@@ -1,0 +1,10 @@
+{
+ "task": "H1",
+ "prompt": "Find the strain state that lowers the band gap of diamond to 2.0 eV at the lowest possible elastic strain energy, and compare it with simple uniaxial loading along <100>, <110> and <111>.",
+ "model": "sonnet",
+ "budget": 150.0,
+ "architecture": "pipeline",
+ "start": 1792809390.230166,
+ "end": 1792812553.974253,
+ "verdict": "REJECTED"
+}

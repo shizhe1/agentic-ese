@@ -23,7 +23,7 @@ from eseagent.surrogate import ValleySurrogate  # noqa: E402
 
 torch.set_num_threads(2)
 quick = "--quick" in sys.argv
-recs = json.load(open(ROOT / "demo" / "data" / "Si_refset.json"))
+recs = json.load(open(ROOT / "data" / "refsets" / "Si.json"))
 idx = np.random.default_rng(0).permutation(len(recs))
 ntr = int(0.8 * len(recs))
 train, test = [recs[i] for i in idx[:ntr]], [recs[i] for i in idx[ntr:]]

@@ -1,0 +1,77 @@
+[
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "direct",
+  "n_train": 500,
+  "mae_meV": 34.56153109385022,
+  "fit_s": 4
+ },
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "bandgrid",
+  "n_train": 500,
+  "mae_meV": 38.25061823291802,
+  "fit_s": 5
+ },
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "valley",
+  "n_train": 500,
+  "mae_meV": 7.718022154133293,
+  "fit_s": 196,
+  "cbm_acc": 0.9833333333333333
+ },
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "direct",
+  "n_train": 1000,
+  "mae_meV": 32.8299403536816,
+  "fit_s": 4
+ },
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "bandgrid",
+  "n_train": 1000,
+  "mae_meV": 36.47900568724784,
+  "fit_s": 11
+ },
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "valley",
+  "n_train": 1000,
+  "mae_meV": 7.955663947945965,
+  "fit_s": 374,
+  "cbm_acc": 0.9833333333333333
+ },
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "direct",
+  "n_train": 1016,
+  "mae_meV": 32.49184318283258,
+  "fit_s": 4
+ },
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "bandgrid",
+  "n_train": 1016,
+  "mae_meV": 36.22741798537501,
+  "fit_s": 11
+ },
+ {
+  "split": 7,
+  "set": "Si_small",
+  "model": "valley",
+  "n_train": 1016,
+  "mae_meV": 7.896736654079091,
+  "fit_s": 372,
+  "cbm_acc": 0.9833333333333333
+ }
+]

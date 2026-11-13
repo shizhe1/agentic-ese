@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 import time
 from pathlib import Path
@@ -20,8 +21,10 @@ from .strain import convert, h_from_energies, strained_cell
 
 CODE_VERSION = "pbe-v3"
 ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / "runs" / "cache"
-SCRATCH = ROOT / "runs" / "scratch"
+# All computed data (cache, scratch, agent runs) go under $ESE_RUNS_DIR, default <repo>/runs.
+RUNS = Path(os.environ.get("ESE_RUNS_DIR") or ROOT / "runs")
+CACHE = RUNS / "cache"
+SCRATCH = RUNS / "scratch"
 NGRID = 6
 
 

@@ -1,0 +1,51 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h (meV/A^3)",
+   "constraints": [
+    "Eg <= 0.80 eV (photon energy at 1550 nm), evaluated at HSE06 level (HSE-scissor in search; target 0.78 eV for margin)",
+    "Born elastic stability: all stiffness eigenvalues > 0 at the strained state"
+   ],
+   "subspace": "all 6 Green-Lagrange Voigt components free, bound |e| <= 0.05 normal / 0.03 shear",
+   "level_of_theory": "PBE DFT for sampling, with per-valley HSE06 scissor corrections; full HSE06 for the final check",
+   "stability": "Born stability via elastic_stability at the final strain"
+  },
+  "strain_gl": [
+   0.00862,
+   0.0122,
+   -0.02924,
+   0,
+   0,
+   0
+  ],
+  "h_mev_a3": 0.339,
+  "eg_ev": 0.753,
+  "constraints_satisfied": false,
+  "cbm_valley": "Dz",
+  "explanation": "The best candidate is e = (0.00862, 0.0122, -0.02924, 0, 0, 0). Its PBE DFT values are h = 0.339 meV/A^3 and Eg = 0.171 eV. With the HSE-scissor correction, Eg = 0.753 eV, which is below the 0.80 eV needed for 1550 nm. The conduction-band minimum is the Dz valley, and Gamma (2.28 eV) and L (1.25 eV) are far above it. Compressing along z lowers Dz relative to Dx and Dy, so the gap closes at small strain. The equivalent mirror candidate (Dx valley, e11 = -0.0297) gives h = 0.345 meV/A^3 and the same gap. The gap is indirect, so absorption near 0.75 eV is phonon-assisted and weak. I did not check two things. The first is Born elastic stability. The second is full HSE06 at this strain. The tool permissions for both were denied, so the 0.753 eV is a scissor estimate and stability is unconfirmed. For that reason I set constraints_satisfied to false. Running elastic_stability (12 units) and verify_hse (15 units) would settle both. Budget left is 128 of 150 units."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "h_mev_a3": 0.339,
+  "eg_ev": 0.727,
+  "eg_level": "Full HSE06 (verify_hse). The HSE-scissor value is 0.753 eV and the PBE value is 0.171 eV.",
+  "stable": "Yes. Born stability gives a minimum stiffness eigenvalue of 70.9 GPa, which is positive.",
+  "strain_gl": [
+   0.00862,
+   0.0122,
+   -0.02924,
+   0,
+   0,
+   0
+  ],
+  "issues": [
+   "I reran PBE DFT at the stated strain. h = 0.339 meV/A^3 matches the claim, and the PBE gap is 0.171 eV with a Dz CBM.",
+   "Full HSE06 gives Eg = 0.727 eV with a Dz CBM. This is below both the 0.80 eV limit and the 0.78 eV margin target. The scissor estimate of 0.753 eV was about 0.026 eV higher (conservative), so the claimed gap of 0.753 eV is a scissor value, not a true HSE value.",
+   "The HSE valleys are Dz 0.727, Dx 1.095, Dy 1.128, L 2.001 and G 3.031 eV. Dz is the CBM by about 0.37 eV, so no other valley competes.",
+   "The strain is in Green-Lagrange fractions with tensor shear. It is within the bounds (|e| <= 0.05 normal, 0.03 shear), and the shear components are zero.",
+   "I did not run a global search, so I have not shown that h = 0.339 is the minimum. I only verified that the candidate meets the constraints and that its h is correct.",
+   "I did not test symmetry-equivalent strains. Dz is the CBM here, so swapping e11/e22/e33 axes would give an equivalent state."
+  ]
+ }
+}

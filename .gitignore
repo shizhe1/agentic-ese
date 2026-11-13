@@ -1,7 +1,8 @@
 __pycache__/
 *.pyc
 .DS_Store
-runs/
+/runs/
 demo/output.json
 .venv/
 *.egg-info/
+/figures/

@@ -1,0 +1,50 @@
+{
+ "task": "H3",
+ "seed": 0,
+ "formalization": "naive",
+ "level": "pbe",
+ "verdict": "FAILED",
+ "final": null,
+ "rounds": [
+  {
+   "stage": "first",
+   "constraints": [
+    {
+     "kind": "gap_max",
+     "value": 0.0
+    }
+   ],
+   "result": {
+    "strain": [
+     0.02134,
+     0.01627,
+     -0.04154,
+     -3e-05,
+     -0.00076,
+     0.00294
+    ],
+    "h": 0.731,
+    "eg_scissor": -0.039,
+    "eg_hse": 0.501,
+    "cbm_hse": "Dz",
+    "born_min_eig_GPa": 66.3,
+    "stable": true,
+    "subspace_ok": false,
+    "passed": false
+   }
+  },
+  {
+   "stage": "retarget",
+   "constraints": [
+    {
+     "kind": "gap_max",
+     "value": -0.54
+    }
+   ],
+   "result": null
+  }
+ ],
+ "spent": 59.0,
+ "n_dft": 32,
+ "minutes": 32.8
+}

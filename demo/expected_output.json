@@ -2,21 +2,21 @@
  "n_train": 255,
  "n_test": 64,
  "fit_seconds": 46,
- "gap_mae_mev": 42.1,
- "h_mae_mev_a3": 0.063,
+ "gap_mae_mev": 41.8,
+ "h_mae_mev_a3": 0.064,
  "cbm_valley_accuracy": 0.984,
  "direct_gap_si_surrogate_optimum": {
   "strain_gl": [
-   0.0435,
-   0.0367,
-   0.0809,
-   0.0385,
-   0.0374,
-   0.0535
+   0.0352,
+   0.0532,
+   0.0548,
+   0.042,
+   -0.0509,
+   -0.0551
   ],
-  "h_pred": 9.3526,
-  "eg_pred": 0.1403,
-  "eg_std": 0.0245,
+  "h_pred": 9.2088,
+  "eg_pred": 0.0768,
+  "eg_std": 0.0239,
   "cbm_pred": "G"
  }
 }

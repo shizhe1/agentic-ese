@@ -1,0 +1,10 @@
+{
+ "task": "D1",
+ "prompt": "Find the lowest-elastic-energy state of uniaxial stress along a cube axis that closes the band gap of silicon.",
+ "model": "sonnet",
+ "budget": 60.0,
+ "architecture": "pipeline",
+ "start": 1792799914.183286,
+ "end": 1792801025.2268102,
+ "verdict": "VERIFIED"
+}

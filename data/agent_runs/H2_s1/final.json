@@ -1,0 +1,52 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h (meV/A^3) over GL strain",
+   "constraints": [
+    "Eg <= 0.80 eV (1550 nm) at HSE06 level (hse_scissor used as proxy; target <=0.78-0.79 for margin). Indirect gap acceptable (phonon-assisted absorption)",
+    "Born elastic stability: all stiffness eigenvalues > 0 at the strained state"
+   ],
+   "level_of_theory": "PBE DFT for sampling; hse_scissor (per-valley zero-strain HSE corrections) for the constraint; full HSE06 verification intended for final candidate",
+   "subspace": "all 6 Voigt GL components, |normal|<=0.05, |shear|<=0.03; optimiser favoured pure normal strain",
+   "stability": "Born stability required at the final strain (elastic_stability, 12 units)"
+  },
+  "strain_gl": [
+   0.00582,
+   0.01729,
+   -0.02855,
+   0,
+   0,
+   0
+  ],
+  "h_mev_a3": 0.351,
+  "eg_ev": 0.755,
+  "constraints_satisfied": false,
+  "cbm_valley": "Dz",
+  "explanation": "Best DFT-checked candidate: strain [0.00582, 0.01729, -0.02855, 0, 0, 0], with h = 0.351 meV/A^3. Its PBE gap is 0.173 eV and its HSE-scissor gap is 0.755 eV, below the 0.80 eV (1550 nm) threshold. I did not meet every requirement, so constraints_satisfied is false. Both the Born elastic-stability check and the full HSE06 verification were denied permission in this session, so neither was run. The stability requirement and the full-HSE gap are therefore unverified. The 0.755 eV figure is the scissor estimate only. Please approve those two calls, or tell me to proceed without them.\n\nReasoning in terms of conduction-band valleys: unstrained Si has six-fold degenerate Delta valleys (Dx, Dy, Dz) as its CBM. The gap is cheapest to close by splitting that degeneracy. Uniaxial compression along z with a modest tensile strain in y lowers Dz and raises Dx and Dy (Dz = 0.173 eV against 0.487 for Dx and 0.585 for Dy). The L valleys (1.235 eV) and Gamma (2.27 eV) stay far above, so the CBM stays a single Delta valley and the gap is indirect. The Delta valleys carry the smaller HSE correction (0.582 eV), which is why the HSE gap is roughly 0.58 eV above the PBE gap. Symmetry-equivalent solutions exist: Dx at [-0.0305, 0.0095, 0.0059] gave h = 0.367 and 0.753 eV, and Dy at [0.0080, -0.0290, 0.0099] gave h = 0.367 and 0.764 eV. Tightening the target to 0.79 eV did not lower h in DFT. I used 30 samples (20 run through DFT), plus 4 optimiser-proposed checks. 126 of 150 budget units remain."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "issues": [
+   "PBE DFT reproduces h=0.351 meV/A^3. PBE gap is 0.173 eV, CBM in the Dz valley.",
+   "hse_scissor gap is 0.755 eV, which matches the claim.",
+   "Full HSE06 at the candidate gives Eg=0.728 eV, indirect, CBM in Dz. This is below 0.80 eV and below the 0.78-0.79 margin target. The scissor proxy is 0.027 eV higher than full HSE, so it is conservative.",
+   "Born stability holds: all 12 stress-strain points were evaluated and the minimum stiffness eigenvalue is 70.6 GPa, which is positive.",
+   "The strain is in Green-Lagrange Voigt form with fractional values. Normal strains are within 0.05 and the shear components are zero. Units and conventions are consistent.",
+   "Not done: I did not run a global search for lower-h strains, so I have not shown this is the minimum. I also did not run DFT on the symmetry-equivalent permutations of the normal strains. By cubic symmetry these should give the same h and gap, with the valley labels permuted.",
+   "The gap is indirect, so absorption at 1550 nm needs phonon assistance. The task allows this, but absorption will be weaker than for a direct gap."
+  ],
+  "eg_ev": 0.728,
+  "eg_level": "HSE06 (full)",
+  "h_mev_a3": 0.351,
+  "stable": "true (min eigenvalue 70.6 GPa)",
+  "strain_gl": [
+   0.00582,
+   0.01729,
+   -0.02855,
+   0,
+   0,
+   0
+  ]
+ }
+}

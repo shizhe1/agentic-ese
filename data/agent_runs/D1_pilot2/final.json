@@ -1,0 +1,54 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h (meV/A^3)",
+   "constraints": [
+    "HSE06-level gap Eg <= 0 eV (metallisation); evaluated via hse_scissor on PBE valleys, full HSE06 verification not run",
+    "uniaxial stress along [100]: e11 free, e22=e33 (Poisson contraction/expansion), shears e23=e13=e12=0",
+    "|e| <= 0.12"
+   ],
+   "subspace": "Voigt (e11, e22=e33, 0,0,0), GL strain",
+   "level_of_theory": "PBE DFT with per-valley HSE06 scissor (G 0.764, L 0.763, Delta 0.582 eV); PBE alone overestimates closure (PBE zero-strain gap 0.607 vs HSE 1.189)",
+   "stability": "Born elastic stability not checked (12 units); not requested to be verified"
+  },
+  "strain_gl": [
+   -0.08,
+   0.024,
+   0.024,
+   0,
+   0,
+   0
+  ],
+  "h_mev_a3": 2.462,
+  "eg_ev": -0.009,
+  "constraints_satisfied": false,
+  "cbm_valley": "Dx",
+  "explanation": "Compression along x lowers the Dx valley (the one along the compression axis) and raises Dy/Dz, so the CBM is Dx and falls into the valence band. Tension only splits Dy/Dz down, and it is much less effective: at e11=+0.09 the HSE-scissor gap is still 0.64 eV. Gamma and L stay far above, so the gap is controlled by Dx alone. Bracketing along the uniaxial path gave HSE-scissor gaps of 0.301 eV at -0.06, 0.069 at -0.075, -0.009 at -0.08 and -0.088 at -0.085. The chosen -0.08 point has the lowest h that closes the gap on this path, but only barely (-0.009 eV). The margin is within the scissor-model error, so I'm marking constraints_satisfied false. Two things went wrong. The surrogate fit and optimize_strain both errored, so the search was a manual bracket along the uniaxial line, not an optimiser result. Full HSE06 verification (verify_hse) was denied by permissions, so the closure is not HSE-verified. A slightly larger compression, around -0.082 to -0.085 (h about 2.6 to 2.8), would give more margin. The lateral strain 0.024 is about 0.3 of e11, an estimate of the stress-free Poisson response and not an optimised value."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "h_mev_a3": 2.462,
+  "eg_ev": -0.135,
+  "eg_level": "Full HSE06 (verify_hse); PBE -0.591, hse_scissor -0.009",
+  "stable": "not checked (not requested)",
+  "strain_gl": [
+   -0.08,
+   0.024,
+   0.024,
+   0,
+   0,
+   0
+  ],
+  "issues": [
+   "Independent PBE DFT at the stated strain reproduces h = 2.462 meV/A^3. The PBE gap is -0.591 eV with the Dx valley as CBM, and the hse_scissor gap is -0.009 eV, matching the claim.",
+   "Full HSE06 at the same strain gives Eg = -0.135 eV, with Dx the CBM at -0.135, G 2.589, L 1.466 and Dy/Dz 0.976. The constraint Eg <= 0 holds at the real HSE06 level.",
+   "The claimed -0.009 eV came from the scissor model and was only marginally below zero. The scissor underestimates closure here by about 0.126 eV, which is the safe direction. The scissor was fitted at zero strain, so it does not transfer exactly to this strain.",
+   "The strain is within bounds: |e| <= 0.08 < 0.12. It lies in the stated subspace (e11 = -0.08, e22 = e33 = 0.024, shears 0). Conventions are consistent: Green-Lagrange, Voigt, fractions.",
+   "I did not check that e22 = e33 = 0.024 is the true relaxed uniaxial-stress Poisson response. The task imposes it as a subspace constraint, so I took it as given.",
+   "I did not test that this is the global minimum of h. The design team's optimality claim is unverified. A lower-h strain with a smaller negative HSE gap may exist, because there is HSE margin of 0.135 eV.",
+   "Born elastic stability was not checked, because it was not requested. It is a risk at -8% compression, so the state could be mechanically unstable.",
+   "I did not check symmetry-equivalent strains. The equivalent states are e22 or e33 as the compressed axis, where Dy or Dz would be the CBM. Those follow by cubic symmetry."
+  ]
+ }
+}

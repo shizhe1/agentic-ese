@@ -1,0 +1,53 @@
+{
+ "round": 2,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h(e) in meV/A^3 for diamond C",
+   "constraints": [
+    "HSE06 band gap in [1.9, 2.0] eV (target 2.0 eV), evaluated with full HSE06 at the final strain and not the zero-strain scissor",
+    "Born stability: all eigenvalues of the stiffness matrix at the strained state > 0",
+    "strain is Green-Lagrange, Voigt order, tensor shear, fractions"
+   ],
+   "subspace": "all six Voigt components free, |e_i| <= 0.09",
+   "level_of_theory": "PBE for search and h; HSE06 required for the gap; hse_scissor (zero-strain per-valley corrections) used only as a screening proxy",
+   "stability": "Born stability via elastic_stability at the final strain; not run on this candidate"
+  },
+  "strain_gl": [
+   0.06355,
+   0.08458,
+   0.08609,
+   0.09,
+   -0.09,
+   -0.09
+  ],
+  "h_mev_a3": 22.296,
+  "eg_ev": 2.069,
+  "constraints_satisfied": false,
+  "cbm_valley": "Dx (near-degenerate with Dy and Dz)",
+  "explanation": "NOT VERIFIED. The previous candidate failed because the zero-strain Dx scissor overestimated the HSE gap by about 0.16 eV. I added 18 PBE points (63 in total) and re-optimised. The best state has PBE h = 22.3 meV/A^3 and a PBE gap of 0.970 eV with Dx as CBM; Dy and Dz are within 0.14 eV. The reported eg_ev of 2.069 is the scissor-corrected estimate and is probably too high, so the true HSE gap may be near 1.9 eV and could fall outside the 1.9-2.0 eV window. The full HSE06 check (verify_hse) was denied by the permission system, so the gap is unconfirmed. The Born stability check and the uniaxial <100>, <110> and <111> comparison were not run. The surrogate's held-out gap error was 0.09-0.29 eV, which is not enough to claim the window is met. Constraints are therefore marked unsatisfied until HSE is run."
+ },
+ "verifier": {
+  "verdict": "REJECTED",
+  "eg_ev": 1.502,
+  "eg_level": "HSE06 (full, verify_hse at the candidate strain)",
+  "h_mev_a3": 22.296,
+  "stable": "true (min stiffness eigenvalue 96.0 GPa)",
+  "strain_gl": [
+   0.06355,
+   0.08458,
+   0.08609,
+   0.09,
+   -0.09,
+   -0.09
+  ],
+  "issues": [
+   "Full HSE06 gap at the candidate is 1.502 eV (CBM Dx). That is below the required window [1.9, 2.0] eV and about 0.57 eV below the claimed 2.069 eV, so the gap constraint fails.",
+   "The claimed 2.069 eV is the hse_scissor proxy, which applies the zero-strain per-valley corrections. At this strain the Dx correction is about +0.53 eV (PBE 0.970 to HSE 1.502), not the zero-strain 1.099 eV. The proxy overestimates the gap.",
+   "The claimed 2.069 eV is also above 2.0 eV, so it was already outside the stated window even on the proxy.",
+   "PBE reproduces the claim: h = 22.296 meV/A^3 and PBE gap 0.970 eV, with scissor gap 2.069 eV. The h value is therefore not in doubt.",
+   "Born stability holds: min eigenvalue 96.0 GPa, stable. The team had not run this check.",
+   "The strain is at the search bound: e4 = 0.09, e5 = -0.09 and e6 = -0.09 all sit at |e| = 0.09. The strain is very large, and the VBM is off Gamma at [0.333, 0.333, 0.5]. The proxy and surrogate are unreliable in this regime.",
+   "No comparison with uniaxial <100>, <110> or <111> loading was provided or checked. The optimality claim has no DFT support. The candidate needs re-optimisation with HSE-level constraints, for example a higher PBE gap target, to reach an HSE gap of 1.9 to 2.0 eV. About 29 budget units remain, enough for only one more full HSE check."
+  ]
+ }
+}

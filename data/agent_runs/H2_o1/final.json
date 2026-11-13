@@ -1,0 +1,49 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "Minimise the elastic strain energy density h(\u03b5) in meV/\u00c5^3.",
+   "constraints": [
+    "Eg \u2264 0.80 eV (1239.84/1550 nm), so 1550 nm photons can be absorbed; a direct gap is not required (phonon-assisted absorption at an indirect gap is allowed)",
+    "Eg evaluated at HSE06 level: screened with per-valley scissor corrections on PBE valley energies (\u0394 +0.582, L +0.763, \u0393 +0.764 eV), to be confirmed by full HSE06",
+    "Born stability: all eigenvalues of the elastic stiffness matrix at the strained state must be positive"
+   ],
+   "level_of_theory": "PBE DFT for h and valley energies; HSE06 (scissor, then full verify_hse) for the gap constraint",
+   "subspace": "All 6 Green-Lagrange Voigt components (e11,e22,e33,e23,e13,e12), each bounded to |\u03b5| \u2264 0.10",
+   "stability": "Born elastic stability (elastic_stability) required at the final strain"
+  },
+  "strain_gl": [
+   -0.026,
+   0.01,
+   0.01,
+   0,
+   0,
+   0
+  ],
+  "h_mev_a3": 0.289,
+  "eg_ev": 0.797,
+  "cbm_valley": "Dx",
+  "constraints_satisfied": false,
+  "explanation": "Best DFT-checked candidate: 2.6% compression along [100] with about 1% tension along the two other cube axes. PBE gives h = 0.289 meV/\u00c5^3, Eg_PBE = 0.215 eV and Eg_HSE-scissor = 0.797 eV, which is just below 0.80 eV. The conduction-band minimum is a single \u0394 valley (Dx), lowered from 0.607 to 0.215 eV by the [100] compression. Dy and Dz rise to about 0.54 eV, L sits at about 1.27 eV and \u0393 at about 2.30 eV, so the gap stays indirect. Lateral tension of 0.010\u20130.012 gave the lowest h; pure Poisson-like lateral strain (~0.0074) needed about 0.30\u20130.36 meV/\u00c5^3. Shear routes lower \u0394 as well but cost more energy (e.g. e12 = 0.04 costs 1.56 meV/\u00c5^3). The gap constraint is met only at the scissor level, with a 3 meV margin. Full HSE06 (verify_hse) and the Born stability check (elastic_stability) were blocked by tool permissions, so the constraints are not fully verified. Stability is very likely at strains this small (under 3%), but it was not checked. 80 of 150 budget units remain, enough to run both checks."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "h_mev_a3": 0.289,
+  "eg_ev": 0.773,
+  "eg_level": "full HSE06 (verify_hse); scissor-HSE 0.797 eV; PBE 0.215 eV; indirect, CBM Dx",
+  "stable": "yes - Born stable, min stiffness eigenvalue 71.1 GPa",
+  "strain_gl": [
+   -0.026,
+   0.01,
+   0.01,
+   0,
+   0,
+   0
+  ],
+  "issues": [
+   "Scissor-HSE gap 0.797 eV satisfies Eg<=0.80 eV by only 3 meV; full HSE06 gives 0.773 eV (27 meV margin).",
+   "Scissor overestimates full-HSE gap by ~24 meV here, so a slightly lower-h strain likely also satisfies the constraint at full HSE06; optimality not verified.",
+   "Symmetry-equivalent permutations give identical h and gap (consistent)."
+  ]
+ }
+}

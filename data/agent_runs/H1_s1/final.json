@@ -1,0 +1,53 @@
+{
+ "round": 2,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h(e) (meV/A^3)",
+   "constraints": [
+    "Full HSE06 gap in 1.9-2.0 eV, target about 1.95 (verify_hse is the only valid check)",
+    "CBM is a Delta (X-like) valley",
+    "Born stability: all stiffness eigenvalues > 0"
+   ],
+   "level_of_theory": "Search at PBE + per-valley HSE scissor, shifted to a scissor window of 2.05-2.15 eV (kappa=0.5) to offset the observed scissor over-estimate of about 0.15 eV. Acceptance only at full HSE06.",
+   "subspace": "All six Green-Lagrange Voigt components free, |e| <= 0.09",
+   "stability": "Born check required at the final state. It was not rerun for this candidate."
+  },
+  "strain_gl": [
+   0.03483,
+   -0.07545,
+   0.0296,
+   0.0005,
+   0.03687,
+   0.00265
+  ],
+  "h_mev_a3": 30.334,
+  "eg_ev": 2.11,
+  "constraints_satisfied": false,
+  "cbm_valley": "Dy",
+  "explanation": "NOT HSE-verified. The verify_hse call was denied by the permission mode, so I could not confirm the gap at full HSE06. At this strain PBE DFT gives Eg 0.899+ -> 1.011 eV (Dy CBM) and h 30.33 meV/A^3. The scissor level gives 2.11 eV. The previously rejected state had a scissor gap of 1.998 eV and a true HSE gap of 1.852 eV, so the scissor over-estimated strain-softened gaps by about 0.15 eV. If the same offset applies here, the HSE gap would be about 1.96 eV, inside the window. That is an extrapolation and not a measurement. The comparison with uniaxial <100>, <110> and <111> loading has not been run. I need permission for verify_hse (15 units, 72 left) to confirm this candidate. I would then use the remaining budget for the uniaxial comparison."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "eg_ev": 1.984,
+  "eg_level": "Full HSE06 (verify_hse)",
+  "h_mev_a3": 30.334,
+  "stable": "Yes. Born check, run now: min stiffness eigenvalue is 414.8 GPa, so all eigenvalues are positive.",
+  "strain_gl": [
+   0.03483,
+   -0.07545,
+   0.0296,
+   0.0005,
+   0.03687,
+   0.00265
+  ],
+  "issues": [
+   "Full HSE06 gap is 1.984 eV, inside the 1.9-2.0 eV window. The CBM is the Dy (Delta) valley. The next-lowest valleys are Dz at 5.366 eV and Dx at 5.485 eV, so the CBM assignment is unambiguous.",
+   "The claimed h of 30.334 meV/A^3 is reproduced exactly by both the HSE and PBE runs.",
+   "The PBE gap is 1.011 eV and the HSE-scissor gap is 2.11 eV, as claimed. The scissor over-estimates the full HSE06 gap by 0.126 eV. That is consistent with the designers' 0.15 eV offset, and the offset happens to leave the state inside the window.",
+   "The Born stability check was not run by the design team. I ran it here and the state is stable.",
+   "The strain matches the stated convention: Green-Lagrange, Voigt order, tensor shear, fractions. The largest component is |e22| = 0.0755, within the 0.09 bound. I did not test symmetry-equivalent strains.",
+   "Not verified: that this is the lowest-h solution, and the comparison with uniaxial <100>, <110> and <111> loading. The team gave no uniaxial numbers and I ran no DFT for them. This verdict covers only the constraints and the h value at this one state.",
+   "Budget: 44 of 150 units remain."
+  ]
+ }
+}

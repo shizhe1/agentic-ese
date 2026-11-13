@@ -1,0 +1,10 @@
+{
+ "task": "H2",
+ "prompt": "Make silicon absorb light at 1550 nm at the lowest possible elastic strain energy, while keeping the crystal stable.",
+ "model": "opus",
+ "budget": 150.0,
+ "architecture": "pipeline",
+ "start": 1792820954.688468,
+ "end": 1792823857.761131,
+ "verdict": "VERIFIED"
+}

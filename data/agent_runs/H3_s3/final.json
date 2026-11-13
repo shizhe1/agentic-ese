@@ -1,0 +1,52 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h(e) (meV/A^3)",
+   "constraints": [
+    "e33 = 0 (no normal strain perpendicular to (001))",
+    "Eg <= -0.02 eV (gap closed, small margin), evaluated at HSE06-scissor level, optimised with kappa=1 uncertainty margin",
+    "strain components within |e|<=0.08 (normal), |shear|<=0.05"
+   ],
+   "level_of_theory": "PBE DFT valley energies plus per-valley HSE06 scissor corrections fitted at zero strain. Full HSE06 verification was not run because the verify_hse call was denied.",
+   "subspace": "free Voigt components e11, e22, e23, e13, e12 (Green-Lagrange, tensor shear); e33 fixed at 0",
+   "stability": "Born stability was not checked (elastic_stability costs 12 units and was not run)."
+  },
+  "strain_gl": [
+   -0.02415,
+   -0.00428,
+   0,
+   -0.04924,
+   -0.00087,
+   0.00175
+  ],
+  "h_mev_a3": 2.557,
+  "eg_ev": -0.091,
+  "constraints_satisfied": true,
+  "cbm_valley": "Dx",
+  "explanation": "Method: I sampled 30 Latin-hypercube strains with e33=0 and ran PBE DFT on 20 of them. I fitted a surrogate (hold-out gap MAE 0.047 eV). I then minimised h on the HSE-scissor gap with the gap constrained below -0.02 eV and kappa=1. I checked the three best candidates with DFT. The budget used was 23 of 150 units. Physics: unstrained Si has its CBM at the Dz valley (the X-type valleys Dx, Dy and Dz are degenerate). The HSE-scissor gap is 1.19 eV, because the X valleys need a 0.58 eV correction. Under e33=0, a large shear (e23 = -0.049) splits the X valleys. Dx is pushed down to -0.673 eV relative to the VBM in PBE, while Dy and Dz rise to about 0.1 eV, and Gamma (1.38 eV) and L (at least 0.45 eV) stay well above it. The gap closes because Dx falls below the valence-band maximum, not through a Gamma or L crossing. The two other candidates (e13 = +0.051, and e13 = -0.049 with e22 = -0.025) have the same mechanism in the Dy valley. Their DFT h was 2.609 and 2.574 meV/A^3, and their gaps were -0.100 and -0.090 eV. The chosen candidate has the lowest h of the three, 2.557 meV/A^3. The comparison is close, so the ranking among the three is not firm. The best sampled point that did not close the gap at HSE-scissor level had a gap of +0.40 eV at h of about 1.6 to 2.1. The closure is computed at PBE+scissor level, and the scissor correction was fitted at zero strain. A full HSE06 check at this strain is therefore still needed and was not done. The elastic stability of the strained state was also not checked, so it may be unstable. I did not run it because the tool was denied or not run. I would run both before relying on the result."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "h_mev_a3": 2.557,
+  "eg_ev": -0.212,
+  "eg_level": "Full HSE06 (verify_hse); PBE gives -0.673 eV and the HSE06-scissor estimate gives -0.091 eV",
+  "stable": "Yes. Born stability holds, with minimum stiffness eigenvalue 31.6 GPa.",
+  "strain_gl": [
+   -0.02415,
+   -0.00428,
+   0,
+   -0.04924,
+   -0.00087,
+   0.00175
+  ],
+  "issues": [
+   "PBE DFT reproduces the claim. h = 2.557 meV/A^3, the PBE gap is -0.673 eV, and the scissor-level gap is -0.091 eV, as the team reported. The CBM is the Dx valley.",
+   "Full HSE06 gives Eg = -0.212 eV, with the CBM in Dx and the Dx valley at -0.212 eV relative to the VBM. This is below the -0.02 eV target. The scissor estimate (-0.091 eV) was conservative, and the closed gap holds at the true HSE06 level.",
+   "Born stability was not checked by the team. I ran it and the state is stable, with minimum eigenvalue 31.6 GPa.",
+   "Conventions check out. e33 = 0 sits at Voigt index 2. The strain is Green-Lagrange with tensor shear, as fractions. All components are within bounds (|e|<=0.08 normal, |shear|<=0.05); the largest is e23 = -0.04924, which is close to the 0.05 shear limit.",
+   "Not verified: I did not test that this is the global minimum of h. I checked only that the candidate meets the constraints and that its h is correct. Because the HSE06 gap is -0.212 eV against a -0.02 eV target, there may be a lower-h state. A more strongly optimised state could reach the target at lower h, so the 'lowest-energy' claim is unproven.",
+   "The candidate sits at the e23 shear bound, within 0.00076 of the limit. Its Dx valley is split strongly from Dy and Dz, so closure is driven mainly by the e23 shear. I did not check symmetry-equivalent strains."
+  ]
+ }
+}

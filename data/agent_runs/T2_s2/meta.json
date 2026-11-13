@@ -1,0 +1,10 @@
+{
+ "task": "T2",
+ "prompt": "Find the strain state that makes silicon a direct-band-gap semiconductor at the lowest possible elastic strain energy, and assess whether that state is stable.",
+ "model": "sonnet",
+ "budget": 150.0,
+ "architecture": "pipeline",
+ "start": 1792837647.021547,
+ "end": 1792841597.78214,
+ "verdict": "VERIFIED"
+}

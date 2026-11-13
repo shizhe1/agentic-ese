@@ -1,0 +1,10 @@
+{
+ "task": "T1",
+ "prompt": "Find the strain state that turns silicon into a metal (zero band gap) at the lowest possible elastic strain energy.",
+ "model": "sonnet",
+ "budget": 150.0,
+ "architecture": "pipeline",
+ "start": 1792823857.7984052,
+ "end": 1792826010.0857332,
+ "verdict": "VERIFIED"
+}

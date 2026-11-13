@@ -1,0 +1,53 @@
+{
+ "round": 2,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h(e) (meV/A^3) over a homogeneous Green-Lagrange strain e",
+   "constraints": [
+    "HSE06 gap Eg = 2.0 eV (window about 1.95-2.05); PBE+per-valley scissor is only a proxy, with a measured error of about 0.13 eV at large strain",
+    "Gap is indirect with a Dx/Dz CBM, not Gamma",
+    "Born stability: all stiffness eigenvalues > 0 (not re-run, check denied)",
+    "|e_i| <= 0.1"
+   ],
+   "level_of_theory": "HSE06 target; searched with PBE+scissor, scissor offset about -0.13 eV",
+   "subspace": "full 6-component Voigt strain (e11,e22,e33,e23,e13,e12), tensor shear, bound 0.1",
+   "stability": "Born stability required; previous verifier found the old candidate stable (min eigenvalue 369.6 GPa); not re-run for this candidate"
+  },
+  "strain_gl": [
+   0.02627,
+   0.03294,
+   -0.07344,
+   0.00314,
+   -0.0009,
+   0.04274
+  ],
+  "h_mev_a3": 31.442,
+  "eg_ev": 2.057,
+  "constraints_satisfied": false,
+  "cbm_valley": "Dz",
+  "explanation": "The constraint is NOT confirmed at HSE06, so I set constraints_satisfied=false. verify_hse and elastic_stability were both denied in this session, so I could not check HSE06 or Born stability for this candidate.\n\nWhat changed from the rejected candidate: I re-optimised with scissor targets shifted up by about 0.13 eV (gap window 2.08-2.14 eV). That aims at a true HSE06 gap near 2.0 eV, instead of the old 1.78 eV overshoot.\n\nCandidate: e = [0.02627, 0.03294, -0.07344, 0.00314, -0.0009, 0.04274].\n- PBE DFT: h = 31.44 meV/A^3, PBE gap 0.958 eV, CBM in the Dz valley.\n- Scissor gap: 2.057 eV. If the old -0.13 eV offset applies here, the HSE06 gap would be about 1.93 eV. That is a guess, not a measurement.\n- The next-lowest-energy candidate is [-0.06535, 0.02213, 0.03584, -0.05139, 0.0043, -0.00289]. It has Dx CBM, h = 32.31 meV/A^3 and scissor gap 2.078 eV, so it likely lands nearer 1.95 eV at HSE06.\n- The best candidate has a lower h than the rejected one (33.6 meV/A^3), but that comparison rests on PBE and scissor values only.\n\nCBM valley reasoning: the mechanism is a large strain that pushes one X-type (Delta) valley down. Compression along one axis (-0.073 on e33, with tensile e11 and e22) pulls the Dz valley down to 0.96 eV at PBE. The other valleys stay high: Dx 4.28, Dy 4.43, Gamma 3.80 eV. The gap is therefore set only by Dz. Because the gap rests on one valley, the lowest-energy design is a bi-axial tension plus uniaxial compression combination. This combination also needs less strain energy than uniaxial compression.\n\nUniaxial comparison, all at PBE DFT with the scissor correction. Strains are applied as pure GL components with no lateral relaxation.\n- <100>, e11 = -0.11: h = 49.6 meV/A^3, scissor gap 2.27 eV, Dx CBM. It needs slightly more strain to reach about 2.1 eV, so h is roughly 55.\n- <110>, e11 = e22 = e12 = 0.08: h = 56.7 meV/A^3, scissor gap 2.47 eV, Dz CBM. It is still well above target, so h would need to be above about 70 to reach 2.0 eV.\n- <111>, all six components = 0.035: h = 28.5 meV/A^3, scissor gap 3.87 eV, Gamma CBM. Surrogate only, with no DFT at the target: at 0.05 it predicts a Gamma-CBM scissor gap of about 2.04 eV at h of about 53. That is the one uniaxial case where the CBM switches to Gamma.\n- Overall, the optimised general strain needs roughly 35-45% less strain energy than the best uniaxial option. The <100> value is closest at roughly 55 meV/A^3, and <110> needs more than about 70.\n\nCaveats:\n- The HSE06 gap of the candidate is unverified, and the scissor offset is known to drift at large strain.\n- Born stability for this strain was not checked.\n- The <110> and <111> uniaxial numbers do not sit exactly at 2.0 eV. They are a mix of DFT points and surrogate extrapolation.\n- To close this out, I need permission for one verify_hse run on the best candidate and one elastic_stability run. If the HSE06 gap comes out below 1.95 eV, the strain should be scaled back slightly."
+ },
+ "verifier": {
+  "verdict": "REJECTED",
+  "issues": [
+   "Full HSE06 at the candidate gives Eg = 1.938 eV (Dz CBM). That is outside the required 1.95-2.05 eV window and 0.062 eV below the 2.0 eV target. The claimed 2.057 eV comes from the PBE+scissor proxy, which overestimates the gap by 0.119 eV here.",
+   "My PBE DFT run reproduces h = 31.442 meV/A^3 and PBE Eg = 0.958 eV (Dz). The scissor value is 2.057 eV, matching the claim, but it is only a proxy.",
+   "The CBM is Dz in both PBE and HSE. Dz is 3.17 eV below Gamma and 3.45 eV below Dx in HSE, so the indirect Dx/Dz requirement holds.",
+   "Born stability was re-run at this strain. It is stable, with a minimum stiffness eigenvalue of 411.1 GPa, so the old 369.6 GPa figure does not apply to this candidate. The bound |e_i| <= 0.1 holds, since the largest component is 0.0734.",
+   "The strain is not at the 2.0 eV target, so it is not a valid minimum-h solution. The design team should re-optimise with the scissor target shifted to account for the measured HSE offset, then re-verify with HSE.",
+   "I did not verify the comparison with uniaxial <100>, <110> and <111> loading with DFT or HSE, so that part of the claim has no evidence."
+  ],
+  "eg_ev": 1.938,
+  "eg_level": "HSE06 (full verify_hse)",
+  "h_mev_a3": 31.442,
+  "stable": "Yes, min eigenvalue 411.1 GPa",
+  "strain_gl": [
+   0.02627,
+   0.03294,
+   -0.07344,
+   0.00314,
+   -0.0009,
+   0.04274
+  ]
+ }
+}

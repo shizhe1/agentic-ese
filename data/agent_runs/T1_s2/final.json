@@ -1,0 +1,52 @@
+{
+ "round": 1,
+ "designer": {
+  "formalization": {
+   "objective": "minimise elastic strain energy density h (meV/A^3) of Si",
+   "constraints": [
+    "Eg <= 0 eV (metal), evaluated at HSE06-scissor-corrected level (per-valley corrections: G 0.764, L 0.763, X 0.582 eV); with a small safety margin (target about -0.03 eV) because surrogate holdout MAE is about 0.045 eV",
+    "PBE-level gap is already negative at these strains, but it is not the target level because PBE underestimates the zero-strain gap (0.61 vs 1.19 eV HSE)"
+   ],
+   "subspace": "all 6 Green-Lagrange Voigt components free, |e| <= 0.08 (surrogate optimisation); DFT sampling normals <= 0.08, shears <= 0.06",
+   "level_of_theory": "PBE DFT with HSE06 per-valley scissor for the constraint; full HSE06 verification was attempted but denied",
+   "stability": "Born elastic stability was desired but the check was denied, so the result is unverified"
+  },
+  "strain_gl": [
+   -0.02853,
+   -0.0013,
+   -0.00058,
+   0.04806,
+   -0.00317,
+   -0.00062
+  ],
+  "h_mev_a3": 2.53,
+  "eg_ev": -0.07,
+  "constraints_satisfied": true,
+  "cbm_valley": "Dx",
+  "explanation": "Campaign: 30 Latin-hypercube PBE points, then surrogate fits, optimisation at the HSE-scissor level, and DFT checks of the optimiser's candidates. The first unmargined optimum (h about 2.29) was not metallic: DFT gave an HSE-scissor gap of +0.06 to +0.13 eV. The gap-versus-h trend put the zero crossing at about h = 2.4-2.5. A candidate at h = 2.53 gives HSE-scissor Eg = -0.07 eV. A second candidate at h = 2.547 gives -0.047 eV. Reasoning in terms of conduction-band valleys: the dominant shear e23 = 0.048 splits the six X (Delta) valleys. Dx drops to -0.65 eV PBE, while Dy and Dz rise to about +0.14 eV, and G and L stay far above (G 1.43, L 0.47 and above). The metallic state therefore comes from the single lowered Dx valley crossing the VBM. Even after adding the 0.58 eV X-valley HSE correction, Dx is still below the VBM. The result rests on PBE DFT plus the scissor correction, so full HSE06 and elastic stability remain unconfirmed. About 111 of 150 budget units are left."
+ },
+ "verifier": {
+  "verdict": "VERIFIED",
+  "h_mev_a3": 2.53,
+  "eg_ev": -0.188,
+  "eg_level": "Full HSE06 (verify_hse); PBE -0.652 eV; HSE06-scissor -0.07 eV",
+  "stable": "Yes. Born stable, minimum stiffness eigenvalue 25.5 GPa",
+  "strain_gl": [
+   -0.02853,
+   -0.0013,
+   -0.00058,
+   0.04806,
+   -0.00317,
+   -0.00062
+  ],
+  "issues": [
+   "Independent PBE DFT reproduces h = 2.53 meV/A^3. The PBE gap is -0.652 eV with the Dx valley as CBM. The scissor-corrected gap is -0.07 eV, matching the claim.",
+   "Full HSE06 gives Eg = -0.188 eV (Dx at -0.188 eV relative to the VBM). That is more negative than the scissor estimate, so the metal constraint holds at the right level of theory with margin.",
+   "The earlier claim that HSE verification and the Born stability check were denied is not reflected here. Both ran, and the stability check passed (min eigenvalue 25.5 GPa).",
+   "The strain is a Green-Lagrange tensor with fractional, tensor-shear components. The e23 shear is 0.048. It is the dominant component, together with e11 = -0.0285. The conventions are consistent with the tool, and h and the gap reproduce.",
+   "I did not search for a lower-h strain, so global optimality of 2.53 meV/A^3 is not verified. The result is feasible and stable at the stated strain.",
+   "I did not check symmetry-equivalent strains, such as the e23, e13 and e12 permutations. They should give the same h and a metal by cubic symmetry, but I did not run them.",
+   "The Dx valley is much lower than every other valley. The metallic state therefore depends on the Dx valley moving down under the e23 shear."
+  ]
+ }
+}

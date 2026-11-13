@@ -1,0 +1,10 @@
+{
+ "task": "H3",
+ "prompt": "A silicon film is constrained so that its normal strain perpendicular to the (001) surface is zero. Find the lowest-elastic-energy strain state that closes its band gap.",
+ "model": "sonnet",
+ "budget": 150.0,
+ "architecture": "pipeline",
+ "start": 1792817380.5857458,
+ "end": 1792819340.938743,
+ "verdict": "VERIFIED"
+}

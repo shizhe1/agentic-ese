@@ -1,0 +1,87 @@
+{
+ "task": "H1",
+ "seed": 1,
+ "verdict": "FAILED",
+ "final": {
+  "strain": [
+   -0.07379,
+   0.05061,
+   0.04706,
+   -0.00125,
+   0.00126,
+   -0.00351
+  ],
+  "h": 28.457,
+  "eg_scissor": 2.19,
+  "eg_hse": 2.038,
+  "cbm_hse": "Dx",
+  "born_min_eig_GPa": 402.5,
+  "stable": true,
+  "passed": false
+ },
+ "rounds": [
+  {
+   "stage": "first",
+   "constraints": [
+    {
+     "kind": "gap_min",
+     "value": 1.97
+    },
+    {
+     "kind": "gap_max",
+     "value": 2.03
+    }
+   ],
+   "result": {
+    "strain": [
+     0.05456,
+     -0.07867,
+     0.0455,
+     0.00218,
+     -0.00891,
+     0.00188
+    ],
+    "h": 31.697,
+    "eg_scissor": 2.028,
+    "eg_hse": 1.868,
+    "cbm_hse": "Dy",
+    "born_min_eig_GPa": 396.2,
+    "stable": true,
+    "passed": false
+   }
+  },
+  {
+   "stage": "retarget",
+   "constraints": [
+    {
+     "kind": "gap_min",
+     "value": 2.13
+    },
+    {
+     "kind": "gap_max",
+     "value": 2.19
+    }
+   ],
+   "result": {
+    "strain": [
+     -0.07379,
+     0.05061,
+     0.04706,
+     -0.00125,
+     0.00126,
+     -0.00351
+    ],
+    "h": 28.457,
+    "eg_scissor": 2.19,
+    "eg_hse": 2.038,
+    "cbm_hse": "Dx",
+    "born_min_eig_GPa": 402.5,
+    "stable": true,
+    "passed": false
+   }
+  }
+ ],
+ "spent": 86.0,
+ "n_dft": 32,
+ "minutes": 44.8
+}

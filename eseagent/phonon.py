@@ -11,11 +11,11 @@ from pathlib import Path
 import numpy as np
 
 from . import qe
+from .dft import RUNS
 from .materials import MATERIALS, Material
 from .strain import strained_cell
 
-ROOT = Path(__file__).resolve().parents[1]
-SCRATCH = ROOT / "runs" / "phonon"
+SCRATCH = RUNS / "phonon"
 
 
 def _run(exe: str, inp: str, work: Path, timeout: float = 4 * 3600) -> None:

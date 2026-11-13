@@ -1,0 +1,127 @@
+[
+ {
+  "split": 7,
+  "set": "C",
+  "model": "direct",
+  "n_train": 500,
+  "mae_meV": 247.50015787691385,
+  "fit_s": 5
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "bandgrid",
+  "n_train": 500,
+  "mae_meV": 199.18129958843969,
+  "fit_s": 10
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "valley",
+  "n_train": 500,
+  "mae_meV": 118.74057669021984,
+  "fit_s": 240,
+  "cbm_acc": 0.9666666666666667
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "direct",
+  "n_train": 1000,
+  "mae_meV": 200.62006188192026,
+  "fit_s": 5
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "bandgrid",
+  "n_train": 1000,
+  "mae_meV": 213.0098991904017,
+  "fit_s": 11
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "valley",
+  "n_train": 1000,
+  "mae_meV": 114.27559903907202,
+  "fit_s": 390,
+  "cbm_acc": 0.9666666666666667
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "direct",
+  "n_train": 2000,
+  "mae_meV": 213.4034899600203,
+  "fit_s": 9
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "bandgrid",
+  "n_train": 2000,
+  "mae_meV": 237.56646380998626,
+  "fit_s": 21
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "valley",
+  "n_train": 2000,
+  "mae_meV": 116.58661956399236,
+  "fit_s": 801,
+  "cbm_acc": 0.9666666666666667
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "direct",
+  "n_train": 4000,
+  "mae_meV": 205.9106287199243,
+  "fit_s": 14
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "bandgrid",
+  "n_train": 4000,
+  "mae_meV": 246.62728593666148,
+  "fit_s": 43
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "valley",
+  "n_train": 4000,
+  "mae_meV": 115.11609660188738,
+  "fit_s": 1390,
+  "cbm_acc": 0.9666666666666667
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "direct",
+  "n_train": 6456,
+  "mae_meV": 200.14784744198968,
+  "fit_s": 43
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "bandgrid",
+  "n_train": 6456,
+  "mae_meV": 243.67279609872438,
+  "fit_s": 72
+ },
+ {
+  "split": 7,
+  "set": "C",
+  "model": "valley",
+  "n_train": 6456,
+  "mae_meV": 114.31802113184035,
+  "fit_s": 2097,
+  "cbm_acc": 0.9666666666666667
+ }
+]

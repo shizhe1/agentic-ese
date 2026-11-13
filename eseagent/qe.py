@@ -4,6 +4,7 @@ from __future__ import annotations
 import os
 import shutil
 import subprocess
+import tempfile
 import time
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
@@ -15,7 +16,14 @@ HA_TO_EV = 27.211386245988
 BOHR_TO_A = 0.529177210903
 # Directory holding pw.x / ph.x: $ESE_QE_BIN, else wherever pw.x is on PATH.
 ENV_BIN = Path(os.environ.get("ESE_QE_BIN") or os.path.dirname(shutil.which("pw.x") or "") or ".")
-PSEUDO_DIR = Path(__file__).resolve().parent.parent / "pseudo"
+PSEUDO_DIR = Path(os.environ.get("ESE_PSEUDO_DIR") or Path(__file__).resolve().parent.parent / "pseudo")
+if any(c in str(PSEUDO_DIR) for c in "&<>'\""):
+    # pw.x copies pseudo_dir into its XML output unescaped; mirror the files to a path it can write safely.
+    _safe = Path(tempfile.gettempdir()) / "eseagent_pseudo"
+    _safe.mkdir(parents=True, exist_ok=True)
+    for _f in PSEUDO_DIR.glob("*.upf"):
+        shutil.copy(_f, _safe / _f.name)
+    PSEUDO_DIR = _safe
 
 
 @dataclass

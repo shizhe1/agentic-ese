@@ -31,6 +31,7 @@ and the DFT cache (about 31 GB) are not included.
 | `scripts/scripted_arm.py` | The scripted, LLM-free arm: the same tools, budget and verification on a fixed schedule. |
 | `scripts/figures/` | Scripts that redraw Figs. 1–6 of the paper from the data in this repository. |
 | `demo/` | `run_demo.py` and an example of its output. |
+| `docs/overview.png` | The workflow overview shown above (Fig. 1 of the paper). |
 | `data/refsets/` | PBE reference sets: Si (319 points), Si small-strain (307) and diamond (316), with valley-resolved band edges and `h`. |
 | `data/agent_runs/`, `data/scripted/` | Final answers of the 15 agent runs and 12 scripted runs, plus the full transcripts of the run shown in Fig. 3 (`H2_s3`). |
 | `data/learning_curves/`, `data/uniaxial_C.json`, `data/fig5_reference_states.json` | Remaining source data for the figures. |

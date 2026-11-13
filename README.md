@@ -29,7 +29,7 @@ and the DFT cache (about 31 GB) are not included.
 | `eseagent/` | The toolkit: strain conventions, Quantum ESPRESSO driver, per-strain DFT evaluation with valley-resolved band edges, HSE06 correction, phonon and Born stability checks, the surrogate, the constrained optimizer, the Bayesian-optimization baseline, and the MCP tool server (`server.py`). |
 | `scripts/run_agent.py` | Harness that launches one isolated designer → verifier agent campaign. |
 | `scripts/scripted_arm.py` | The scripted, LLM-free arm: the same tools, budget and verification on a fixed schedule. |
-| `scripts/figures/` | Scripts that redraw Figs. 1–6 of the paper from the data in this repository. |
+| `scripts/figures/` | Scripts that redraw Figs. 1–6 of the paper from the data in this repository (see its README). |
 | `demo/` | `run_demo.py` and an example of its output. |
 | `docs/overview.png` | The workflow overview shown above (Fig. 1 of the paper). |
 | `data/refsets/` | PBE reference sets: Si (319 points), Si small-strain (307) and diamond (316), with valley-resolved band edges and `h`. |
@@ -67,15 +67,6 @@ The ensemble members are trained in parallel threads, so numbers change a little
 expect a gap error of 41–43 meV and a predicted optimum `h` of roughly 8.7–9.4 meV/Å³ (the
 DFT-verified agent states in the paper are at 9.5). The optimum is a surrogate prediction only. In
 the paper each candidate is recomputed with DFT and checked by the verifier before it is reported.
-
-## Figures
-
-```bash
-cd scripts/figures && for i in 1 2 3 4 5 6; do python fig$i.py; done
-```
-
-This writes `figures/fig1.png` … `fig6.png` (and PDFs) from `results/results.json` and `data/`.
-No DFT code is needed. The figures use Arial.
 
 Conventions used everywhere: Green-Lagrange strain in Voigt order (e11, e22, e33, e23, e13, e12),
 tensor shear, as fractions (0.01 = 1%); `h` is the elastic strain energy density in meV/Å³.

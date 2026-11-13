@@ -77,9 +77,9 @@ pip install -r playground/requirements.txt
 python playground/app.py        # then open http://127.0.0.1:7860
 ```
 
-![The playground's Predict tab: strain sliders, the predicted gap and h, and the eight valley energies](docs/playground.png)
+![The playground: strain tensor controls, predicted gap, character and h, a band-edge level diagram of the eight conduction valleys, and the strain tensor map](docs/playground.png)
 
-A small point-and-click interface on top of the pre-trained surrogate. **Predict:** set the six
+A small point-and-click interface on top of the pre-trained surrogate. **Forward model:** set the six
 strain components with sliders and see the predicted valley energies, band gap and `h` for Si or
 diamond. **Inverse design:** choose a target (close the gap, a gap value, a direct gap) and a strain
 subspace, and get the lowest-energy strains. It starts in a few seconds and runs no DFT and no

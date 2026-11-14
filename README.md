@@ -5,6 +5,23 @@ Companion code for the paper
 > Zhe Shi, **Agentic Deep Elastic Strain Engineering of Semiconductor Electronic Properties**
 > (submitted, 2026).
 
+This work builds on our earlier papers on deep elastic strain engineering:
+
+1. Z. Shi, E. Tsymbalov, M. Dao, S. Suresh, A. Shapeev, J. Li, Deep elastic strain engineering of
+   bandgap through machine learning, *Proc. Natl. Acad. Sci. U.S.A.* **116**, 4117–4122 (2019).
+   [doi:10.1073/pnas.1818555116](https://doi.org/10.1073/pnas.1818555116)
+2. Z. Shi, M. Dao, E. Tsymbalov, A. Shapeev, J. Li, S. Suresh, Metallization of diamond,
+   *Proc. Natl. Acad. Sci. U.S.A.* **117**, 24634–24639 (2020).
+   [doi:10.1073/pnas.2013565117](https://doi.org/10.1073/pnas.2013565117)
+3. E. Tsymbalov, Z. Shi, M. Dao, S. Suresh, J. Li, A. Shapeev, Machine learning for deep elastic
+   strain engineering of semiconductor electronic band structure and effective mass,
+   *npj Comput. Mater.* **7**, 76 (2021).
+   [doi:10.1038/s41524-021-00538-0](https://doi.org/10.1038/s41524-021-00538-0)
+4. Z. Shi, E. Tsymbalov, W. Shi, A. Barr, Q. Li, J. Li, et al., Phonon stability boundary and deep
+   elastic strain engineering of lattice thermal conductivity, *Proc. Natl. Acad. Sci. U.S.A.*
+   **121**, e2313840121 (2024).
+   [doi:10.1073/pnas.2313840121](https://doi.org/10.1073/pnas.2313840121)
+
 A language-model "designer" agent turns a one-sentence goal (for example *"make silicon a
 direct-gap semiconductor at the lowest elastic strain energy"*) into a constrained inverse problem
 and solves it with first-principles active learning on a valley-resolved, symmetry-equivariant
